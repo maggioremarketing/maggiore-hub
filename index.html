@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consumer Insights Hub · Maggiore</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    /* ── Maggiore brand tokens ─────────────────────────────────────────── */
+    :root {
+      --bg:             #111118;
+      --surface:        #17171f;
+      --surface-raised: #1e1e2a;
+      --border:         rgba(255,255,255,0.07);
+      --border-focus:   rgba(44,206,214,0.45);
+      --text-primary:   #eeeef5;
+      --text-secondary: rgba(238,238,245,0.52);
+      --text-muted:     rgba(238,238,245,0.3);
+      --teal:           #2cced6;
+      --green:          #00ff99;
+      --violet:         #a399ff;
+      --error-bg:       rgba(255,85,85,0.09);
+      --error-border:   rgba(255,85,85,0.22);
+      --error-text:     #ff8080;
+      --success-bg:     rgba(0,255,153,0.07);
+      --success-border: rgba(0,255,153,0.18);
+      --success-text:   #00cc7a;
+      --r:              10px;
+      --r-sm:           6px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 20px 40px;
+    }
+
+    /* Aurora ambient glow */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 55% at 15% -5%,  rgba(44,206,214,0.10) 0%, transparent 55%),
+        radial-gradient(ellipse 55% 45% at 85% 108%, rgba(163,153,255,0.09) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 35% at 50% 55%,  rgba(0,255,153,0.04)  0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Layout wrapper ────────────────────────────────────────────────── */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Logo block ────────────────────────────────────────────────────── */
+    .logo-block {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo-wordmark {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .logo-m {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+      font-family: 'Arial Black', 'Arial', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .logo-rest {
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      color: var(--text-primary);
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .logo-sub {
+      font-size: 10.5px;
+      letter-spacing: 0.20em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 7px;
+      font-weight: 400;
+    }
+
+    .aurora-bar {
+      height: 2px;
+      width: 56px;
+      background: linear-gradient(90deg, var(--teal), var(--green), var(--violet));
+      border-radius: 2px;
+      margin: 11px auto 0;
+    }
+
+    /* ── Card ──────────────────────────────────────────────────────────── */
+    .card {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 32px 30px 30px;
+    }
+
+    /* ── Tab switcher ──────────────────────────────────────────────────── */
+    .tabs {
+      display: flex;
+      background: rgba(255,255,255,0.04);
+      border-radius: calc(var(--r-sm) + 1px);
+      padding: 3px;
+      margin-bottom: 26px;
+      gap: 0;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 8px 10px;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      border-radius: var(--r-sm);
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: inherit;
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .tab.active {
+      background: var(--surface-raised);
+      color: var(--text-primary);
+    }
+
+    /* ── Form header ───────────────────────────────────────────────────── */
+    .form-head {
+      margin-bottom: 22px;
+    }
+
+    .form-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      margin-bottom: 5px;
+    }
+
+    .form-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ── Fields ────────────────────────────────────────────────────────── */
+    .field {
+      margin-bottom: 14px;
+    }
+
+    .field.hidden {
+      display: none;
+    }
+
+    label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 13px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.18s, background 0.18s;
+      -webkit-appearance: none;
+    }
+
+    input:focus {
+      border-color: var(--border-focus);
+      background: rgba(44,206,214,0.03);
+    }
+
+    input::placeholder {
+      color: var(--text-muted);
+    }
+
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 50px #17171f inset;
+      -webkit-text-fill-color: var(--text-primary);
+    }
+
+    /* ── Submit button ─────────────────────────────────────────────────── */
+    .btn {
+      width: 100%;
+      margin-top: 6px;
+      padding: 11px 16px;
+      border: none;
+      border-radius: var(--r-sm);
+      font-size: 13px;
+      font-weight: 700;
+      font-family: inherit;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: linear-gradient(90deg, var(--teal) 0%, var(--green) 100%);
+      color: #0d0d14;
+      transition: opacity 0.18s, transform 0.1s;
+    }
+
+    .btn:hover:not(:disabled) { opacity: 0.88; }
+    .btn:active:not(:disabled) { transform: scale(0.987); }
+    .btn:disabled {
+      opacity: 0.38;
+      cursor: not-allowed;
+    }
+
+    /* ── Alert messages ────────────────────────────────────────────────── */
+    .alert {
+      display: none;
+      font-size: 13px;
+      line-height: 1.55;
+      padding: 11px 13px;
+      border-radius: var(--r-sm);
+      margin-top: 14px;
+    }
+
+    .alert.show { display: block; }
+
+    .alert.error {
+      background: var(--error-bg);
+      border: 1px solid var(--error-border);
+      color: var(--error-text);
+    }
+
+    .alert.success {
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
+      color: var(--success-text);
+    }
+
+    /* ── Domain note ───────────────────────────────────────────────────── */
+    .domain-note {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 1px 7px 2px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      font-size: 11px;
+      letter-spacing: 0.01em;
+      margin: 0 1px;
+    }
+
+    /* ── Footer ────────────────────────────────────────────────────────── */
+    .footer {
+      margin-top: 22px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .footer a {
+      color: rgba(44,206,214,0.7);
+      text-decoration: none;
+    }
+
+    .footer a:hover { color: var(--teal); }
+
+    /* ── Loading spinner (minimal) ─────────────────────────────────────── */
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .spinner {
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      border: 2px solid rgba(0,0,0,0.25);
+      border-top-color: rgba(0,0,0,0.7);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    /* ── Responsive ────────────────────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .card { padding: 26px 20px 22px; }
+      .logo-m, .logo-rest { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Logo -->
+  <div class="logo-block">
+    <div class="logo-wordmark">
+      <span class="logo-m">M</span><span class="logo-rest">aggiore</span>
+    </div>
+    <div class="logo-sub">Consumer Insights Hub</div>
+    <div class="aurora-bar"></div>
+  </div>
+
+  <!-- Card -->
+  <div class="card">
+
+    <!-- Tab switcher -->
+    <div class="tabs">
+      <button class="tab active" id="tab-signin"   onclick="switchTab('signin')">Sign In</button>
+      <button class="tab"        id="tab-register" onclick="switchTab('register')">Create Account</button>
+    </div>
+
+    <!-- Dynamic header -->
+    <div class="form-head">
+      <div class="form-title" id="form-title">Welcome back</div>
+      <div class="form-desc"  id="form-desc">Sign in to access your consumer intelligence hub.</div>
+    </div>
+
+    <!-- Form -->
+    <form id="main-form" onsubmit="handleSubmit(event)" novalidate>
+
+      <div class="field hidden" id="f-fullname">
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          id="fullname"
+          placeholder="Jane Doe"
+          autocomplete="name"
+          spellcheck="false"
+        />
+      </div>
+
+      <div class="field hidden" id="f-jobtitle">
+        <label for="jobtitle">Job Title</label>
+        <input
+          type="text"
+          id="jobtitle"
+          placeholder="Senior Brand Manager"
+          autocomplete="organization-title"
+          spellcheck="false"
+        />
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="you@bayer.com"
+          autocomplete="email"
+          spellcheck="false"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="••••••••"
+          autocomplete="current-password"
+          required
+        />
+      </div>
+
+      <button class="btn" type="submit" id="submit-btn">Sign In</button>
+    </form>
+
+    <!-- Alert -->
+    <div class="alert" id="alert-box"></div>
+
+    <!-- Domain hint -->
+    <div class="domain-note">
+      Access is restricted to
+      <span class="badge">@maggiore.cl</span>
+      <span class="badge">@bayer.com</span>
+      <span class="badge">@combe.com</span>
+    </div>
+
+  </div><!-- /card -->
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="mailto:research@maggiore.cl">Contact support</a>
+    &nbsp;·&nbsp;
+    Maggiore Marketing &copy; 2025
+  </div>
+
+</div><!-- /wrapper -->
+
+<script>
+// ── CONFIG ── Replace these before deploying ────────────────────────────────
+const SUPABASE_URL  = 'https://mqaglifoavkknsdwtpwk.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1xYWdsaWZvYXZra25zZHd0cHdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2NzU0MDgsImV4cCI6MjA5NzI1MTQwOH0.yfafUVsBgA2aG9UugB5z9icwUqaecWDIQ9uXjFTK7lo';
+
+const DOMAIN_RULES = {
+  'maggiore.cl': 'both',
+  'bayer.com':   'bayer',
+  'combe.com':   'combe',
+};
+
+const HUB_REDIRECT = {
+  'bayer': '/bayer',
+  'combe': '/combe',
+  'both':  '/hubs', // hub selector for @maggiore.cl
+};
+// ────────────────────────────────────────────────────────────────────────────
+
+const { createClient } = supabase;
+const sb = createClient(SUPABASE_URL, SUPABASE_ANON);
+
+let mode = 'signin'; // 'signin' | 'register'
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function getAccess(email) {
+  const domain = email.split('@')[1]?.toLowerCase().trim();
+  return DOMAIN_RULES[domain] ?? null;
+}
+
+function showAlert(text, type) {
+  const el = document.getElementById('alert-box');
+  el.innerHTML = text;
+  el.className = `alert ${type} show`;
+}
+
+function clearAlert() {
+  document.getElementById('alert-box').className = 'alert';
+}
+
+function setLoading(on) {
+  const btn = document.getElementById('submit-btn');
+  if (on) {
+    const label = mode === 'signin' ? 'Signing in' : 'Creating account';
+    btn.innerHTML = `<span class="spinner"></span>${label}…`;
+    btn.disabled = true;
+  } else {
+    btn.textContent = mode === 'signin' ? 'Sign In' : 'Create Account';
+    btn.disabled = false;
+  }
+}
+
+// ── Tab switch ────────────────────────────────────────────────────────────────
+function switchTab(tab) {
+  mode = tab;
+  clearAlert();
+
+  const isReg = tab === 'register';
+
+  document.getElementById('tab-signin').classList.toggle('active', !isReg);
+  document.getElementById('tab-register').classList.toggle('active', isReg);
+
+  document.getElementById('form-title').textContent = isReg
+    ? 'Request access'
+    : 'Welcome back';
+  document.getElementById('form-desc').textContent = isReg
+    ? 'Create your account. We\'ll send a verification link to your email.'
+    : 'Sign in to access your consumer intelligence hub.';
+
+  document.getElementById('f-fullname').classList.toggle('hidden', !isReg);
+  document.getElementById('f-jobtitle').classList.toggle('hidden', !isReg);
+
+  document.getElementById('fullname').required = isReg;
+  document.getElementById('jobtitle').required = isReg;
+
+  document.getElementById('password').autocomplete = isReg ? 'new-password' : 'current-password';
+  document.getElementById('submit-btn').textContent = isReg ? 'Create Account' : 'Sign In';
+}
+
+// ── Form submit ───────────────────────────────────────────────────────────────
+async function handleSubmit(e) {
+  e.preventDefault();
+  clearAlert();
+
+  const email    = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+
+  if (!getAccess(email)) {
+    showAlert(
+      'This email domain is not authorized. Access is limited to ' +
+      '<strong>@maggiore.cl</strong>, <strong>@bayer.com</strong>, and <strong>@combe.com</strong>.',
+      'error'
+    );
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    if (mode === 'signin') {
+      await doSignIn(email, password);
+    } else {
+      await doRegister(email, password);
+    }
+  } catch (err) {
+    showAlert(err.message ?? 'An unexpected error occurred. Please try again.', 'error');
+  } finally {
+    setLoading(false);
+  }
+}
+
+// ── Sign in ───────────────────────────────────────────────────────────────────
+async function doSignIn(email, password) {
+  const { data, error } = await sb.auth.signInWithPassword({ email, password });
+
+  if (error) {
+    if (error.message.includes('Email not confirmed')) {
+      showAlert(
+        'Your email address has not been verified yet. ' +
+        'Check your inbox for the confirmation link we sent when you registered.',
+        'error'
+      );
+    } else if (error.message.includes('Invalid login credentials')) {
+      showAlert('Incorrect email or password. Please try again.', 'error');
+    } else {
+      showAlert(error.message, 'error');
+    }
+    return;
+  }
+
+  const access = getAccess(data.user.email);
+  window.location.href = HUB_REDIRECT[access];
+}
+
+// ── Register ──────────────────────────────────────────────────────────────────
+async function doRegister(email, password) {
+  const fullName = document.getElementById('fullname').value.trim();
+  const jobTitle = document.getElementById('jobtitle').value.trim();
+
+  if (!fullName) {
+    showAlert('Please enter your full name.', 'error');
+    setLoading(false);
+    return;
+  }
+  if (!jobTitle) {
+    showAlert('Please enter your job title.', 'error');
+    setLoading(false);
+    return;
+  }
+  if (password.length < 8) {
+    showAlert('Password must be at least 8 characters.', 'error');
+    setLoading(false);
+    return;
+  }
+
+  const { data, error } = await sb.auth.signUp({
+    email,
+    password,
+    options: {
+      data: {
+        full_name:  fullName,
+        job_title:  jobTitle,
+        hub_access: getAccess(email),
+      },
+      emailRedirectTo: `${window.location.origin}/login`,
+    },
+  });
+
+  if (error) {
+    if (error.message.includes('already registered')) {
+      showAlert(
+        'An account with this email already exists. ' +
+        'Switch to Sign In or contact support if you need help accessing your account.',
+        'error'
+      );
+    } else {
+      showAlert(error.message, 'error');
+    }
+    return;
+  }
+
+  showAlert(
+    '✓ Account created. We sent a verification link to <strong>' + escHtml(email) + '</strong>. ' +
+    'Click the link in that email to activate your account, then come back here to sign in.',
+    'success'
+  );
+
+  document.getElementById('main-form').reset();
+  setTimeout(() => switchTab('signin'), 300);
+}
+
+// ── Auth callback (after email verification redirect) ─────────────────────────
+async function handleAuthCallback() {
+  const hash = window.location.hash;
+  if (!hash.includes('access_token') && !hash.includes('type=signup')) return;
+
+  const { data: { session } } = await sb.auth.getSession();
+  if (session) {
+    const access = getAccess(session.user.email);
+    window.location.replace(HUB_REDIRECT[access]);
+  }
+}
+
+// ── Check existing session on page load ───────────────────────────────────────
+async function checkExistingSession() {
+  const { data: { session } } = await sb.auth.getSession();
+  if (session) {
+    const access = getAccess(session.user.email);
+    window.location.replace(HUB_REDIRECT[access]);
+  }
+}
+
+// ── XSS-safe escape ───────────────────────────────────────────────────────────
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+handleAuthCallback();
+checkExistingSession();
+</script>
+</body>
+</html>
