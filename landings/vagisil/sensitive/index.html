@@ -6,9 +6,11 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Vagisil Sensitive | Vagisil®</title>
 <!--
-  IEP LANDING TEMPLATE
-  Variables por variante: claim principal (hero-claim), título, beneficios, precio, imágenes.
-  Tracking: reemplazar PIXEL_ID y descomentar el bloque de Meta Pixel antes de salir a campo.
+  IEP LANDING TEMPLATE — réplica de vagisil.store/daily-wash/sensitive
+  Estilos extraídos de la página original: texto #1A4497 (Futura Heavy/Book),
+  franja #F060A6 (44px), botón #1A4497 radio 15px 180x42.
+  Variables por variante: claim (hero-claim), beneficios, precio, imágenes.
+  Tracking: reemplazar PIXEL_ID y descomentar el bloque de Meta Pixel antes de campaña.
 -->
 <!-- Meta Pixel (activar en campaña)
 <script>
@@ -24,46 +26,54 @@ fbq('track', 'ViewContent', {content_name: 'Vagisil Sensitive'});
 -->
 <style>
 :root{
-  --blue:#1A4497; --pink:#ED1566; --teal:#7fd6cf; --ink:#080808; --muted:#5f6360; --bg:#ffffff;
+  --blue:#1A4497; --pink:#F060A6; --bg:#ffffff;
+  --futura:"Futura","Century Gothic","URW Gothic","Jost","Trebuchet MS",Arial,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-.wrap{max-width:520px;margin:0 auto;padding:0 20px}
-header{padding:16px 0;border-bottom:1px solid #eee}
+body{font-family:var(--futura);background:var(--bg);color:var(--blue);line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header{padding:14px 0}
 header .wrap{display:flex;align-items:center;justify-content:space-between}
-header img{height:38px;width:auto}
-header nav a{font-size:14px;color:var(--blue);text-decoration:none;font-weight:500}
-.title{padding:34px 0 6px;text-align:center}
-.title h1{color:var(--blue);font-size:34px;font-weight:700;letter-spacing:-0.01em}
-.title p{color:var(--muted);font-size:16px;text-transform:uppercase;letter-spacing:0.12em;margin-top:4px}
-.product{padding:10px 0 0}
-.product img{width:100%;height:auto;display:block;border-radius:8px}
-.claim{padding:26px 0 6px;text-align:center}
-.claim p{font-size:18px;color:var(--ink);font-weight:600;line-height:1.55}
-.benefits{padding:16px 0 8px}
-.benefits div{display:flex;gap:12px;align-items:flex-start;padding:9px 0}
-.benefits svg{flex-shrink:0;margin-top:5px}
-.benefits p{font-size:15px;color:var(--muted)}
-.buy{padding:26px 0 8px;text-align:center}
-.buy .price{font-size:30px;font-weight:700;color:var(--ink)}
-.buy button{margin-top:14px;background:var(--pink);color:#fff;border:none;border-radius:32px;
-  padding:15px 54px;font-size:17px;font-weight:700;cursor:pointer;transition:transform .12s, box-shadow .12s;
-  box-shadow:0 4px 14px rgba(237,21,102,0.35)}
-.buy button:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(237,21,102,0.45)}
-.buy .added{display:none;margin-top:12px;color:var(--blue);font-weight:600;font-size:14px}
-.hero{padding:30px 0 0}
-.hero img{width:100%;height:auto;display:block;border-radius:8px}
-.story{padding:30px 0;text-align:center}
-.story h2{color:var(--blue);font-size:24px;margin-bottom:10px}
-.story p{font-size:15.5px;color:var(--muted)}
-footer{padding:26px 0 40px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid #eee;margin-top:18px}
-@media(min-width:900px){
-  .wrap{max-width:960px}
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  .title{text-align:left;padding-top:50px}
-  .claim{text-align:left;padding-top:0}
-  .benefits{padding-top:4px}
-  .buy{text-align:left}
+header img{height:56px;width:auto}
+header nav a{font-size:15px;color:var(--blue);text-decoration:none;font-weight:600}
+.band{background:var(--pink);height:44px}
+main{padding:40px 0 10px}
+.grid{display:grid;grid-template-columns:1.05fr 1fr;gap:20px 56px;align-items:start;
+  grid-template-areas:"product title" "product info" "clean hero"}
+.g-title{grid-area:title}
+.g-product{grid-area:product}
+.g-info{grid-area:info}
+.g-hero{grid-area:hero;margin-top:26px}
+.g-clean{grid-area:clean;align-self:end;padding-bottom:8px}
+.g-title h1{font-size:40px;font-weight:700;letter-spacing:0.01em;line-height:1.15}
+.g-title p{font-size:22px;margin-top:4px}
+.g-product img{width:100%;height:auto;display:block}
+.claim{font-size:19px;line-height:1.6;margin:26px 0 18px}
+.claim b{font-weight:700}
+ul.benefits{padding-left:22px;display:flex;flex-direction:column;gap:14px}
+ul.benefits li{font-size:16.5px;line-height:1.55}
+ul.benefits b{font-weight:700}
+.price{font-size:24px;margin-top:26px}
+.atc{margin-top:14px;display:inline-block;background:var(--blue);color:#fff;border:none;border-radius:15px;
+  width:180px;height:42px;font-size:16px;font-weight:600;font-family:var(--futura);cursor:pointer;transition:filter .12s}
+.atc:hover{filter:brightness(1.12)}
+.added{display:none;margin-top:10px;font-weight:600;font-size:14px}
+.g-hero img{width:100%;height:auto;display:block}
+.g-clean h2{font-size:34px;font-weight:400;line-height:1.25;max-width:420px}
+.g-clean p{font-size:16px;margin-top:14px;max-width:440px}
+footer{padding:34px 0 44px;text-align:center;font-size:14px}
+@media(max-width:880px){
+  header img{height:44px}
+  main{padding:22px 0 0}
+  .grid{grid-template-columns:1fr;gap:0;
+    grid-template-areas:"title" "product" "info" "hero" "clean"}
+  .g-title{text-align:left;padding-bottom:12px}
+  .g-title h1{font-size:30px}
+  .g-title p{font-size:18px}
+  .claim{font-size:16.5px;margin-top:22px}
+  .g-hero{margin-top:30px}
+  .g-clean{padding:28px 0 0}
+  .g-clean h2{font-size:24px}
 }
 </style>
 </head>
@@ -75,45 +85,34 @@ footer{padding:26px 0 40px;text-align:center;color:var(--muted);font-size:13px;b
     <nav><a href="#">Daily Intimate Wash</a></nav>
   </div>
 </header>
+<div class="band"></div>
 
 <main>
-  <div class="wrap split">
-    <div>
-      <div class="title">
-        <h1>Vagisil Sensitive</h1>
-        <p>Daily Intimate Wash</p>
-      </div>
-      <div class="product"><img src="img/product.png" alt="Vagisil Sensitive Daily Intimate Wash, 12 fl. oz."></div>
+  <div class="wrap grid">
+    <div class="g-title">
+      <h1>Vagisil Sensitive</h1>
+      <p>Daily Intimate Wash</p>
     </div>
-    <div>
-      <div class="claim">
-        <p id="hero-claim">Gently cleanses intimate skin without disrupting your natural microbiome. Hypoallergenic, pH&#8209;balanced vaginal wash suitable for sensitive vulvar skin.</p>
-      </div>
-      <div class="benefits">
-        <div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ED1566" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          <p>Gentle enough for your most sensitive skin, with a pH-balanced formula designed for daily intimate cleansing.</p>
-        </div>
-        <div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ED1566" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          <p>Supports the skin&rsquo;s natural barrier while helping you feel clean, fresh, and comfortable every day.</p>
-        </div>
-        <div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ED1566" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          <p>Clinically and gynecologist tested for sensitive intimate skin, with a soft, gentle cleansing experience.</p>
-        </div>
-      </div>
-      <div class="buy">
-        <div class="price">$5.99</div>
-        <button id="atc" onclick="addToCart()">Add to Cart</button>
-        <div class="added" id="added">&#10003; Added to cart</div>
-      </div>
-    </div>
-  </div>
 
-  <div class="wrap">
-    <div class="hero"><img src="img/hero.webp" alt=""></div>
-    <div class="story">
+    <div class="g-product">
+      <img src="img/product.png" alt="Vagisil Sensitive Daily Intimate Wash, 12 fl. oz.">
+    </div>
+
+    <div class="g-info">
+      <p class="claim" id="hero-claim">Gently cleanses intimate skin without disrupting your natural microbiome. Hypoallergenic, pH&#8209;balanced vaginal wash suitable for sensitive vulvar skin</p>
+      <ul class="benefits">
+        <li><b>Gentle enough for your most sensitive skin</b>, with a pH-balanced formula designed for daily intimate cleansing.</li>
+        <li><b>Supports the skin&rsquo;s natural barrier</b> while helping you feel clean, fresh, and comfortable every day.</li>
+        <li><b>Clinically and gynecologist tested</b> for sensitive intimate skin, with a soft, gentle cleansing experience.</li>
+      </ul>
+      <div class="price">$5.99</div>
+      <button class="atc" id="atc" onclick="addToCart()">Add to Cart</button>
+      <div class="added" id="added">&#10003; Added to cart</div>
+    </div>
+
+    <div class="g-hero"><img src="img/hero.webp" alt=""></div>
+
+    <div class="g-clean">
       <h2>Clean beauty meets intimate cleansing</h2>
       <p>By popular demand, our experts designed this ultra gentle, pH balanced wash with a &lsquo;less is more&rsquo; profile. It&rsquo;s fragrance-free, yet fresh and delightful.</p>
     </div>

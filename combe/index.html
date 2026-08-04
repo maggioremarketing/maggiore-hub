@@ -2292,6 +2292,11 @@
     <div id="iepV2Home">
       <div class="v2-stats" id="v2Stats"></div>
       <div class="v2-grid" id="iepV2Grid"></div>
+
+      <div class="section-label" style="margin-top:40px">Landing Pages</div>
+      <h2 class="section-heading" style="font-size:22px">Experiment Landing Library</h2>
+      <p style="font-size:13px;color:var(--text-muted);max-width:640px;margin-bottom:16px">Landing pages built and versioned inside the platform. Each experiment variant gets its own page with add-to-cart tracking, generated from a shared template.</p>
+      <div class="v2-grid" id="iepV2Landings"></div>
     </div>
     <div id="iepV2Detail" class="v2-detail"></div>
   </div>
@@ -3372,6 +3377,14 @@ document.addEventListener('DOMContentLoaded', () => {
 .v2-legend span{display:inline-flex;align-items:center;gap:6px}
 .v2-sw{width:12px;height:12px;border-radius:3px;display:inline-block}
 @media (max-width:800px){.v2-stats{grid-template-columns:repeat(2,1fr)}}
+.v2-land-thumb{width:100%;height:170px;object-fit:contain;background:var(--bg-main);border-radius:8px}
+.v2-modal{display:none;position:fixed;inset:0;background:rgba(13,26,43,0.72);z-index:3000;align-items:center;justify-content:center;padding:24px}
+.v2-modal.open{display:flex}
+.v2-modal-box{background:white;border-radius:12px;width:min(480px,94vw);height:min(860px,92vh);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.4)}
+.v2-modal-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);font-size:13px;color:var(--text-secondary)}
+.v2-modal-bar a{color:var(--accent);text-decoration:none;font-weight:600}
+.v2-modal-bar button{background:transparent;border:none;font-size:20px;cursor:pointer;color:var(--text-muted);line-height:1}
+.v2-modal iframe{border:none;width:100%;flex:1}
 </style>
 
 <!-- ===== IEP V2 SCRIPT ===== -->
@@ -3500,11 +3513,41 @@ function v2Bar(elId,rows,bm){
   });
 }
 
+var IEPV2_LANDINGS = [
+  {brand:"Vagisil", name:"Vagisil Sensitive — Daily Intimate Wash", note:"Replica of the live Wix landing (E02 Wash), rebuilt as a platform template", url:"/landings/vagisil/sensitive/", thumb:"/landings/vagisil/sensitive/img/product.png"}
+];
+function v2RenderLandings(){
+  var g=document.getElementById("iepV2Landings"); if(!g) return;
+  g.innerHTML=IEPV2_LANDINGS.map(function(l,i){
+    var c=IEPV2_BRAND_COLORS[l.brand]||"#42b8b4";
+    return '<div class="v2-card" onclick="v2Landing('+i+')">'+
+      '<div class="v2-card-top"><span class="v2-chip" style="background:'+c+'">'+l.brand+'</span><span class="v2-eid">TEMPLATE</span></div>'+
+      '<img class="v2-land-thumb" src="'+l.thumb+'" alt="" loading="lazy">'+
+      '<h4>'+l.name+'</h4><div class="v2-meta">'+l.note+'</div></div>';
+  }).join("");
+}
+function v2Landing(i){
+  var l=IEPV2_LANDINGS[i];
+  document.getElementById("v2LandFrame").src=l.url;
+  document.getElementById("v2LandOpen").href=l.url;
+  document.getElementById("v2LandTitle").textContent=l.name;
+  document.getElementById("v2LandModal").classList.add("open");
+}
+function v2LandClose(){
+  document.getElementById("v2LandModal").classList.remove("open");
+  document.getElementById("v2LandFrame").src="about:blank";
+}
 document.addEventListener("DOMContentLoaded",function(){
-  if(document.getElementById("iepV2Grid")&&IEPV2_DATA.length){v2RenderStats();v2RenderGrid();}
+  if(document.getElementById("iepV2Grid")&&IEPV2_DATA.length){v2RenderStats();v2RenderGrid();v2RenderLandings();}
 });
 </script>
 <div class="v2-tip" id="v2Tip"></div>
+<div class="v2-modal" id="v2LandModal" onclick="if(event.target===this)v2LandClose()">
+  <div class="v2-modal-box">
+    <div class="v2-modal-bar"><span id="v2LandTitle"></span><span><a id="v2LandOpen" href="#" target="_blank" rel="noopener">Open full page &#8599;</a> &nbsp; <button onclick="v2LandClose()" aria-label="Close">&times;</button></span></div>
+    <iframe id="v2LandFrame" src="about:blank" title="Landing preview"></iframe>
+  </div>
+</div>
 
 </body>
 </html>
