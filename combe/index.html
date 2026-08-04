@@ -2061,6 +2061,7 @@
       <button class="nav-btn active" onclick="switchPage('home')">The Hub</button>
       <button class="nav-btn" onclick="switchPage('sl')">Social Listening</button>
       <button class="nav-btn" onclick="switchPage('iep')">IEP</button>
+      <button class="nav-btn" onclick="switchPage('iepv2')">IEP V2</button>
       <div class="nav-dropdown">
         <button class="nav-dropdown-toggle" onclick="toggleDropdown()">
           Insights+
@@ -2271,6 +2272,24 @@
 
     <div class="tabs-container" id="iepBrandTabs"></div>
     <div class="iep-grid" id="iepGrid"></div>
+  </div>
+
+  <!-- PAGE 3B: IEP V2 -->
+  <div id="iepv2" class="page-view">
+    <div class="section-label">Experimentation</div>
+    <h2 class="section-heading">IEP V2</h2>
+
+    <div class="method-box" style="border-top: 3px solid #42b8b4;">
+      <h3 style="color:#42b8b4">The next generation of IEP</h3>
+      <p>A renewed <strong>Iterative Experiment Platform</strong> with live results, faster iteration cycles, and deeper integration with Social Listening insights. New experiments will be published in this section as they go live.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px">
+        <div style="background:rgba(66,184,180,0.06);border:1px solid rgba(66,184,180,0.15);border-radius:10px;padding:16px;text-align:center"><div style="font-size:14px;font-weight:700;color:#42b8b4;margin-bottom:6px">Live Results</div><div style="font-size:12px;color:var(--text-muted);line-height:1.5">Experiment metrics updated as campaigns run &mdash; no waiting for the final report.</div></div>
+        <div style="background:rgba(66,184,180,0.06);border:1px solid rgba(66,184,180,0.15);border-radius:10px;padding:16px;text-align:center"><div style="font-size:14px;font-weight:700;color:#42b8b4;margin-bottom:6px">Faster Iterations</div><div style="font-size:12px;color:var(--text-muted);line-height:1.5">Streamlined campaign and landing page setup shortens the time between rounds.</div></div>
+        <div style="background:rgba(66,184,180,0.06);border:1px solid rgba(66,184,180,0.15);border-radius:10px;padding:16px;text-align:center"><div style="font-size:14px;font-weight:700;color:#42b8b4;margin-bottom:6px">SL-Informed</div><div style="font-size:12px;color:var(--text-muted);line-height:1.5">Hypotheses and claims grounded in Social Listening evidence from the start.</div></div>
+      </div>
+    </div>
+
+    <div class="iep-grid" id="iepV2Grid"></div>
   </div>
 
   <!-- PAGE 5: ASK THE HUB -->
