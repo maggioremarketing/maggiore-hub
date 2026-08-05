@@ -2292,11 +2292,6 @@
     <div id="iepV2Home">
       <div class="v2-stats" id="v2Stats"></div>
       <div class="v2-grid" id="iepV2Grid"></div>
-
-      <div class="section-label" style="margin-top:40px">Landing Pages</div>
-      <h2 class="section-heading" style="font-size:22px">Experiment Landing Library</h2>
-      <p style="font-size:13px;color:var(--text-muted);max-width:640px;margin-bottom:16px">Landing pages built and versioned inside the platform. Each experiment variant gets its own page with add-to-cart tracking, generated from a shared template.</p>
-      <div class="v2-grid" id="iepV2Landings"></div>
     </div>
     <div id="iepV2Detail" class="v2-detail"></div>
   </div>
@@ -3432,6 +3427,16 @@ function v2Open(i){
     '<div class="v2-dhead"><span class="v2-chip" style="background:'+c+'">'+e.brand+'</span><h3>'+e.experiment_id+' &middot; '+e.name+'</h3></div>'+
     '<div class="v2-obj"><b>Learning objective.</b> '+e.learning_objective+'<br><b>Hypothesis.</b> '+e.hypothesis+'</div>';
   h+=e.rounds.map(function(r,ri){return v2Round(e,r,ri);}).join("");
+  var lands=IEPV2_LANDINGS.map(function(l,li){return {l:l,li:li};}).filter(function(x){return x.l.exp===e.brand+"|"+e.experiment_id;});
+  if(lands.length){
+    h+='<div class="v2-round"><div class="v2-round-head"><h4>Landing Pages</h4><span class="v2-round-dates">'+lands.length+' template'+(lands.length>1?"s":"")+' in the platform</span></div>'+
+      '<div class="v2-crit">Versioned in the platform, generated from a shared template with add-to-cart tracking. Click to preview.</div>'+
+      '<div class="v2-grid">'+lands.map(function(x){
+        return '<div class="v2-card" onclick="v2Landing('+x.li+')">'+
+          '<img class="v2-land-thumb" src="'+x.l.thumb+'" alt="" loading="lazy">'+
+          '<h4 style="font-size:15px">'+x.l.name+'</h4><div class="v2-meta">'+x.l.note+'</div></div>';
+      }).join("")+'</div></div>';
+  }
   d.innerHTML=h;
   e.rounds.forEach(function(r,ri){
     v2Charts(e,r,ri);
@@ -3514,18 +3519,8 @@ function v2Bar(elId,rows,bm){
 }
 
 var IEPV2_LANDINGS = [
-  {brand:"Vagisil", name:"Vagisil Sensitive — Daily Intimate Wash", note:"Replica of the live Wix landing (E02 Wash), rebuilt as a platform template", url:"/landings/vagisil/sensitive/", thumb:"/landings/vagisil/sensitive/img/product.png"}
+  {exp:"Vagisil|E02", brand:"Vagisil", name:"Vagisil Sensitive — Daily Intimate Wash", note:"Concept: Sensitive Daily Intimate Wash. Platform template with add-to-cart tracking and thank-you page.", url:"/landings/vagisil/sensitive/", thumb:"/landings/vagisil/sensitive/img/product.png"}
 ];
-function v2RenderLandings(){
-  var g=document.getElementById("iepV2Landings"); if(!g) return;
-  g.innerHTML=IEPV2_LANDINGS.map(function(l,i){
-    var c=IEPV2_BRAND_COLORS[l.brand]||"#42b8b4";
-    return '<div class="v2-card" onclick="v2Landing('+i+')">'+
-      '<div class="v2-card-top"><span class="v2-chip" style="background:'+c+'">'+l.brand+'</span><span class="v2-eid">TEMPLATE</span></div>'+
-      '<img class="v2-land-thumb" src="'+l.thumb+'" alt="" loading="lazy">'+
-      '<h4>'+l.name+'</h4><div class="v2-meta">'+l.note+'</div></div>';
-  }).join("");
-}
 function v2Landing(i){
   var l=IEPV2_LANDINGS[i];
   document.getElementById("v2LandFrame").src=l.url;
@@ -3538,7 +3533,7 @@ function v2LandClose(){
   document.getElementById("v2LandFrame").src="about:blank";
 }
 document.addEventListener("DOMContentLoaded",function(){
-  if(document.getElementById("iepV2Grid")&&IEPV2_DATA.length){v2RenderStats();v2RenderGrid();v2RenderLandings();}
+  if(document.getElementById("iepV2Grid")&&IEPV2_DATA.length){v2RenderStats();v2RenderGrid();}
 });
 </script>
 <div class="v2-tip" id="v2Tip"></div>
