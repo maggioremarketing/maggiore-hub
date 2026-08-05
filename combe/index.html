@@ -2450,7 +2450,6 @@ function wireJTBD(){
 var TABS = {
   'hub': ['Hero', 'Brand Portfolio'],
   'social-listening': ['Social Listening'],
-  'iep': ['IEP'],
   'iep-v2': ['IEP V2'],
   'insights': ['Key Insights'],
   'ask': ['Ask the Hub'],
@@ -2486,7 +2485,8 @@ function showTab(tab){
 }
 function navActive(){
   Array.prototype.forEach.call(document.querySelectorAll('[data-screen-label="Nav"] a[href^="#"]'), function(a){
-    a.addEventListener('click', function(ev){ ev.preventDefault(); showTab(a.getAttribute('href').slice(1)); });
+    if (a.getAttribute('href') === '#iep' && a.textContent.trim() === 'IEP'){ a.style.display = 'none'; return; }
+    a.addEventListener('click', function(ev){ ev.preventDefault(); var t = a.getAttribute('href').slice(1); showTab(t === 'iep' ? 'iep-v2' : t); });
   });
   var initial = (location.hash || '#hub').slice(1);
   showTab(initial);
