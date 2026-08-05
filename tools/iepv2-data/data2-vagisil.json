@@ -521,7 +521,7 @@
      {
       "title": "LIVE · Stopping Power by concept — All women 25-54 (updated Aug 5, 2026)",
       "metric": "stopping",
-      "audience": "Women 25-54 · pooled",
+      "audience": "Women 25-54 · pooled · unique link clicks / reach (Meta Marketing API)",
       "benchmark": {
        "lo": 1.18,
        "hi": 2.48
@@ -531,8 +531,8 @@
         "label": "Sensitive",
         "ref": "A",
         "group": null,
-        "value": 3.22,
-        "extra": "Reach 6,359 · Unique clicks 205 · LP views 126",
+        "value": 2.32,
+        "extra": "Reach 6,722 · Unique link clicks 156 · LP views 140",
         "better_than": null,
         "winner": false
        },
@@ -540,8 +540,8 @@
         "label": "Hydration+",
         "ref": "B",
         "group": null,
-        "value": 3.97,
-        "extra": "Reach 7,651 · Unique clicks 304 · LP views 221",
+        "value": 3.05,
+        "extra": "Reach 7,651 · Unique link clicks 233 · LP views 221",
         "better_than": "A",
         "winner": false
        },
@@ -549,8 +549,8 @@
         "label": "Itch Protect",
         "ref": "C",
         "group": null,
-        "value": 5.37,
-        "extra": "Reach 6,068 · Unique clicks 326 · LP views 236",
+        "value": 4.25,
+        "extra": "Reach 6,068 · Unique link clicks 258 · LP views 236",
         "better_than": "ABDE",
         "winner": true
        },
@@ -558,22 +558,22 @@
         "label": "Simply Sensitive (Summer's Eve)",
         "ref": "D",
         "group": null,
-        "value": 3.86,
-        "extra": "Reach 7,928 · Unique clicks 306 · LP views 212",
-        "better_than": "A",
+        "value": 2.8,
+        "extra": "Reach 7,928 · Unique link clicks 222 · LP views 212",
+        "better_than": null,
         "winner": false
        },
        {
         "label": "Joyful",
         "ref": "E",
         "group": null,
-        "value": 4.5,
-        "extra": "Reach 5,951 · Unique clicks 268 · LP views 179",
-        "better_than": "A",
+        "value": 3.5,
+        "extra": "Reach 5,951 · Unique link clicks 208 · LP views 179",
+        "better_than": "AD",
         "winner": false
        }
       ],
-      "insight": "An early plot twist: the current product is winning attention. “Itch Protect” — the concept the experiment set out to replace — leads Stopping Power at 5.37%, statistically above every other concept so far, with “Joyful” second at 4.50%. Every concept clears the benchmark ceiling, and the round is still in field — the real verdict comes with Closing Power, where attention has been known to evaporate (see EasyCombIn R1)."
+      "insight": "An early plot twist: the current product is winning attention. “Itch Protect” — the concept the experiment set out to replace — leads Stopping Power at 4.25%, statistically above every other concept so far, with “Joyful” second at 3.50%. Every concept clears the benchmark ceiling, and the round is still in field — the real verdict comes with Closing Power, where attention has been known to evaporate (see EasyCombIn R1). Figures use Meta's exact unique link clicks, pulled straight from the Marketing API."
      },
      {
       "title": "LIVE · Stopping Power by concept — Women 25-35",
@@ -588,8 +588,8 @@
         "label": "Sensitive",
         "ref": "A",
         "group": null,
-        "value": 2.17,
-        "extra": "Reach 2,305 · Unique clicks 50 · LP views 31",
+        "value": 1.8,
+        "extra": "Reach 2,668 · Unique link clicks 48 · LP views 45",
         "better_than": null,
         "winner": false
        },
@@ -597,17 +597,17 @@
         "label": "Hydration+",
         "ref": "B",
         "group": null,
-        "value": 3.3,
-        "extra": "Reach 4,453 · Unique clicks 147 · LP views 94",
-        "better_than": "A",
+        "value": 2.36,
+        "extra": "Reach 4,453 · Unique link clicks 105 · LP views 94",
+        "better_than": null,
         "winner": false
        },
        {
         "label": "Itch Protect",
         "ref": "C",
         "group": null,
-        "value": 4.89,
-        "extra": "Reach 4,173 · Unique clicks 204 · LP views 131",
+        "value": 3.55,
+        "extra": "Reach 4,173 · Unique link clicks 148 · LP views 131",
         "better_than": "ABD",
         "winner": true
        },
@@ -615,22 +615,22 @@
         "label": "Simply Sensitive (Summer's Eve)",
         "ref": "D",
         "group": null,
-        "value": 3.29,
-        "extra": "Reach 4,351 · Unique clicks 143 · LP views 96",
-        "better_than": "A",
+        "value": 2.39,
+        "extra": "Reach 4,351 · Unique link clicks 104 · LP views 96",
+        "better_than": null,
         "winner": false
        },
        {
         "label": "Joyful",
         "ref": "E",
         "group": null,
-        "value": 4.05,
-        "extra": "Reach 3,209 · Unique clicks 130 · LP views 86",
-        "better_than": "A",
+        "value": 3.15,
+        "extra": "Reach 3,209 · Unique link clicks 101 · LP views 86",
+        "better_than": "ABD",
         "winner": false
        }
       ],
-      "insight": "Younger women follow the same pattern. At 25-35, “Itch Protect” leads at 4.89% — significantly above “Sensitive” and “Hydration+” — while “Sensitive”, one of the two new concepts, trails the field at 2.17%."
+      "insight": "Younger women follow the same pattern. At 25-35, “Itch Protect” leads at 3.55% — significantly above “Sensitive” and “Hydration+” — while “Sensitive”, one of the two new concepts, trails the field at 1.80%."
      },
      {
       "title": "LIVE · Stopping Power by concept — Women 36-54",
@@ -645,8 +645,8 @@
         "label": "Sensitive",
         "ref": "A",
         "group": null,
-        "value": 3.82,
-        "extra": "Reach 4,054 · Unique clicks 155 · LP views 95",
+        "value": 2.66,
+        "extra": "Reach 4,054 · Unique link clicks 108 · LP views 95",
         "better_than": null,
         "winner": false
        },
@@ -654,8 +654,8 @@
         "label": "Hydration+",
         "ref": "B",
         "group": null,
-        "value": 4.91,
-        "extra": "Reach 3,198 · Unique clicks 157 · LP views 127",
+        "value": 4.0,
+        "extra": "Reach 3,198 · Unique link clicks 128 · LP views 127",
         "better_than": "A",
         "winner": false
        },
@@ -663,8 +663,8 @@
         "label": "Itch Protect",
         "ref": "C",
         "group": null,
-        "value": 6.44,
-        "extra": "Reach 1,895 · Unique clicks 122 · LP views 105",
+        "value": 5.8,
+        "extra": "Reach 1,895 · Unique link clicks 110 · LP views 105",
         "better_than": "ABDE",
         "winner": true
        },
@@ -672,8 +672,8 @@
         "label": "Simply Sensitive (Summer's Eve)",
         "ref": "D",
         "group": null,
-        "value": 4.56,
-        "extra": "Reach 3,577 · Unique clicks 163 · LP views 116",
+        "value": 3.3,
+        "extra": "Reach 3,577 · Unique link clicks 118 · LP views 116",
         "better_than": null,
         "winner": false
        },
@@ -681,13 +681,13 @@
         "label": "Joyful",
         "ref": "E",
         "group": null,
-        "value": 5.03,
-        "extra": "Reach 2,742 · Unique clicks 138 · LP views 93",
+        "value": 3.9,
+        "extra": "Reach 2,742 · Unique link clicks 107 · LP views 93",
         "better_than": "A",
         "winner": false
        }
       ],
-      "insight": "The older group pays the most attention overall. Every concept runs hotter at 36-54, again led by “Itch Protect” at 6.44%. “Hydration+” performs notably better here (4.91%) than with the younger group, an early hint that the new concepts may skew older."
+      "insight": "The older group pays the most attention overall. Every concept runs hotter at 36-54, again led by “Itch Protect” at 5.80%. “Hydration+” performs notably better here (4.00%) than with the younger group, an early hint that the new concepts may skew older."
      },
      {
       "title": "Closing Power — pending",
