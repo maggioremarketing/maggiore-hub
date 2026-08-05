@@ -1,0 +1,662 @@
+[
+ {
+  "brand": "Vagisil",
+  "experiment_id": "E01",
+  "name": "Vagisil BV",
+  "category": "Feminine Care",
+  "status": "completed",
+  "headline": "Vagisil BV — Learning Journey E01",
+  "subtitle": "Iterative Experiment Platform · 2026.05.05",
+  "background": "Vagisil is expanding its portfolio with a breakthrough solution for Bacterial Vaginosis (BV). Unlike traditional treatments that require multi-day applications, this new product is formulated to provide effective symptom relief in a single dose, with visible results within just one day.",
+  "objective": "Establish a hierarchy of information for the packaging to ensure the most compelling benefits are communicated first.",
+  "hypothesis": null,
+  "success_criteria": "Stopping & Closing Power",
+  "methodology": {
+   "platform": "Meta (Facebook / Instagram)",
+   "format": "Static banners (3 packaging claims), each driving to a dedicated landing page with add-to-cart",
+   "field": "April 15 – April 30, 2026",
+   "kpi": "Stopping Power (unique link clicks / reach) and Closing Power (add to cart / landing page visits), plus Holding Power and Overall Score",
+   "benchmarks": [
+    {
+     "metric": "stopping",
+     "lo": 1.18,
+     "hi": 2.48
+    },
+    {
+     "metric": "closing",
+     "lo": 9.6,
+     "hi": 17.46
+    }
+   ]
+  },
+  "audiences": [
+   {
+    "name": "Female 18-25",
+    "size_mm": "25.9 – 30.5",
+    "details": "Female, age 18-25. Behavior: Engaged Shoppers. Location: US. Excluding offices of: Prestige Consumer Healthcare, Church & Dwight, Bayer Consumer Health, The Honey Pot Company, Bonafide Health, FemiClear, Laclede Inc., Lupin Pharmaceuticals, Reckitt."
+   },
+   {
+    "name": "Female 26-35",
+    "size_mm": "29.4 – 34.6",
+    "details": "Female, age 26-35. Behavior: Engaged Shoppers. Location: US. Same competitor-office exclusions."
+   },
+   {
+    "name": "Female 36-45",
+    "size_mm": "22.9 – 26.9",
+    "details": "Female, age 36-45. Behavior: Engaged Shoppers. Location: US. Same competitor-office exclusions."
+   },
+   {
+    "name": "Female 46-55",
+    "size_mm": "17.9 – 21.1",
+    "details": "Female, age 46-55. Behavior: Engaged Shoppers. Location: US. Same competitor-office exclusions."
+   }
+  ],
+  "rounds": [
+   {
+    "round": 1,
+    "dates": "April 15 – April 30, 2026",
+    "charts": [
+     {
+      "title": "Results Round 01 — Stopping Power (all audiences)",
+      "metric": "stopping",
+      "audience": "All (Female 18-55)",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "A",
+        "group": null,
+        "value": 3.09,
+        "extra": "Reach 24,181 · Clicks 747 · Holding Power 00:53",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "B",
+        "group": null,
+        "value": 3.03,
+        "extra": "Reach 23,529 · Clicks 713 · Holding Power 00:29",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "C",
+        "group": null,
+        "value": 3.51,
+        "extra": "Reach 18,037 · Clicks 633 · Holding Power 00:26",
+        "better_than": "AB",
+        "winner": true
+       }
+      ],
+      "insight": "The claim \"Relief in just 1 day\" delivers the highest Stopping and Closing Power, making it the overall top-performing claim. While the remaining claims show similar levels of Stopping Power, \"95% of women said their symptoms were gone in 1 day\" achieves a slightly higher Closing Power than \"Kills 99% of bacteria that causes BV\", although the difference is not statistically significant."
+     },
+     {
+      "title": "Results Round 01 — Closing Power (all audiences)",
+      "metric": "closing",
+      "audience": "All (Female 18-55)",
+      "benchmark": {
+       "lo": 9.6,
+       "hi": 17.46
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "A",
+        "group": null,
+        "value": 12.06,
+        "extra": "Visits 680 · Add to Cart 82 · Overall Score 0.37%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "B",
+        "group": null,
+        "value": 14.06,
+        "extra": "Visits 647 · Add to Cart 91 · Overall Score 0.43%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "C",
+        "group": null,
+        "value": 17.09,
+        "extra": "Visits 597 · Add to Cart 102 · Overall Score 0.60%",
+        "better_than": "A",
+        "winner": true
+       }
+      ],
+      "insight": "The claim \"Relief in just 1 day\" delivers the highest Stopping and Closing Power, making it the overall top-performing claim. While the remaining claims show similar levels of Stopping Power, \"95% of women said their symptoms were gone in 1 day\" achieves a slightly higher Closing Power than \"Kills 99% of bacteria that causes BV\", although the difference is not statistically significant."
+     },
+     {
+      "title": "Round 01 by age — Stopping Power, Ages 18-25",
+      "metric": "stopping",
+      "audience": "Female 18-25",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "A",
+        "group": "18-25",
+        "value": 2.83,
+        "extra": "Reach 6,635 · Clicks 188 · Holding Power 1:01",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "B",
+        "group": "18-25",
+        "value": 2.64,
+        "extra": "Reach 5,804 · Clicks 153 · Holding Power 0:19",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "C",
+        "group": "18-25",
+        "value": 2.56,
+        "extra": "Reach 6,100 · Clicks 156 · Holding Power 0:26",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "18-25: All values of Stopping Power are above the upper limit of the IEP Benchmark, while only one value of Closing Power falls within the IEP Benchmark. Although there is no statistical difference in Stopping Power, \"Kills 99% of bacteria that causes BV\" shows a directionally higher value. For Closing Power, \"Relief in just 1 day\" has the highest directional result."
+     },
+     {
+      "title": "Round 01 by age — Closing Power, Ages 18-25",
+      "metric": "closing",
+      "audience": "Female 18-25",
+      "benchmark": {
+       "lo": 9.6,
+       "hi": 17.46
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "A",
+        "group": "18-25",
+        "value": 4.97,
+        "extra": "Visits 181 · Add to Cart 9 · Overall Score 0.14%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "B",
+        "group": "18-25",
+        "value": 7.19,
+        "extra": "Visits 139 · Add to Cart 10 · Overall Score 0.19%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "C",
+        "group": "18-25",
+        "value": 9.72,
+        "extra": "Visits 144 · Add to Cart 14 · Overall Score 0.25%",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "18-25: All values of Stopping Power are above the upper limit of the IEP Benchmark, while only one value of Closing Power falls within the IEP Benchmark. Although there is no statistical difference in Stopping Power, \"Kills 99% of bacteria that causes BV\" shows a directionally higher value. For Closing Power, \"Relief in just 1 day\" has the highest directional result."
+     },
+     {
+      "title": "Round 01 by age — Stopping Power, Ages 26-35",
+      "metric": "stopping",
+      "audience": "Female 26-35",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "D",
+        "group": "26-35",
+        "value": 2.66,
+        "extra": "Reach 8,543 · Clicks 227 · Holding Power 0:39",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "E",
+        "group": "26-35",
+        "value": 2.79,
+        "extra": "Reach 5,334 · Clicks 149 · Holding Power 1:01",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "F",
+        "group": "26-35",
+        "value": 3.15,
+        "extra": "Reach 5,614 · Clicks 177 · Holding Power 0:24",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "26-35: All values of Stopping Power are above the upper limit of the IEP Benchmark, and Closing Power values are mostly within the benchmark, with \"Relief in just 1 day\" exceeding the upper limit. Although there is no statistical difference in Stopping Power, \"Relief in just 1 day\" shows a directionally higher value. For Closing Power, \"Relief in just 1 day\" also has the highest directional result."
+     },
+     {
+      "title": "Round 01 by age — Closing Power, Ages 26-35",
+      "metric": "closing",
+      "audience": "Female 26-35",
+      "benchmark": {
+       "lo": 9.6,
+       "hi": 17.46
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "D",
+        "group": "26-35",
+        "value": 13.66,
+        "extra": "Visits 205 · Add to Cart 28 · Overall Score 0.36%",
+        "better_than": "A",
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "E",
+        "group": "26-35",
+        "value": 16.67,
+        "extra": "Visits 138 · Add to Cart 23 · Overall Score 0.47%",
+        "better_than": "AB",
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "F",
+        "group": "26-35",
+        "value": 19.3,
+        "extra": "Visits 171 · Add to Cart 33 · Overall Score 0.61%",
+        "better_than": "ABC",
+        "winner": false
+       }
+      ],
+      "insight": "26-35: All values of Stopping Power are above the upper limit of the IEP Benchmark, and Closing Power values are mostly within the benchmark, with \"Relief in just 1 day\" exceeding the upper limit. Although there is no statistical difference in Stopping Power, \"Relief in just 1 day\" shows a directionally higher value. For Closing Power, \"Relief in just 1 day\" also has the highest directional result."
+     },
+     {
+      "title": "Round 01 by age — Stopping Power, Ages 36-45",
+      "metric": "stopping",
+      "audience": "Female 36-45",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "G",
+        "group": "36-45",
+        "value": 3.35,
+        "extra": "Reach 5,041 · Clicks 169 · Holding Power 0:22",
+        "better_than": "BCD",
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "H",
+        "group": "36-45",
+        "value": 3.26,
+        "extra": "Reach 5,584 · Clicks 182 · Holding Power 0:13",
+        "better_than": "BCD",
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "I",
+        "group": "36-45",
+        "value": 4.86,
+        "extra": "Reach 2,982 · Clicks 145 · Holding Power 0:16",
+        "better_than": "ABCDEFGHK",
+        "winner": true
+       }
+      ],
+      "insight": "36-45: All values of Stopping Power are above the upper limit of the IEP Benchmark. At a Closing Power level, two values are above the upper limit while one value is within the Benchmark. \"Relief in just 1 day\" has a statistically higher value of Stopping Power, being the best result across the test. And while there is no statistical difference within the Closing Power within this group range, \"95% of women said their symptoms were gone in 1 day\" had the highest directional value."
+     },
+     {
+      "title": "Round 01 by age — Closing Power, Ages 36-45",
+      "metric": "closing",
+      "audience": "Female 36-45",
+      "benchmark": {
+       "lo": 9.6,
+       "hi": 17.46
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "G",
+        "group": "36-45",
+        "value": 12.32,
+        "extra": "Visits 138 · Add to Cart 17 · Overall Score 0.41%",
+        "better_than": "A",
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "H",
+        "group": "36-45",
+        "value": 19.64,
+        "extra": "Visits 168 · Add to Cart 33 · Overall Score 0.64%",
+        "better_than": "ABC",
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "I",
+        "group": "36-45",
+        "value": 18.12,
+        "extra": "Visits 138 · Add to Cart 25 · Overall Score 0.88%",
+        "better_than": "ABC",
+        "winner": false
+       }
+      ],
+      "insight": "36-45: All values of Stopping Power are above the upper limit of the IEP Benchmark. At a Closing Power level, two values are above the upper limit while one value is within the Benchmark. \"Relief in just 1 day\" has a statistically higher value of Stopping Power, being the best result across the test. And while there is no statistical difference within the Closing Power within this group range, \"95% of women said their symptoms were gone in 1 day\" had the highest directional value."
+     },
+     {
+      "title": "Round 01 by age — Stopping Power, Ages 46-55",
+      "metric": "stopping",
+      "audience": "Female 46-55",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "J",
+        "group": "46-55",
+        "value": 4.11,
+        "extra": "Reach 3,962 · Clicks 163 · Holding Power 1:30",
+        "better_than": "ABCDEFHK",
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "K",
+        "group": "46-55",
+        "value": 3.36,
+        "extra": "Reach 6,807 · Clicks 229 · Holding Power 0:24",
+        "better_than": "BCD",
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "L",
+        "group": "46-55",
+        "value": 4.64,
+        "extra": "Reach 3,341 · Clicks 155 · Holding Power 0:36",
+        "better_than": "ABCDEFGHK",
+        "winner": false
+       }
+      ],
+      "insight": "46-55: All values of Stopping Power are above the upper limit of the IEP Benchmark. At a Closing Power level, two values are above the upper limit while one value is within the Benchmark. The claims \"Relief in just 1 day\" and \"Kills 99% of bacteria that causes BV\" are statistically higher than \"95% of women said their symptoms were gone in 1 day\" at a Stopping Power level. The Closing Power of \"Relief in just 1 day\" was the highest across the test."
+     },
+     {
+      "title": "Round 01 by age — Closing Power, Ages 46-55",
+      "metric": "closing",
+      "audience": "Female 46-55",
+      "benchmark": {
+       "lo": 9.6,
+       "hi": 17.46
+      },
+      "rows": [
+       {
+        "label": "Kills 99% of bacteria that causes BV",
+        "ref": "J",
+        "group": "46-55",
+        "value": 17.95,
+        "extra": "Visits 156 · Add to Cart 28 · Overall Score 0.74%",
+        "better_than": "ABC",
+        "winner": false
+       },
+       {
+        "label": "95% of women said their symptoms were gone in 1 day",
+        "ref": "K",
+        "group": "46-55",
+        "value": 12.38,
+        "extra": "Visits 202 · Add to Cart 25 · Overall Score 0.42%",
+        "better_than": "A",
+        "winner": false
+       },
+       {
+        "label": "Relief in just 1 day",
+        "ref": "L",
+        "group": "46-55",
+        "value": 20.83,
+        "extra": "Visits 144 · Add to Cart 30 · Overall Score 0.97%",
+        "better_than": "ABCK",
+        "winner": true
+       }
+      ],
+      "insight": "46-55: All values of Stopping Power are above the upper limit of the IEP Benchmark. At a Closing Power level, two values are above the upper limit while one value is within the Benchmark. The claims \"Relief in just 1 day\" and \"Kills 99% of bacteria that causes BV\" are statistically higher than \"95% of women said their symptoms were gone in 1 day\" at a Stopping Power level. The Closing Power of \"Relief in just 1 day\" was the highest across the test."
+     }
+    ],
+    "narrative": [
+     {
+      "title": "Stimuli tested",
+      "body": "Three banners (Banner 001, 002, 003), one per packaging claim: \"Kills 99% of bacteria that causes BV\", \"95% of women said their symptoms were gone in 1 day\" and \"Relief in just 1 day\". The annex includes the packaging shown in the creatives."
+     },
+     {
+      "title": "Landing pages",
+      "body": "Landing Page 01 – Kills 99% of bacteria that causes BV: https://www.vagisil.store/bv-vagisil/kills99ofbacteria · Landing Page 02 – 95% of women said their symptoms were gone: https://www.vagisil.store/bv-vagisil/95women · Landing Page 03 – Relief in just 1 day: https://www.vagisil.store/bv-vagisil/relief1dose"
+     },
+     {
+      "title": "Heatmaps",
+      "body": "Round 01 heatmaps are available through a link in the deck (external HeatMaps link)."
+     },
+     {
+      "title": "Comments on Social Media",
+      "body": "The annex collects social media comments from the campaign; the comments shown correspond to the 26-35 age range."
+     }
+    ],
+    "outcome": "The claim \"Relief in just 1 day\" delivers the highest Stopping and Closing Power, making it the overall top-performing claim. While the remaining claims show similar levels of Stopping Power, \"95% of women said their symptoms were gone in 1 day\" achieves a slightly higher Closing Power than \"Kills 99% of bacteria that causes BV\", although the difference is not statistically significant."
+   }
+  ],
+  "learnings": [
+   "\"Relief in just 1 day\" delivered the highest Stopping Power (3.51%, statistically better than both other claims) and the highest Closing Power (17.09%), making it the overall top-performing claim.",
+   "\"95% of women said their symptoms were gone in 1 day\" achieved a slightly higher Closing Power than \"Kills 99% of bacteria that causes BV\", but the difference is not statistically significant.",
+   "All age groups delivered Stopping Power above the upper limit of the IEP Benchmark (1.18%-2.48%), showing strong overall attention to the BV proposition.",
+   "Ages 36-45 and 46-55 responded most strongly: \"Relief in just 1 day\" was statistically superior in Stopping Power for 36-45 (4.86%, the best result across the test) and delivered the highest Closing Power of the test in 46-55 (20.83%).",
+   "Ages 18-25 showed the weakest conversion: Closing Power fell below the IEP Benchmark for two of the three claims, with \"Relief in just 1 day\" the highest directional result.",
+   "In 46-55, both \"Relief in just 1 day\" and \"Kills 99% of bacteria that causes BV\" were statistically higher than \"95% of women...\" in Stopping Power."
+  ],
+  "recommendations": [
+   "Lead the packaging information hierarchy with \"Relief in just 1 day\", the top-performing claim in both Stopping and Closing Power.",
+   "Use \"95% of women said their symptoms were gone in 1 day\" as a supporting claim, given its directionally higher Closing Power versus \"Kills 99% of bacteria that causes BV\".",
+   "Consider age-specific emphasis: the speed-of-relief message resonates most with women 36-55, while the 18-25 segment converts below benchmark and may need a different approach."
+  ]
+ },
+ {
+  "brand": "Vagisil",
+  "experiment_id": "E02",
+  "name": "Vagisil Wash",
+  "category": "Feminine Care",
+  "status": "in_progress",
+  "headline": "Vagisil Wash — Project Compass E02R01",
+  "subtitle": "Iterative Experiment Platform · 2026.07.27",
+  "background": "Itch Protect Mousse Wash was introduced to the Vagisil portfolio to replace the 12 oz Itch Protect gel wash to reverse sales softness and reinvigorate the product. Mousse wash is an increasingly popular format and adds to the premiumization of the brands. Since the launch in Spring 2026, this new format and design does not seem to be resonating with consumers and sales have been slow to ramp up. Hypotheses for poor performance are that \"Itch Protect\" is not an intuitive product benefit and consumers don't understand what problem the product solves. Mousse is also more expensive but is not delivering on perceived superiority to gel wash. The current packaging is doing a better job at communicating format rather than function (mousse vs. benefit to consumer). Communication and design feel more clinical than reassuring (comforting).",
+  "objective": "Which concept has more Stopping Power at shelf and which concept drives more purchase intent (Closing Power): \"Sensitive\" or \"Hydration+\"? Benchmark \"Sensitive\" and \"Hydration+\" against Summer's Eve Simply Sensitive concept, and against the current \"Itch Protect\" Wash.",
+  "hypothesis": "\"Itch Protect\" is not an intuitive product benefit and consumers don't understand what problem the product solves; the current packaging communicates format (mousse) rather than function, and the communication and design feel more clinical than reassuring.",
+  "success_criteria": "Stopping & Closing Power",
+  "methodology": {
+   "platform": "Meta (Facebook / Instagram)",
+   "format": "Static banners (5 concepts/claims), each driving to a dedicated landing page with add-to-cart",
+   "field": "In field since July 2026 (E02R01, deck dated 2026.07.27)",
+   "kpi": "Stopping Power (unique link clicks / reach) and Closing Power (add to cart / landing page visits)",
+   "benchmarks": []
+  },
+  "audiences": [
+   {
+    "name": "Female 25-35",
+    "size_mm": "TBD",
+    "details": "Female, age 25-35. Behavior: Engaged Shoppers. Location: US. Excluding offices of: Prestige Consumer Healthcare, Church & Dwight, Bayer Consumer Health, The Honey Pot Company, Bonafide Health, FemiClear, Laclede Inc., Lupin Pharmaceuticals, Reckitt."
+   },
+   {
+    "name": "Female 36-54",
+    "size_mm": "TBD",
+    "details": "Female, age 36-54. Behavior: Engaged Shoppers. Location: US. Same competitor-office exclusions."
+   }
+  ],
+  "rounds": [
+   {
+    "round": 1,
+    "dates": "July 2026 — in field",
+    "charts": [
+     {
+      "title": "E02R01 — Stopping Power (results pending)",
+      "metric": "stopping",
+      "audience": "Female 25-54",
+      "benchmark": null,
+      "rows": [
+       {
+        "label": "Sensitive Daily Intimate Wash — \"Made for your most sensitive intimate skin\"",
+        "ref": "01",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Hydration+ Daily Intimate Wash — \"Hydration Packed Intimate Care\"",
+        "ref": "02",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Itch Protect Mousse Wash — \"Break the cycle of itch for good\"",
+        "ref": "03",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Simply Sensitive pH-Balanced Cleansing Wash (Summer's Eve) — \"Gentle cleansing for your intimate area\"",
+        "ref": "04",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Joyful Daily Intimate Wash — \"Freshen, soothe and set your mood\"",
+        "ref": "05",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Experiment in field; Stopping Power results not yet reported."
+     },
+     {
+      "title": "E02R01 — Closing Power (results pending)",
+      "metric": "closing",
+      "audience": "Female 25-54",
+      "benchmark": null,
+      "rows": [
+       {
+        "label": "Sensitive Daily Intimate Wash — \"Made for your most sensitive intimate skin\"",
+        "ref": "01",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Hydration+ Daily Intimate Wash — \"Hydration Packed Intimate Care\"",
+        "ref": "02",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Itch Protect Mousse Wash — \"Break the cycle of itch for good\"",
+        "ref": "03",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Simply Sensitive pH-Balanced Cleansing Wash (Summer's Eve) — \"Gentle cleansing for your intimate area\"",
+        "ref": "04",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Joyful Daily Intimate Wash — \"Freshen, soothe and set your mood\"",
+        "ref": "05",
+        "group": null,
+        "value": null,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Experiment in field; Closing Power results not yet reported."
+     }
+    ],
+    "narrative": [
+     {
+      "title": "Packs tested",
+      "body": "Four pack designs frame the test: the current Itch Protect pack, the Joyful pack, the Summer's Eve concept (competitor benchmark), and the New Concept packs (Sensitive and Hydration+)."
+     },
+     {
+      "title": "Banner 01 — Sensitive Daily Intimate Wash",
+      "body": "New concept banner. Claim: \"Made for your most sensitive intimate skin\". Landing page: https://www.vagisil.store/daily-wash/sensitive"
+     },
+     {
+      "title": "Banner 02 — Hydration+ Daily Intimate Wash",
+      "body": "New concept banner. Claim: \"Hydration Packed Intimate Care\". Landing page: https://www.vagisil.store/daily-wash/hydration"
+     },
+     {
+      "title": "Banner 03 — Itch Protect Mousse Wash",
+      "body": "Current product banner (control). Claim: \"Break the cycle of itch for good\". Landing page: https://www.vagisil.store/daily-wash/protect"
+     },
+     {
+      "title": "Banner 04 — Simply Sensitive pH-Balanced Cleansing Wash (Summer's Eve)",
+      "body": "Competitor benchmark banner. Claim: \"Gentle cleansing for your intimate area\". Landing page: https://www.vagisil.store/daily-wash/simply-sensitive"
+     },
+     {
+      "title": "Banner 05 — Joyful Daily Intimate Wash",
+      "body": "Additional concept banner. Claim: \"Freshen, soothe and set your mood\". Landing page: https://www.vagisil.store/daily-wash/joyful-wash"
+     }
+    ],
+    "outcome": "Currently testing which daily intimate wash concept has more Stopping Power at shelf and which drives more purchase intent (Closing Power) — \"Sensitive\" vs. \"Hydration+\" — benchmarked against Summer's Eve Simply Sensitive, the current Itch Protect Mousse Wash and the Joyful concept, across women 25-35 and 36-54 in the US. The experiment is in field (July 2026) and results are expected soon."
+   }
+  ],
+  "learnings": [],
+  "recommendations": []
+ }
+]

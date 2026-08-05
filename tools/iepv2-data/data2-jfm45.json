@@ -1,0 +1,1536 @@
+[
+ {
+  "brand": "Just For Men",
+  "experiment_id": "E04",
+  "name": "EasyCombIn",
+  "category": "Hair Care",
+  "status": "completed",
+  "headline": "The name that closes for Easy Comb-In.",
+  "subtitle": "A sub-brand naming recommendation for Just For Men Easy Comb-In — built on Stopping Power and Closing Power across three audiences.",
+  "background": "Just For Men is seeking dual placement for Easy Comb-In between the Men's Shave aisle and the Women's Hair Color aisle. The test identifies which title best positions the product — with special attention to Closing Power for the Women's HC set.",
+  "objective": "Which sub-brand title gives Easy Comb-In the strongest Closing Power? Does the winner hold up across male English, male Spanish and female audiences?",
+  "hypothesis": "One of the proposed sub-brand titles will have greater closing power than the current “Easy Comb-In Color” title.",
+  "success_criteria": null,
+  "methodology": {
+   "platform": "Iterative Experiment Platform (IEP)",
+   "format": "8 digital banners + 8 landing pages — 1 title each",
+   "field": "Meta · June 2026",
+   "kpi": "Stopping Power · Closing Power",
+   "benchmarks": [
+    {
+     "metric": "stopping",
+     "lo": 1.18,
+     "hi": 2.49
+    },
+    {
+     "metric": "closing",
+     "lo": 9.52,
+     "hi": 17.38
+    }
+   ]
+  },
+  "audiences": [
+   {
+    "name": "Male 30–64 (EN)",
+    "size_mm": null,
+    "details": null
+   },
+   {
+    "name": "Male 30–64 (ES)",
+    "size_mm": null,
+    "details": null
+   },
+   {
+    "name": "Female 30–64",
+    "size_mm": null,
+    "details": null
+   }
+  ],
+  "rounds": [
+   {
+    "round": 1,
+    "dates": "June 2026",
+    "charts": [
+     {
+      "title": "Stopping Power by title — Men 30–64 (EN + ES combined)",
+      "metric": "stopping",
+      "audience": "Men EN+ES",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.49
+      },
+      "rows": [
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": null,
+        "value": 1.51,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Hair Color",
+        "ref": "001",
+        "group": null,
+        "value": 2.32,
+        "extra": null,
+        "better_than": "Control (000 · Easy Comb-In Color), stat. sig. at 95%",
+        "winner": false
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": null,
+        "value": 1.91,
+        "extra": null,
+        "better_than": "Control (000 · Easy Comb-In Color), stat. sig. at 95%",
+        "winner": false
+       },
+       {
+        "label": "Touch-Up Hair Color",
+        "ref": "003",
+        "group": null,
+        "value": 1.71,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": null,
+        "value": 1.48,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": null,
+        "value": 1.9,
+        "extra": null,
+        "better_than": "Control (000 · Easy Comb-In Color), stat. sig. at 95%",
+        "winner": true
+       },
+       {
+        "label": "Clean-Up Hair Color",
+        "ref": "006",
+        "group": null,
+        "value": 2.03,
+        "extra": null,
+        "better_than": "Control (000 · Easy Comb-In Color), stat. sig. at 95%",
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "007",
+        "group": null,
+        "value": 1.68,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "“Quick Fix” lifts both KPIs. The only title significantly above the control on both KPIs. And while the current title closes below the IEP benchmark norm (8.70% vs. a 9.52% floor), Quick Fix and Precision sit at its ceiling. Stopping power = % who paused on the title (click-through). ▲ Stat. sig. above control at 95% confidence · Dashed line = control level · Shaded band = IEP benchmark (SP 1.18–2.49% · CP 9.52–17.38%)."
+     },
+     {
+      "title": "Closing Power by title — Men 30–64 (EN + ES combined)",
+      "metric": "closing",
+      "audience": "Men EN+ES",
+      "benchmark": {
+       "lo": 9.52,
+       "hi": 17.38
+      },
+      "rows": [
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": null,
+        "value": 8.7,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Hair Color",
+        "ref": "001",
+        "group": null,
+        "value": 10.65,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": null,
+        "value": 7.94,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch-Up Hair Color",
+        "ref": "003",
+        "group": null,
+        "value": 7.92,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": null,
+        "value": 16.67,
+        "extra": null,
+        "better_than": "Control (000 · Easy Comb-In Color), stat. sig. at 95%",
+        "winner": false
+       },
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": null,
+        "value": 17.13,
+        "extra": null,
+        "better_than": "Control (000 · Easy Comb-In Color), stat. sig. at 95%",
+        "winner": true
+       },
+       {
+        "label": "Clean-Up Hair Color",
+        "ref": "006",
+        "group": null,
+        "value": 5.43,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "007",
+        "group": null,
+        "value": 11.35,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "“Quick Fix” lifts both KPIs. The only title significantly above the control on both KPIs. And while the current title closes below the IEP benchmark norm (8.70% vs. a 9.52% floor), Quick Fix and Precision sit at its ceiling. Closing power = % with purchase intent (add-to-cart). ▲ Stat. sig. above control at 95% confidence · Dashed line = control level · Shaded band = IEP benchmark (SP 1.18–2.49% · CP 9.52–17.38%)."
+     },
+     {
+      "title": "Stopping Power by title — Men (EN + ES combined) vs. Women",
+      "metric": "stopping",
+      "audience": "Men (EN+ES) vs Women",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.49
+      },
+      "rows": [
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": "Men",
+        "value": 1.51,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": "Women",
+        "value": 3.11,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Hair Color",
+        "ref": "001",
+        "group": "Men",
+        "value": 2.32,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Hair Color",
+        "ref": "001",
+        "group": "Women",
+        "value": 5.37,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": "Men",
+        "value": 1.91,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": "Women",
+        "value": 12.82,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch-Up Hair Color",
+        "ref": "003",
+        "group": "Men",
+        "value": 1.71,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch-Up Hair Color",
+        "ref": "003",
+        "group": "Women",
+        "value": 2.49,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": "Men",
+        "value": 1.48,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": "Women",
+        "value": 4.01,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": "Men",
+        "value": 1.9,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": "Women",
+        "value": 6.42,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clean-Up Hair Color",
+        "ref": "006",
+        "group": "Men",
+        "value": 2.03,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clean-Up Hair Color",
+        "ref": "006",
+        "group": "Women",
+        "value": 1.73,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "007",
+        "group": "Men",
+        "value": 1.68,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "007",
+        "group": "Women",
+        "value": 2.76,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Naming moves men — not the female shopper. Women pause on the banners far more than men — then convert ≈3× less (CP 10.70% men vs. 3.70% women pooled, stat. sig.). They look, but don't commit: a proxy purchase. Dashed lines = each group's control level (gray = men, red = women) · Shaded band = IEP benchmark (SP 1.18–2.49% · CP 9.52–17.38%) · n = 1,627 men · 756 women."
+     },
+     {
+      "title": "Closing Power by title — Men (EN + ES combined) vs. Women",
+      "metric": "closing",
+      "audience": "Men (EN+ES) vs Women",
+      "benchmark": {
+       "lo": 9.52,
+       "hi": 17.38
+      },
+      "rows": [
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": "Men",
+        "value": 8.7,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": "Women",
+        "value": 3.45,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Hair Color",
+        "ref": "001",
+        "group": "Men",
+        "value": 10.65,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Hair Color",
+        "ref": "001",
+        "group": "Women",
+        "value": 1.22,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": "Men",
+        "value": 7.94,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": "Women",
+        "value": 1.87,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch-Up Hair Color",
+        "ref": "003",
+        "group": "Men",
+        "value": 7.92,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch-Up Hair Color",
+        "ref": "003",
+        "group": "Women",
+        "value": 5.49,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": "Men",
+        "value": 16.67,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": "Women",
+        "value": 4.0,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": "Men",
+        "value": 17.13,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": "Women",
+        "value": 2.83,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clean-Up Hair Color",
+        "ref": "006",
+        "group": "Men",
+        "value": 5.43,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clean-Up Hair Color",
+        "ref": "006",
+        "group": "Women",
+        "value": 3.3,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "007",
+        "group": "Men",
+        "value": 11.35,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "007",
+        "group": "Women",
+        "value": 7.61,
+        "extra": "Best CP of the test with women (directional)",
+        "better_than": null,
+        "winner": true
+       }
+      ],
+      "insight": "Naming moves men — not the female shopper. Women pause on the banners far more than men — then convert ≈3× less (CP 10.70% men vs. 3.70% women pooled, stat. sig.). They look, but don't commit: a proxy purchase. Dashed lines = each group's control level (gray = men, red = women) · Shaded band = IEP benchmark (SP 1.18–2.49% · CP 9.52–17.38%) · n = 1,627 men · 756 women."
+     },
+     {
+      "title": "Closing Power by title — Male English vs. Male Spanish",
+      "metric": "closing",
+      "audience": "Men EN vs ES",
+      "benchmark": {
+       "lo": 9.52,
+       "hi": 17.38
+      },
+      "rows": [
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": "English",
+        "value": 6.12,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": "Spanish",
+        "value": 11.63,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Hair Color",
+        "ref": "001",
+        "group": "English",
+        "value": 8.24,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Hair Color",
+        "ref": "001",
+        "group": "Spanish",
+        "value": 13.1,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": "English",
+        "value": 9.9,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": "Spanish",
+        "value": 6.19,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch-Up Hair Color",
+        "ref": "003",
+        "group": "English",
+        "value": 13.59,
+        "extra": "Collapses in Spanish — only stat. sig. language gap of the test",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch-Up Hair Color",
+        "ref": "003",
+        "group": "Spanish",
+        "value": 2.02,
+        "extra": "Collapses in Spanish — only stat. sig. language gap of the test",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": "English",
+        "value": 15.93,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": "Spanish",
+        "value": 17.72,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": "English",
+        "value": 16.51,
+        "extra": null,
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": "Spanish",
+        "value": 17.76,
+        "extra": null,
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Clean-Up Hair Color",
+        "ref": "006",
+        "group": "English",
+        "value": 7.21,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clean-Up Hair Color",
+        "ref": "006",
+        "group": "Spanish",
+        "value": 3.64,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "007",
+        "group": "English",
+        "value": 13.01,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "007",
+        "group": "Spanish",
+        "value": 9.43,
+        "extra": null,
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "The winners travel across languages. NO OVERALL LANGUAGE GAP — 11.51% EN vs. 9.82% ES pooled across all titles — no significant difference. And the two winning titles are language-proof: Quick Fix (16.51 / 17.76) and Precision (15.93 / 17.72). ONE TITLE DOESN'T TRAVEL — “Touch-Up” collapses in Spanish: 13.59% EN vs. 2.02% ES — the only statistically significant language gap in the test. A caution flag if this title is ever considered. DIRECTIONAL WATCH-OUT — The current title leans Spanish (11.63% ES vs. 6.12% EN, directional) — renaming should be validated in Spanish-language media first."
+     },
+     {
+      "title": "Closing Power on Hotjar click heat-map landing pages — All audiences",
+      "metric": "closing",
+      "audience": "All audiences",
+      "benchmark": {
+       "lo": 9.52,
+       "hi": 17.38
+      },
+      "rows": [
+       {
+        "label": "Quick Fix Hair Color",
+        "ref": "005",
+        "group": null,
+        "value": 12.42,
+        "extra": "FOCUSED click pattern",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Precision Hair Color",
+        "ref": "004",
+        "group": null,
+        "value": 12.33,
+        "extra": "FOCUSED click pattern",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Easy Touch-Up Hair Color",
+        "ref": "002",
+        "group": null,
+        "value": 5.92,
+        "extra": "SCATTERED click pattern",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Comb-In Color (control)",
+        "ref": "000",
+        "group": null,
+        "value": 7.01,
+        "extra": "SCATTERED click pattern",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Winning titles focus the click. INTENT LOOKS LIKE THIS — On the winning pages, clicks pile onto one place: Add to Cart. Quick Fix and Precision show a single hot core on the buy button and little else — visitors arrive already decided. ATTENTION ≠ INTENT — “Easy Touch-Up” is the cautionary tale: the most-explored page of the test — clicks scattered over the pack, the title, the copy — and one of the lowest closing rates. The current title shows the same diffuse pattern, echoing its below-benchmark CP. Crops show the buy section of each landing page · full-length heat maps available on request."
+     }
+    ],
+    "narrative": [
+     {
+      "title": "What we tested",
+      "body": "Stimuli: 8 sub-brand titles, one constant claim. Eight titles, identical everything else. Same pack, same claim (“Easy no-mix application”), same media — only the sub-brand title changed. 000 · CONTROL Easy Comb-In Color · 001 Targeted Hair Color · 002 Easy Touch-Up Hair Color · 003 Touch-Up Hair Color · 004 Precision Hair Color · 005 Quick Fix Hair Color · 006 Clean-Up Hair Color · 007 No Mix Hair Color."
+     }
+    ],
+    "outcome": "Hypothesis confirmed — two titles beat the control with statistical significance. Recommendation: rename to Quick Fix Hair Color — all three audiences combined, and still the only title that lifts both attention and conversion versus the current name."
+   }
+  ],
+  "learnings": [
+   "Women convert far below men. CP 10.70% men vs. 3.70% women pooled — a ≈3× gap, stat. sig. — even though women pause on the banners nearly 2× more (SP 3.40% vs. 1.78%). A proxy purchase: they look, but don't commit, and no title fixed it. Next step: elevate “No Mix” as a highlighted on-pack claim to speak to the female shopper.",
+   "The best name is “Quick Fix Hair Color.” The only title significantly above the control on Stopping Power and Closing Power — CP 12.42% vs. 7.01% across all audiences, rising to 17.13% among men, where the current title closes below the IEP benchmark floor. “Precision Hair Color” is a validated alternative (CP 12.33%, stat. sig.).",
+   "Spanish and English agree on the winner. No overall language gap (11.51% EN vs. 9.82% ES, n.s.) and the winning titles are language-proof: Quick Fix 16.51 / 17.76 and Precision 15.93 / 17.72. One caution: “Touch-Up” collapses in Spanish (13.59% → 2.02%, the only stat. sig. language gap of the test)."
+  ],
+  "recommendations": [
+   "PRIMARY · WINNER — Rename to Quick Fix Hair Color. Highest Closing Power of the test (stat. sig. above control, 12.42% all audiences) and significantly above it on Stopping Power (2.45%). Wins with men in both languages (CP 16.51% EN · 17.76% ES) and keeps the lead in the full aggregate.",
+   "VALIDATED ALTERNATIVE — Precision Hair Color. Statistically tied with Quick Fix on Closing Power (12.33% vs. 12.42%) and equally language-proof — but its Stopping Power stays at control level (1.90%), so it converts without adding attention.",
+   "BEST FOR THE FEMALE SHOPPER — No Mix Hair Color. The strongest title with women (CP 7.61%, directional) and third overall (CP total 10.28%, directional). Rather than renaming, elevate “No Mix” as a highlighted on-pack claim to speak to the Women's HC aisle shopper."
+  ]
+ },
+ {
+  "brand": "Just For Men",
+  "experiment_id": "E05",
+  "name": "Mustache & Beard",
+  "category": "Hair Care",
+  "status": "completed",
+  "headline": "The claim that wins the shelf.",
+  "subtitle": "A claims-attention test for Just For Men Mustache & Beard Color - 31 claims, three audiences, one KPI: Stopping Power.",
+  "background": "Just For Men is seeking dual placement for Mustache & Beard Color between the Men's Shave aisle and the Women's Hair Color aisle. A test is needed to discover which claims best position the product, to inform an update to the current on-pack claims.",
+  "objective": "Which claims resonate best with the target audiences?",
+  "hypothesis": null,
+  "success_criteria": "Stopping Power (this test does not measure Closing Power). No hypothesis was defined for this round — the read is exploratory across claims and audiences.",
+  "methodology": {
+   "platform": "Iterative Experiment Platform (IEP)",
+   "format": "31 digital banners - 1 claim each",
+   "field": "Meta · July 2026",
+   "kpi": "Stopping Power (only)",
+   "benchmarks": [
+    {
+     "metric": "stopping",
+     "lo": 1.18,
+     "hi": 2.48
+    }
+   ]
+  },
+  "audiences": [
+   {
+    "name": "Men EN 30-64",
+    "size_mm": "11.3 – 13.3",
+    "details": "Male, age 30–64. People who match — Interests: Hair coloring, Hair products, Just For Men, or Men's grooming products."
+   },
+   {
+    "name": "Men ES 30-64",
+    "size_mm": "2.3 – 2.7",
+    "details": "Male, age 30–64, Spanish. Same interests as Men EN (Hair coloring, Hair products, Just For Men, or Men's grooming products), AND speaks Spanish."
+   },
+   {
+    "name": "Women 30-64",
+    "size_mm": "24.3 – 28.6",
+    "details": "Female, age 30–64. People who match — Interests: Hair coloring, Hair products, Just For Men, or Men's grooming products. Combined addressable reach ≈ 38–44MM across the three segments."
+   }
+  ],
+  "rounds": [
+   {
+    "round": 1,
+    "dates": "July 2026",
+    "charts": [
+     {
+      "title": "Stopping Power Top 10 — Men (English + Spanish pooled)",
+      "metric": "stopping",
+      "audience": "Men EN+ES",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Precision brush for root touchups",
+        "ref": "003",
+        "group": "Precision & Brush Tool",
+        "value": 1.89,
+        "extra": "Rank #1",
+        "better_than": "Men's pooled average across all 31 claims (1.42%), 95% confidence",
+        "winner": true
+       },
+       {
+        "label": "Smooth, conditioned feel with Aloe & Coconut Oil",
+        "ref": "028",
+        "group": "Moisture & Nourishment",
+        "value": 1.88,
+        "extra": "Rank #2",
+        "better_than": "Men's pooled average across all 31 claims (1.42%), 95% confidence",
+        "winner": false
+       },
+       {
+        "label": "Up to 3 uses: Reusable for Future Use",
+        "ref": "015",
+        "group": "Ease of Application",
+        "value": 1.82,
+        "extra": "Rank #3",
+        "better_than": "Men's pooled average across all 31 claims (1.42%), 95% confidence",
+        "winner": false
+       },
+       {
+        "label": "Easy Brush-In Application",
+        "ref": "001",
+        "group": "Ease of Application",
+        "value": 1.73,
+        "extra": "Rank #4",
+        "better_than": "Men's pooled average across all 31 claims (1.42%), 95% confidence",
+        "winner": false
+       },
+       {
+        "label": "Infused with Aloe & Coconut Oil for Softer Feeling Hair",
+        "ref": "009",
+        "group": "Moisture & Nourishment",
+        "value": 1.7,
+        "extra": "Rank #5",
+        "better_than": "Men's pooled average across all 31 claims (1.42%), 95% confidence",
+        "winner": false
+       },
+       {
+        "label": "Natural-looking color for mustache & beard",
+        "ref": "017",
+        "group": "Color Result & Longevity",
+        "value": 1.68,
+        "extra": "Rank #6",
+        "better_than": "Men's pooled average across all 31 claims (1.42%), 95% confidence",
+        "winner": false
+       },
+       {
+        "label": "3 easy steps",
+        "ref": "005",
+        "group": "Ease of Application",
+        "value": 1.6,
+        "extra": "Rank #7",
+        "better_than": "Men's pooled average across all 31 claims (1.42%), 95% confidence",
+        "winner": false
+       },
+       {
+        "label": "Healthier-looking hair",
+        "ref": "012",
+        "group": "Gentle / Healthier Formula",
+        "value": 1.6,
+        "extra": "Rank #8",
+        "better_than": "Men's pooled average across all 31 claims (1.42%), 95% confidence",
+        "winner": false
+       },
+       {
+        "label": "Aloe & Coconut Oil to Help Hydrate as it Colors",
+        "ref": "010",
+        "group": "Moisture & Nourishment",
+        "value": 1.55,
+        "extra": "Rank #9",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Ideal for mustache, beard and sideburns",
+        "ref": "031",
+        "group": "Color Result & Longevity",
+        "value": 1.54,
+        "extra": "Rank #10",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "The 10 claims worth testing on the box. Two themes dominate this list: Moisture & nourishment (Aloe & Coconut Oil) and Ease of application each account for 3 of the top 10. Bars show Stopping Power against the IEP benchmark band; ▲ marks claims significantly above the men's pooled average (95% confidence). Men's pooled average across all 31 claims: 1.42%."
+     },
+     {
+      "title": "Stopping Power Top 10 by audience — Men EN",
+      "metric": "stopping",
+      "audience": "Men EN",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Up to 3 uses: Reusable for Future Use",
+        "ref": "015",
+        "group": "Ease of Application",
+        "value": 2.22,
+        "extra": "Rank #1",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Ideal for mustache, beard and sideburns",
+        "ref": "031",
+        "group": "Color Result & Longevity",
+        "value": 1.98,
+        "extra": "Rank #2",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Moisturizes Hair with Aloe and Coconut Oil",
+        "ref": "008",
+        "group": "Moisture & Nourishment",
+        "value": 1.9,
+        "extra": "Rank #3",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Infused with Aloe & Coconut Oil for Softer Feeling Hair",
+        "ref": "009",
+        "group": "Moisture & Nourishment",
+        "value": 1.88,
+        "extra": "Rank #4",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Smooth, conditioned feel with Aloe & Coconut Oil",
+        "ref": "028",
+        "group": "Moisture & Nourishment",
+        "value": 1.84,
+        "extra": "Rank #5",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Natural-looking color for mustache & beard",
+        "ref": "017",
+        "group": "Color Result & Longevity",
+        "value": 1.81,
+        "extra": "Rank #6 · ★ in every audience's top 10",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Helps reduce dryness with Aloe & Coconut Oil",
+        "ref": "027",
+        "group": "Moisture & Nourishment",
+        "value": 1.76,
+        "extra": "Rank #7",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "3 easy steps",
+        "ref": "005",
+        "group": "Ease of Application",
+        "value": 1.65,
+        "extra": "Rank #8 · ★ in every audience's top 10",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Easy Brush-In Application",
+        "ref": "001",
+        "group": "Ease of Application",
+        "value": 1.64,
+        "extra": "Rank #9",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Healthier-looking hair",
+        "ref": "012",
+        "group": "Gentle / Healthier Formula",
+        "value": 1.59,
+        "extra": "Rank #10",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Top Claims by audience. Only two claims land in every audience's top 10: “3 easy steps” and “Natural-looking color for mustache & beard” (marked ★). Everything else is audience-specific. Men EN pool avg 1.46%. Stopping Power = unique link clicks / reach. All values fall within the IEP benchmark band [1.18% - 2.48%]."
+     },
+     {
+      "title": "Stopping Power Top 10 by audience — Men ES",
+      "metric": "stopping",
+      "audience": "Men ES",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Precision brush for root touchups",
+        "ref": "003",
+        "group": "Precision & Brush Tool",
+        "value": 2.6,
+        "extra": "Rank #1",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Smooth, conditioned feel with Aloe & Coconut Oil",
+        "ref": "028",
+        "group": "Moisture & Nourishment",
+        "value": 1.92,
+        "extra": "Rank #2",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Easy Brush-In Application",
+        "ref": "001",
+        "group": "Ease of Application",
+        "value": 1.83,
+        "extra": "Rank #3",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision brush for sideburns and temples",
+        "ref": "002",
+        "group": "Precision & Brush Tool",
+        "value": 1.81,
+        "extra": "Rank #4",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Aloe & Coconut Oil to Help Hydrate as it Colors",
+        "ref": "010",
+        "group": "Moisture & Nourishment",
+        "value": 1.63,
+        "extra": "Rank #5",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Healthier-looking hair",
+        "ref": "012",
+        "group": "Gentle / Healthier Formula",
+        "value": 1.6,
+        "extra": "Rank #6",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Natural-looking color for mustache & beard",
+        "ref": "017",
+        "group": "Color Result & Longevity",
+        "value": 1.55,
+        "extra": "Rank #7 · ★ in every audience's top 10",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Infused with Aloe & Coconut Oil for Softer Feeling Hair",
+        "ref": "009",
+        "group": "Moisture & Nourishment",
+        "value": 1.51,
+        "extra": "Rank #8",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "3 easy steps",
+        "ref": "005",
+        "group": "Ease of Application",
+        "value": 1.51,
+        "extra": "Rank #9 · ★ in every audience's top 10",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Won't Wash Out – Lasts Until Gray Grows Back",
+        "ref": "016",
+        "group": "Color Result & Longevity",
+        "value": 1.51,
+        "extra": "Rank #10",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Top Claims by audience. Only two claims land in every audience's top 10: “3 easy steps” and “Natural-looking color for mustache & beard” (marked ★). Everything else is audience-specific. Men ES pool avg 1.37%. Stopping Power = unique link clicks / reach. All values fall within the IEP benchmark band [1.18% - 2.48%]."
+     },
+     {
+      "title": "Stopping Power Top 10 by audience — Women",
+      "metric": "stopping",
+      "audience": "Women",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Built for precise facial hair application",
+        "ref": "019",
+        "group": "Precision & Brush Tool",
+        "value": 2.88,
+        "extra": "Rank #1",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gentle Formula Specifically Designed for Facial Hair",
+        "ref": "013",
+        "group": "Gentle / Healthier Formula",
+        "value": 2.64,
+        "extra": "Rank #2",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Facial hair color with a more nourished feel",
+        "ref": "024",
+        "group": "Moisture & Nourishment",
+        "value": 2.53,
+        "extra": "Rank #3",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "3 easy steps",
+        "ref": "005",
+        "group": "Ease of Application",
+        "value": 2.46,
+        "extra": "Rank #4 · ★ in every audience's top 10",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Won't Wash Out – Lasts Until Gray Grows Back",
+        "ref": "016",
+        "group": "Color Result & Longevity",
+        "value": 2.22,
+        "extra": "Rank #5",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Designed for Easy, at Home Use",
+        "ref": "007",
+        "group": "Ease of Application",
+        "value": 2.09,
+        "extra": "Rank #6",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision brush for root touchups",
+        "ref": "003",
+        "group": "Precision & Brush Tool",
+        "value": 1.9,
+        "extra": "Rank #7",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Natural-looking color for mustache & beard",
+        "ref": "017",
+        "group": "Color Result & Longevity",
+        "value": 1.89,
+        "extra": "Rank #8 · ★ in every audience's top 10",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Aloe & Coconut Oil to Help Hydrate as it Colors",
+        "ref": "010",
+        "group": "Moisture & Nourishment",
+        "value": 1.88,
+        "extra": "Rank #9",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted color specifically designed for facial hair",
+        "ref": "018",
+        "group": "Targeted Color Technology",
+        "value": 1.8,
+        "extra": "Rank #10",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Top Claims by audience. Only two claims land in every audience's top 10: “3 easy steps” and “Natural-looking color for mustache & beard” (marked ★). Everything else is audience-specific. Women pool avg 1.74%. Stopping Power = unique link clicks / reach. All values fall within the IEP benchmark band [1.18% - 2.48%]."
+     },
+     {
+      "title": "Stopping Power — All 31 claims ranked by Men (EN+ES) pooled, with per-audience lookup",
+      "metric": "stopping",
+      "audience": "All audiences",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Precision brush for root touchups",
+        "ref": "003",
+        "group": "Precision & Brush Tool",
+        "value": 1.9,
+        "extra": "EN 1.3 · ES 2.6 · W 1.9",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Smooth, conditioned feel with Aloe & Coconut Oil",
+        "ref": "028",
+        "group": "Moisture & Nourishment",
+        "value": 1.9,
+        "extra": "EN 1.8 · ES 1.9 · W 1.6",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Up to 3 uses: Reusable for Future Use",
+        "ref": "015",
+        "group": "Ease of Application",
+        "value": 1.8,
+        "extra": "EN 2.2 · ES 1.4 · W 1.8",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Easy Brush-In Application",
+        "ref": "001",
+        "group": "Ease of Application",
+        "value": 1.7,
+        "extra": "EN 1.6 · ES 1.8 · W 1.6",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Infused with Aloe & Coconut Oil for Softer Feeling Hair",
+        "ref": "009",
+        "group": "Moisture & Nourishment",
+        "value": 1.7,
+        "extra": "EN 1.9 · ES 1.5 · W 1.5",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Natural-looking color for mustache & beard",
+        "ref": "017",
+        "group": "Color Result & Longevity",
+        "value": 1.7,
+        "extra": "EN 1.8 · ES 1.6 · W 1.9",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "3 easy steps",
+        "ref": "005",
+        "group": "Ease of Application",
+        "value": 1.6,
+        "extra": "EN 1.6 · ES 1.5 · W 2.5",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Healthier-looking hair",
+        "ref": "012",
+        "group": "Gentle / Healthier Formula",
+        "value": 1.6,
+        "extra": "EN 1.6 · ES 1.6 · W 1.0",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Aloe & Coconut Oil to Help Hydrate as it Colors",
+        "ref": "010",
+        "group": "Moisture & Nourishment",
+        "value": 1.6,
+        "extra": "EN 1.5 · ES 1.6 · W 1.9",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Ideal for mustache, beard and sideburns",
+        "ref": "031",
+        "group": "Color Result & Longevity",
+        "value": 1.5,
+        "extra": "EN 2.0 · ES 1.1 · W 1.6",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Moisturizes Hair with Aloe and Coconut Oil",
+        "ref": "008",
+        "group": "Moisture & Nourishment",
+        "value": 1.4,
+        "extra": "EN 1.9 · ES 0.8 · W 1.4",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision brush for sideburns and temples",
+        "ref": "002",
+        "group": "Precision & Brush Tool",
+        "value": 1.4,
+        "extra": "EN 1.2 · ES 1.8 · W 1.8",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Won't Wash Out – Lasts Until Gray Grows Back",
+        "ref": "016",
+        "group": "Color Result & Longevity",
+        "value": 1.4,
+        "extra": "EN 1.3 · ES 1.5 · W 2.2",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Helps reduce dryness with Aloe & Coconut Oil",
+        "ref": "027",
+        "group": "Moisture & Nourishment",
+        "value": 1.4,
+        "extra": "EN 1.8 · ES 1.0 · W 1.6",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Supports a softer, more conditioned beard",
+        "ref": "025",
+        "group": "Moisture & Nourishment",
+        "value": 1.4,
+        "extra": "EN 1.5 · ES 1.2 · W 1.4",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Designed for Easy, at Home Use",
+        "ref": "007",
+        "group": "Ease of Application",
+        "value": 1.4,
+        "extra": "EN 1.4 · ES 1.3 · W 2.1",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Precision control for detailed application",
+        "ref": "020",
+        "group": "Precision & Brush Tool",
+        "value": 1.3,
+        "extra": "EN 1.3 · ES 1.3 · W 1.5",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "A simple routine for beard color refresh",
+        "ref": "030",
+        "group": "Color Result & Longevity",
+        "value": 1.3,
+        "extra": "EN 1.4 · ES 1.3 · W 1.5",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "New Precision brush for touch ups",
+        "ref": "004",
+        "group": "Precision & Brush Tool",
+        "value": 1.3,
+        "extra": "EN 1.5 · ES 1.1 · W 1.6",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Designed for neat, targeted results",
+        "ref": "021",
+        "group": "Precision & Brush Tool",
+        "value": 1.3,
+        "extra": "EN 1.4 · ES 1.2 · W 1.2",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Built for precise facial hair application",
+        "ref": "019",
+        "group": "Precision & Brush Tool",
+        "value": 1.3,
+        "extra": "EN 1.3 · ES 1.3 · W 2.9",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Use what you need, save the rest for later",
+        "ref": "014",
+        "group": "Ease of Application",
+        "value": 1.3,
+        "extra": "EN 1.3 · ES 1.2 · W 1.4",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gentle Formula Specifically Designed for Facial Hair",
+        "ref": "013",
+        "group": "Gentle / Healthier Formula",
+        "value": 1.3,
+        "extra": "EN 1.2 · ES 1.4 · W 2.6",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted color specifically designed for facial hair",
+        "ref": "018",
+        "group": "Targeted Color Technology",
+        "value": 1.3,
+        "extra": "EN 1.3 · ES 1.2 · W 1.8",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Helps facial hair feel softer as it covers grays",
+        "ref": "022",
+        "group": "Moisture & Nourishment",
+        "value": 1.2,
+        "extra": "EN 1.2 · ES 1.2 · W 1.3",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix, Hassle-free Application",
+        "ref": "006",
+        "group": "Ease of Application",
+        "value": 1.2,
+        "extra": "EN 1.1 · ES 1.3 · W 1.7",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Designed for coarse facial hair",
+        "ref": "029",
+        "group": "Color Result & Longevity",
+        "value": 1.2,
+        "extra": "EN 1.2 · ES 1.2 · W 1.6",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Moisture minded gray coverage for mustache & beard",
+        "ref": "023",
+        "group": "Moisture & Nourishment",
+        "value": 1.2,
+        "extra": "EN 1.2 · ES 1.2 · W 1.6",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Facial hair color with a more nourished feel",
+        "ref": "024",
+        "group": "Moisture & Nourishment",
+        "value": 1.2,
+        "extra": "EN 1.4 · ES 0.9 · W 2.5",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Ammonia, no PPD",
+        "ref": "011",
+        "group": "Gentle / Healthier Formula",
+        "value": 1.1,
+        "extra": "EN 1.1 · ES 1.1 · W 1.7",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Designed to leave hair feeling healthier after coloring",
+        "ref": "026",
+        "group": "Moisture & Nourishment",
+        "value": 1.1,
+        "extra": "EN 1.3 · ES 1.0 · W 1.7",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Full results — for reference. Ranked by pooled Men (English + Spanish) Stopping Power, with each audience's individual result alongside for lookup. Top 10 with men: strongest candidates for on-pack claims. Significantly below men's pool average: lower priority. All figures are Stopping Power (%). EN/ES/W = Male English, Male Spanish, Women. All 31 claims fall within the IEP benchmark [1.18% – 2.48%] — this ranks relative performance, not pass/fail."
+     }
+    ],
+    "narrative": [
+     {
+      "title": "Who we're talking to",
+      "body": "Three segments, same interest criteria — split by gender and language to see whether claims travel across all three. MEN · EN: Male, age 30–64, interests Hair coloring, Hair products, Just For Men, or Men's grooming products (11.3 – 13.3 MM Meta estimated size). MEN · ES: Male, age 30–64, Spanish — same interests, AND speaks Spanish (2.3 – 2.7 MM). WOMEN: Female, age 30–64, same interests (24.3 – 28.6 MM). Combined addressable reach ≈ 38–44MM across the three segments."
+     },
+     {
+      "title": "What we tested",
+      "body": "Stimuli: 31 claims across 6 themes. Same pack, same brush — only the on-pack claim changed. Example creative: Banner 005 · “3 easy steps”. EASE OF APPLICATION (6): 001 Easy Brush-In Application · 005 3 easy steps · 006 No Mix, Hassle-free Application · 007 Designed for Easy, at Home Use · 014 Use what you need, save the rest for later · 015 Up to 3 uses: Reusable for Future Use. PRECISION & BRUSH TOOL (6): 002 Precision brush for sideburns and temples · 003 Precision brush for root touchups · 004 New Precision brush for touch ups · 019 Built for precise facial hair application · 020 Precision control for detailed application · 021 Designed for neat, targeted results. MOISTURE & NOURISHMENT (10): 008 Moisturizes Hair with Aloe and Coconut Oil · 009 Infused with Aloe & Coconut Oil for Softer Feeling Hair · 010 Aloe & Coconut Oil to Help Hydrate as it Colors · 022 Helps facial hair feel softer as it covers grays · 023 Moisture minded gray coverage for mustache & beard · 024 Facial hair color with a more nourished feel · 025 Supports a softer, more conditioned beard · 026 Designed to leave hair feeling healthier after coloring · 027 Helps reduce dryness with Aloe & Coconut Oil · 028 Smooth, conditioned feel with Aloe & Coconut Oil. GENTLE / HEALTHIER FORMULA (3): 011 No Ammonia, no PPD · 012 Healthier-looking hair · 013 Gentle Formula Specifically Designed for Facial Hair. COLOR RESULT & LONGEVITY (5): 016 Won't Wash Out – Lasts Until Gray Grows Back · 017 Natural-looking color for mustache & beard · 029 Designed for coarse facial hair · 030 A simple routine for beard color refresh · 031 Ideal for mustache, beard and sideburns. TARGETED COLOR TECHNOLOGY (1): 018 Targeted color specifically designed for facial hair."
+     }
+    ],
+    "outcome": "With two claims already proven across every audience and four of the strongest results specifically with men, this set gives the box both safety and strength, enough range to fill front and back without repeating a single claim."
+   }
+  ],
+  "learnings": [
+   "Two themes dominate the men's top 10: Moisture & nourishment (Aloe & Coconut Oil) and Ease of application each account for 3 of the top 10.",
+   "Only two claims land in every audience's top 10: “3 easy steps” and “Natural-looking color for mustache & beard”. Everything else is audience-specific.",
+   "“Aloe & Coconut Oil” repeats in 3 of the men's top 10; the strongest is “Smooth, conditioned feel with Aloe & Coconut Oil” (1.88%); “Infused with Aloe & Coconut Oil for Softer Feeling Hair” (1.70%) and “Aloe & Coconut Oil to Help Hydrate as it Colors” (1.55%) are equally valid alternates.",
+   "All 31 claims fall within the IEP benchmark band [1.18% – 2.48%] — the read ranks relative performance, not pass/fail. Pool averages: Men (EN+ES) 1.42% · Men EN 1.46% · Men ES 1.37% · Women 1.74%."
+  ],
+  "recommendations": [
+   "Two safe bets, four sharp for men: with two claims already proven across every audience and four of the strongest results specifically with men, this set gives the box both safety and strength, enough range to fill front and back without repeating a single claim.",
+   "UNIVERSAL · PROVEN WITH EVERY AUDIENCE — “3 easy steps” (Men 1.60%, rank #7 of 31).",
+   "UNIVERSAL · PROVEN WITH EVERY AUDIENCE — “Natural-looking color for mustache & beard” (Men 1.68%, rank #6 of 31).",
+   "TOP PERFORMER FOR MEN (EN + ES combined) · PRECISION & BRUSH TOOL — “Precision brush for root touchups” (Men 1.89%).",
+   "TOP PERFORMER FOR MEN (EN + ES combined) · MOISTURE & NOURISHMENT — “Smooth, conditioned feel with Aloe & Coconut Oil” (Men 1.88%).",
+   "TOP PERFORMER FOR MEN (EN + ES combined) · EASE OF APPLICATION — “Up to 3 uses: Reusable for Future Use” (Men 1.82%).",
+   "TOP PERFORMER FOR MEN (EN + ES combined) · EASE OF APPLICATION — “Easy Brush-In Application” (Men 1.73%).",
+   "“Aloe & Coconut Oil” repeats in 3 of the men's top 10; shown is the strongest (“Smooth, conditioned feel”, 1.88%); “Infused with Aloe & Coconut Oil for Softer Feeling Hair” (1.70%) and “Aloe & Coconut Oil to Help Hydrate as it Colors” (1.55%) are equally valid alternates. Men's pool average across all 31 claims: 1.42%."
+  ]
+ }
+]

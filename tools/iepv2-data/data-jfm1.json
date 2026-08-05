@@ -1,0 +1,147 @@
+[
+  {
+    "brand": "Just For Men",
+    "experiment_id": "E01",
+    "name": "Gray Reverse",
+    "category": "Hair Care",
+    "status": "completed",
+    "learning_objective": "Identify which messages capture attention (Stopping Power) and drive add-to-cart (Closing Power) for Gray Reverse, demonstrating its potential as a new gray-management subcategory.",
+    "hypothesis": "When exposed to Gray Reverse in a natural shopping environment, consumers demonstrate genuine engagement and consideration, emphasizing its potential to expand the men's hair color market.",
+    "rounds": [
+      {
+        "round": 1,
+        "dates": "Oct 8 – Oct 22, 2025",
+        "success_criteria": "Stopping Power",
+        "benchmark": {"metric": "stopping", "lo": 1.10, "hi": 2.36},
+        "results": [
+          {"claim": "The ultimate anti-aging hack for hair", "group": "Awareness", "ref": "A", "reach": 2419, "clicks": 57, "stopping_power": 2.36, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "FGHI"},
+          {"claim": "The first true anti-aging peptide for hair &amp; beard", "group": "Awareness", "ref": "B", "reach": 2024, "clicks": 44, "stopping_power": 2.17, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "F"},
+          {"claim": "Get ahead of grays before you get a head of grays", "group": "Awareness", "ref": "C", "reach": 2750, "clicks": 104, "stopping_power": 3.78, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "ABDEFGHI"},
+          {"claim": "Reverse your grays", "group": "Awareness", "ref": "D", "reach": 3202, "clicks": 58, "stopping_power": 1.81, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "F"},
+          {"claim": "Restore your natural hair color", "group": "Awareness", "ref": "E", "reach": 2931, "clicks": 49, "stopping_power": 1.67, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Fastest anti-aging peptide hair serum.", "group": "Awareness", "ref": "F", "reach": 2087, "clicks": 22, "stopping_power": 1.05, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Look 5 years younger in 90 days", "group": "Awareness", "ref": "G", "reach": 2152, "clicks": 31, "stopping_power": 1.44, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "90 days of anti-aging", "group": "Awareness", "ref": "H", "reach": 2967, "clicks": 43, "stopping_power": 1.45, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Start today to stop the gray.", "group": "Awareness", "ref": "I", "reach": 4387, "clicks": 72, "stopping_power": 1.64, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "F"},
+          {"claim": "Most men reversed their grays in just 90 days.", "group": "Product-Color Benefits", "ref": "A", "reach": 3553, "clicks": 46, "stopping_power": 1.29, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "88% of users had less gray hair growth", "group": "Product-Color Benefits", "ref": "B", "reach": 2761, "clicks": 89, "stopping_power": 3.22, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "ACDEGH"},
+          {"claim": "84% saw results in weeks", "group": "Product-Color Benefits", "ref": "C", "reach": 2245, "clicks": 35, "stopping_power": 1.56, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Works 2x times faster than competition", "group": "Product-Color Benefits", "ref": "D", "reach": 2758, "clicks": 53, "stopping_power": 1.92, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "80% say their hair aged in reverse", "group": "Product-Color Benefits", "ref": "E", "reach": 2219, "clicks": 32, "stopping_power": 1.44, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Fastest visible results from the #1 trusted brand in Men's Gray Care", "group": "Product-Color Benefits", "ref": "F", "reach": 2045, "clicks": 56, "stopping_power": 2.74, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "ACEGH"},
+          {"claim": "80% say it feels like hair magic", "group": "Product-Color Benefits", "ref": "G", "reach": 2208, "clicks": 31, "stopping_power": 1.40, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Clinically proven results", "group": "Product-Color Benefits", "ref": "H", "reach": 2322, "clicks": 41, "stopping_power": 1.77, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Supports healthy scalp, with keratin &amp; antioxidants", "group": "Secondary", "ref": "A", "reach": 2369, "clicks": 73, "stopping_power": 3.08, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "CDEFG"},
+          {"claim": "90% say hair feels stronger after consistent use", "group": "Secondary", "ref": "B", "reach": 3292, "clicks": 86, "stopping_power": 2.61, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "CDEF"},
+          {"claim": "95% say it was easy to use every day", "group": "Secondary", "ref": "C", "reach": 2279, "clicks": 39, "stopping_power": 1.71, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "90% of men said their hair felt healthier &amp; softer", "group": "Secondary", "ref": "D", "reach": 2374, "clicks": 37, "stopping_power": 1.56, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "80% of men said their barber noticed a difference", "group": "Secondary", "ref": "E", "reach": 3092, "clicks": 37, "stopping_power": 1.20, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "90% would recommend to a friend", "group": "Secondary", "ref": "F", "reach": 2101, "clicks": 38, "stopping_power": 1.81, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "2x stronger-looking hair", "group": "Secondary", "ref": "G", "reach": 2237, "clicks": 46, "stopping_power": 2.06, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "E"},
+          {"claim": "Patented, peptide technology that revives your hair's pigmentation", "group": "How It Works", "ref": "A", "reach": 2671, "clicks": 44, "stopping_power": 1.65, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Restores your natural color from the root to the tip", "group": "How It Works", "ref": "B", "reach": 2711, "clicks": 52, "stopping_power": 1.92, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Restart your hair's pigmentation process", "group": "How It Works", "ref": "C", "reach": 4211, "clicks": 74, "stopping_power": 1.76, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Jump starts color at the root", "group": "How It Works", "ref": "D", "reach": 2356, "clicks": 45, "stopping_power": 1.91, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Reclaim your natural hair color", "group": "How It Works", "ref": "E", "reach": 2804, "clicks": 65, "stopping_power": 2.32, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": "GI"},
+          {"claim": "Revives hair's melanin production at the follicle", "group": "How It Works", "ref": "F", "reach": 2312, "clicks": 45, "stopping_power": 1.95, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Jump-starts melanin, so hair grows in with your natural color", "group": "How It Works", "ref": "G", "reach": 2173, "clicks": 28, "stopping_power": 1.29, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Powers-up melanin production, so hair grows in with your natural color", "group": "How It Works", "ref": "H", "reach": 2198, "clicks": 43, "stopping_power": 1.96, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null},
+          {"claim": "Dye free peptide-antioxidant complex that revives your hair's natural color", "group": "How It Works", "ref": "I", "reach": 1977, "clicks": 25, "stopping_power": 1.26, "lp_visits": null, "add_to_cart": null, "closing_power": null, "better_than": null}
+        ],
+        "group_closing": [
+          {"group": "Awareness", "lp_visits": 456, "add_to_cart": 41, "closing_power": 8.99, "better_than": null},
+          {"group": "Product Color Benefits", "lp_visits": 463, "add_to_cart": 42, "closing_power": 9.07, "better_than": null},
+          {"group": "Secondary", "lp_visits": 318, "add_to_cart": 39, "closing_power": 12.26, "better_than": null},
+          {"group": "How It Works", "lp_visits": 357, "add_to_cart": 49, "closing_power": 13.73, "better_than": "AB"}
+        ],
+        "winner": "Get ahead of grays before you get a head of grays",
+        "outcome": "Six claims delivered Stopping Power above 2.36%, the upper limit of the Maggiore benchmark, with 'Get ahead of grays before you get a head of grays' (Awareness) as the top performer, statistically superior to all other claims in its group. In Closing Power by group, 'How It Works' outperformed the others, statistically higher than both 'Awareness' and 'Product Color Benefits'."
+      },
+      {
+        "round": 2,
+        "dates": "Nov 7 – Nov 19, 2025",
+        "success_criteria": "Closing Power",
+        "benchmark": {"metric": "closing", "lo": 9.09, "hi": 17.36},
+        "results": [
+          {"claim": "Get ahead of grays before you get a head of grays", "group": null, "ref": "A", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 177, "add_to_cart": 25, "closing_power": 14.12, "better_than": null},
+          {"claim": "The ultimate anti-aging hack for hair", "group": null, "ref": "B", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 181, "add_to_cart": 40, "closing_power": 22.10, "better_than": "AH"},
+          {"claim": "Reclaim your natural hair color", "group": null, "ref": "C", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 170, "add_to_cart": 34, "closing_power": 20.00, "better_than": null},
+          {"claim": "Restarts hairs pigmentation process so hair grows in with your natural color", "group": null, "ref": "D", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 176, "add_to_cart": 40, "closing_power": 22.73, "better_than": "AH"},
+          {"claim": "Restores your natural color from the root to the tip", "group": null, "ref": "E", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 162, "add_to_cart": 33, "closing_power": 20.37, "better_than": null},
+          {"claim": "Supports healthy scalp with keratin and antioxidants", "group": null, "ref": "F", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 186, "add_to_cart": 38, "closing_power": 20.43, "better_than": null},
+          {"claim": "88% of users had less gray hair growth", "group": null, "ref": "G", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 161, "add_to_cart": 41, "closing_power": 25.47, "better_than": "AH"},
+          {"claim": "Fastest visible results from the number one trusted brand in Men's Gray Care", "group": null, "ref": "H", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 163, "add_to_cart": 22, "closing_power": 13.50, "better_than": null},
+          {"claim": "90% say hair feels stronger after consistent use", "group": null, "ref": "I", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 231, "add_to_cart": 40, "closing_power": 17.32, "better_than": null},
+          {"claim": "Promotes anti-aging by reducing stress on hair and scalp", "group": null, "ref": "J", "reach": null, "clicks": null, "stopping_power": null, "lp_visits": 165, "add_to_cart": 44, "closing_power": 26.67, "better_than": "AHI"}
+        ],
+        "average_stopping_power": 2.97,
+        "winner": "Promotes anti-aging by reducing stress on hair and scalp",
+        "outcome": "The claim with the highest Closing Power is 'Promotes anti-aging by reducing stress on hair and scalp' (26.67%), followed by '88% of users had less gray hair growth' (25.47%). Overall, all tested claims delivered acceptable levels of Closing Power, performing at or above the IEP benchmark, which spans a wide range of product categories such as vitamins, supplements, pain relievers, and digestive health products."
+      }
+    ]
+  },
+  {
+    "brand": "Just For Men",
+    "experiment_id": "E02",
+    "name": "Control GX Gradual",
+    "category": "Hair Care",
+    "status": "completed",
+    "learning_objective": "In a single phase, measure Stopping and Closing Power to identify which claim and packaging direction best captures attention and drives add-to-cart for Control GX and a new Hair Darkening Shampoo.",
+    "hypothesis": "A refreshed Control GX stimulus that clarifies the core benefit and reduces shelf confusion will drive stronger engagement and higher add-to-cart intent versus the current baseline, showing that optimized messaging and pack cues can drive incremental growth without formula changes.",
+    "rounds": [
+      {
+        "round": 1,
+        "dates": "March 11 – March 22, 2026",
+        "success_criteria": "Stopping &amp; Closing Power",
+        "benchmark": {"metric": "stopping", "lo": 1.12, "hi": 2.38},
+        "benchmark_closing": {"metric": "closing", "lo": 9.16, "hi": 17.37},
+        "results": [
+          {"claim": "The First Shampoo That Gradually Reduces Gray", "group": "Control GX", "ref": "A", "reach": 26707, "clicks": 571, "stopping_power": 2.14, "lp_visits": 501, "add_to_cart": 63, "closing_power": 12.57, "better_than": "D"},
+          {"claim": "Don't just wash your hair, revitalize it!", "group": "Control GX", "ref": "B", "reach": 25326, "clicks": 575, "stopping_power": 2.27, "lp_visits": 475, "add_to_cart": 55, "closing_power": 11.58, "better_than": "D"},
+          {"claim": "Wash. Rinse. Reduce Gray.", "group": "Control GX", "ref": "C", "reach": 21330, "clicks": 492, "stopping_power": 2.31, "lp_visits": 439, "add_to_cart": 49, "closing_power": 11.16, "better_than": "D"},
+          {"claim": "Control The Pace. See The Proof.", "group": "Control GX", "ref": "D", "reach": 38774, "clicks": 673, "stopping_power": 1.74, "lp_visits": 552, "add_to_cart": 59, "closing_power": 10.69, "better_than": null},
+          {"claim": "The Secret To A Refreshed Look.", "group": "Hair Darkening Shampoo", "ref": "A", "reach": 12487, "clicks": 581, "stopping_power": 4.65, "lp_visits": 550, "add_to_cart": 122, "closing_power": 22.18, "better_than": "B"},
+          {"claim": "Natural Color. Stronger Hair. Don't Settle For Less.", "group": "Hair Darkening Shampoo", "ref": "B", "reach": 21951, "clicks": 865, "stopping_power": 3.94, "lp_visits": 784, "add_to_cart": 129, "closing_power": 16.45, "better_than": null},
+          {"claim": "A Gradual Transformation Worth Waiting For.", "group": "Hair Darkening Shampoo", "ref": "C", "reach": 14849, "clicks": 740, "stopping_power": 4.98, "lp_visits": 704, "add_to_cart": 143, "closing_power": 20.31, "better_than": "B"}
+        ],
+        "winner": "The Secret To A Refreshed Look.",
+        "outcome": "For Control GX, 'Wash. Rinse. Reduce Gray.' (Build Color Gradually) delivered the highest Stopping Power while the current concept had a slightly higher Closing Power; based on Overall Score, concepts A, B and C are recommended over D. For the Hair Darkening Shampoo, 'The Secret To A Refreshed Look.' (Discreetly reducing gray) and 'A Gradual Transformation Worth Waiting For.' (Gradually add natural color) achieved the same top Overall Score with a strong balance of Stopping and Closing Power; even the lowest-performing concept exceeded the Stopping Power benchmark, indicating clear consumer curiosity and willingness to try the new product."
+      }
+    ]
+  },
+  {
+    "brand": "Just For Men",
+    "experiment_id": "E03",
+    "name": "JFM One",
+    "category": "Hair Care",
+    "status": "paused",
+    "learning_objective": "Identify which claim territories and headlines generate the strongest Stopping Power for JFM ONE and establish a prioritized set of claims to carry into subsequent testing and final content development.",
+    "hypothesis": null,
+    "rounds": [
+      {
+        "round": 1,
+        "dates": "Feb 10 – Feb 15, 2026",
+        "success_criteria": "Stopping Power",
+        "benchmark": {"metric": "stopping", "lo": 1.11, "hi": 2.35},
+        "benchmark_closing": {"metric": "closing", "lo": 9.09, "hi": 17.36},
+        "results": [
+          {"claim": "One step brush in color", "group": "Simplicity", "ref": "A", "reach": 11994, "clicks": 322, "stopping_power": 2.68, "lp_visits": 286, "add_to_cart": 41, "closing_power": 14.34, "better_than": "EHK"},
+          {"claim": "The simplest anti-aging hack", "group": "Emotional", "ref": "B", "reach": 10237, "clicks": 411, "stopping_power": 4.01, "lp_visits": 389, "add_to_cart": 58, "closing_power": 14.91, "better_than": "ADEFHKL"},
+          {"claim": "Foolproof color for real life", "group": "Simplicity", "ref": "C", "reach": 9834, "clicks": 396, "stopping_power": 4.03, "lp_visits": 373, "add_to_cart": 58, "closing_power": 15.55, "better_than": "ADEFHKL"},
+          {"claim": "One of the fastest ways to cover gray", "group": "Speed", "ref": "D", "reach": 8208, "clicks": 258, "stopping_power": 3.14, "lp_visits": 240, "add_to_cart": 31, "closing_power": 12.92, "better_than": "EHK"},
+          {"claim": "95% say hair looked healthier and more youthful", "group": "Health", "ref": "E", "reach": 6175, "clicks": 60, "stopping_power": 0.97, "lp_visits": 56, "add_to_cart": 0, "closing_power": 0.00, "better_than": null},
+          {"claim": "One step haircolor", "group": "Simplicity", "ref": "F", "reach": 4925, "clicks": 156, "stopping_power": 3.17, "lp_visits": 145, "add_to_cart": 12, "closing_power": 8.28, "better_than": "EHK"},
+          {"claim": "The simplest way to color hair", "group": "Simplicity", "ref": "G", "reach": 3406, "clicks": 153, "stopping_power": 4.49, "lp_visits": 145, "add_to_cart": 18, "closing_power": 12.41, "better_than": "ADEFHJKLM"},
+          {"claim": "6 months of anti-aging in one pack", "group": "Emotional", "ref": "H", "reach": 2578, "clicks": 46, "stopping_power": 1.78, "lp_visits": 46, "add_to_cart": 5, "closing_power": 10.87, "better_than": "E"},
+          {"claim": "Look 10 years younger in 5 minutes", "group": "Emotional", "ref": "I", "reach": 2220, "clicks": 83, "stopping_power": 3.74, "lp_visits": 79, "add_to_cart": 13, "closing_power": 16.46, "better_than": "AEHK"},
+          {"claim": "Color made simple", "group": "Simplicity", "ref": "J", "reach": 1882, "clicks": 62, "stopping_power": 3.29, "lp_visits": 54, "add_to_cart": 14, "closing_power": 25.93, "better_than": "EHK"},
+          {"claim": "Trusted Just For Men results, in one simple step", "group": "Trust", "ref": "K", "reach": 1784, "clicks": 25, "stopping_power": 1.40, "lp_visits": 24, "add_to_cart": 0, "closing_power": 0.00, "better_than": null},
+          {"claim": "With Keratin for 2X stronger hair", "group": "Health", "ref": "L", "reach": 1145, "clicks": 32, "stopping_power": 2.79, "lp_visits": 34, "add_to_cart": 7, "closing_power": 20.59, "better_than": "EK"},
+          {"claim": "Can't Mess It Up Hair Color", "group": "Simplicity", "ref": "M", "reach": 1054, "clicks": 32, "stopping_power": 3.04, "lp_visits": 31, "add_to_cart": 5, "closing_power": 16.13, "better_than": "EHK"}
+        ],
+        "winner": "Foolproof color for real life",
+        "outcome": "Among claims that reached approximately 10,000 people, 'The simplest anti-aging hack' and 'Foolproof color for real life' delivered the highest Stopping Power, with all tested claims achieving Closing Power above 10%. Stopping Power was above the IEP benchmark across those claims while Closing Power stayed within the expected range. Due to concerns about the manufacturer's aggressive competitive nature, the experiment was paused and only a few legs yielded results."
+      }
+    ]
+  }
+]
