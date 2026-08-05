@@ -23,7 +23,7 @@
 .v2-back{background:transparent;border:1px solid var(--border);border-radius:8px;padding:8px 16px;font-size:13px;color:var(--text-secondary);cursor:pointer;margin-bottom:18px}
 .v2-back:hover{background:var(--bg-card-hover)}
 .v2-dhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.v2-headline{font-size:30px;color:var(--text-primary);line-height:1.2;margin:10px 0 4px;max-width:820px}
+.v2-headline{font-size:36px;letter-spacing:-0.01em;color:var(--text-primary);line-height:1.2;margin:10px 0 4px;max-width:820px}
 .v2-subline{font-size:15px;color:var(--text-muted);max-width:760px;margin-bottom:10px}
 .v2-story{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:18px 0}
 .v2-story-box{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
@@ -44,8 +44,10 @@
 .v2-crit{font-size:12px;color:var(--text-muted);margin-bottom:14px}
 .v2-chart-title{font-size:14px;font-weight:700;color:var(--text-primary);margin:24px 0 2px}
 .v2-chart-sub{font-size:11.5px;color:var(--text-muted);margin-bottom:10px}
-.v2-insight{background:rgba(107,138,242,0.06);border:1px solid rgba(107,138,242,0.18);border-left:3px solid #6B8AF2;border-radius:8px;padding:12px 15px;font-size:13px;color:var(--text-secondary);line-height:1.6;margin:10px 0 4px}
-.v2-insight b{color:#4a68c4}
+.v2-insight{background:rgba(107,138,242,0.07);border-left:4px solid #6B8AF2;border-radius:0 12px 12px 0;padding:16px 20px 15px;margin:12px 0 6px}
+.v2-insight-label{font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#4a68c4;margin-bottom:7px}
+.v2-insight-lead{font-size:16px;font-weight:700;color:var(--text-primary);line-height:1.4;margin-bottom:5px}
+.v2-insight-body{font-size:13px;color:var(--text-secondary);line-height:1.65}
 .v2-narr{background:var(--bg-main);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:14px 0}
 .v2-narr h6{font-size:13px;color:var(--text-primary);margin-bottom:6px}
 .v2-narr p{font-size:13px;color:var(--text-secondary);line-height:1.6}
@@ -56,8 +58,15 @@
 .v2-final-box.reco{border-top:3px solid #2C8C89}
 .v2-final-box.learn{border-top:3px solid #6B8AF2}
 .v2-final-box h5{font-size:14px;color:var(--text-primary);margin-bottom:10px}
-.v2-final-box ol{padding-left:20px;display:flex;flex-direction:column;gap:9px}
-.v2-final-box li{font-size:13px;color:var(--text-secondary);line-height:1.55}
+.v2-final-box ol{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;counter-reset:fin}
+.v2-final-box li{font-size:13px;color:var(--text-secondary);line-height:1.6;position:relative;padding-left:38px;counter-increment:fin}
+.v2-final-box li::before{content:counter(fin);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:white}
+.v2-final-box.reco li::before{background:#2C8C89}
+.v2-final-box.learn li::before{background:#6B8AF2}
+.v2-hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:20px 0 6px}
+.v2-hero-tile{background:linear-gradient(160deg,#0d1a2b,#1a2f4d);border-radius:12px;padding:18px 18px 16px;color:white}
+.v2-hero-num{font-size:30px;font-weight:800;line-height:1.05;color:#7fd6d3}
+.v2-hero-lbl{font-size:10.5px;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.65);margin-top:7px;line-height:1.45}
 .v2-tip{position:fixed;pointer-events:none;background:#0d1a2b;color:#fff;font-size:12px;line-height:1.5;padding:9px 12px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.25);z-index:2000;max-width:280px;display:none}
 .v2-legend{display:flex;gap:16px;align-items:center;font-size:11.5px;color:var(--text-muted);margin-top:8px;flex-wrap:wrap}
 .v2-legend span{display:inline-flex;align-items:center;gap:6px}
@@ -120,6 +129,7 @@ function v2Open(i){
   h+='<div class="v2-dhead"><span class="v2-chip" style="background:'+c+'">'+e.brand+'</span><span class="v2-eid">'+e.experiment_id+' &middot; '+e.name+'</span>'+v2StatusBadge(e.status)+'</div>';
   h+='<h3 class="v2-headline">'+v2Esc(e.headline||e.name)+'</h3>';
   if(e.subtitle) h+='<div class="v2-subline">'+e.subtitle+'</div>';
+  h+=v2Hero(e);
 
   var story="";
   if(e.background) story+='<div class="v2-story-box"><h5>Background</h5><p>'+e.background+'</p></div>';
@@ -195,7 +205,7 @@ function v2Round(e,r,ri){
     }else{
       h+='<ul style="font-size:13px;color:var(--text-secondary);line-height:1.9;padding-left:20px">'+rows.map(function(x){return '<li>'+(x.group?'<b>'+x.group+':</b> ':'')+x.label+'</li>';}).join("")+'</ul>';
     }
-    if(ch.insight) h+='<div class="v2-insight"><b>Read:</b> '+ch.insight+'</div>';
+    if(ch.insight) h+=v2Insight(ch.insight);
   });
   (r.narrative||[]).forEach(function(n){
     h+='<div class="v2-narr"><h6>'+n.title+'</h6><p>'+n.body+'</p></div>';
@@ -203,6 +213,40 @@ function v2Round(e,r,ri){
   if(r.outcome) h+='<div class="v2-outcome"><b>Outcome.</b> '+r.outcome+'</div>';
   h+='</div>';
   return h;
+}
+
+function v2Insight(text){
+  var lead=null, body=text;
+  var m=text.match(/^(.{10,90}?[.!?])\s+(.*)$/);
+  if(m){lead=m[1];body=m[2];}
+  return '<div class="v2-insight"><div class="v2-insight-label">Insight</div>'+
+    (lead?'<div class="v2-insight-lead">'+lead+'</div>':'')+
+    '<div class="v2-insight-body">'+body+'</div></div>';
+}
+
+function v2Hero(e){
+  var topSP=null, topCP=null, seenS=false, seenC=false;
+  e.rounds.forEach(function(r){(r.charts||[]).forEach(function(ch){
+    var take=(ch.metric==="stopping"&&!seenS)||(ch.metric==="closing"&&!seenC);
+    if(!take) return;
+    var any=false;
+    (ch.rows||[]).forEach(function(x){
+      if(x.value==null) return;
+      any=true;
+      if(ch.metric==="stopping"&&(topSP==null||x.value>topSP)) topSP=x.value;
+      if(ch.metric==="closing"&&(topCP==null||x.value>topCP)) topCP=x.value;
+    });
+    if(any){ if(ch.metric==="stopping")seenS=true; else seenC=true; }
+  });});
+  var tiles=[];
+  if(e.claims_count) tiles.push([e.claims_count, (e.status==="in_progress"?"concepts in field":"claims tested")]);
+  if(topSP!=null) tiles.push([topSP.toFixed(2)+"%","top stopping power"]);
+  if(topCP!=null) tiles.push([topCP.toFixed(2)+"%","top closing power"]);
+  if(e.card_winner) tiles.push(["\u2605","winner: "+(e.card_winner.length>60?e.card_winner.slice(0,58)+"\u2026":e.card_winner)]);
+  if(!tiles.length) return "";
+  return '<div class="v2-hero">'+tiles.map(function(t){
+    return '<div class="v2-hero-tile"><div class="v2-hero-num">'+t[0]+'</div><div class="v2-hero-lbl">'+t[1]+'</div></div>';
+  }).join("")+'</div>';
 }
 
 function v2Bar(elId,rows,bm){
@@ -224,12 +268,12 @@ function v2Bar(elId,rows,bm){
     s+='<g class="v2b" data-tip="'+r.tip.replace(/"/g,"&quot;")+'">';
     s+='<rect x="0" y="'+y+'" width="'+W+'" height="'+rowH+'" fill="transparent"/>';
     s+='<text x="'+(padL-10)+'" y="'+(y+rowH/2+3.5)+'" font-size="12" fill="#4a5568" text-anchor="end">'+lbl+'</text>';
-    s+='<rect x="'+padL+'" y="'+(y+5)+'" width="'+Math.max(2,x(r.value)-padL)+'" height="'+bh+'" rx="4" fill="#2C8C89"/>';
+    s+='<rect x="'+padL+'" y="'+(y+5)+'" width="'+Math.max(2,x(r.value)-padL)+'" height="'+bh+'" rx="4" fill="'+(r.winner?'#1F7A77':'#2C8C89')+'"/>';
     s+='<text x="'+(x(r.value)+8)+'" y="'+(y+rowH/2+3.5)+'" font-size="12" font-weight="700" fill="#1a2332">'+r.value.toFixed(2)+'%'+(r.winner?'  ★':'')+'</text>';
     s+='</g>';
   });
   s+='</svg>';
-  if(bm) s+='<div class="v2-legend"><span><span class="v2-sw" style="background:#2C8C89"></span>Tested</span><span><span class="v2-sw" style="background:#7a8ea0;opacity:0.25"></span>Benchmark '+bm.lo+'%&ndash;'+bm.hi+'%</span><span>★ Top performer</span></div>';
+  if(bm) s+='<div class="v2-legend"><span><span class="v2-sw" style="background:#2C8C89"></span>Tested</span><span><span class="v2-sw" style="background:#7a8ea0;opacity:0.25"></span>Benchmark '+bm.lo+'%&ndash;'+bm.hi+'%</span><span><span class="v2-sw" style="background:#1F7A77"></span>★ Top performer</span></div>';
   el.innerHTML=s;
   el.querySelectorAll(".v2b").forEach(function(g){
     g.addEventListener("mousemove",function(ev){

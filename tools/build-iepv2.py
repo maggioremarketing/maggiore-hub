@@ -70,15 +70,16 @@ def v1_to_v2(e):
 def finalize(e):
     """Precalcula campos de tarjeta."""
     labels = set()
-    winner = None
+    from collections import Counter
+    wins = Counter()
     for r in e.get("rounds", []):
         for ch in r.get("charts", []):
             for x in ch.get("rows", []):
                 labels.add(x["label"])
                 if x.get("winner") and x.get("value") is not None:
-                    winner = x["label"]
+                    wins[x["label"]] += 1
     e["claims_count"] = len(labels)
-    e["card_winner"] = winner
+    e["card_winner"] = (wins.most_common(1)[0][0] if wins else None)
     return e
 
 # ---- cargar datos ----
@@ -87,6 +88,17 @@ new_jfm = json.load(open(S + "/data2-jfm45.json", encoding="utf-8"))   # E04, E0
 new_vag = json.load(open(S + "/data2-vagisil.json", encoding="utf-8")) # Vag E01, E02 (v2 narrativo)
 
 data = [finalize(v1_to_v2(e)) for e in v1] + [finalize(e) for e in new_jfm] + [finalize(e) for e in new_vag]
+
+# limpieza: quitar frases de leyenda de deck que no aplican al gráfico web
+def clean_insight(t):
+    if not t: return t
+    t = re.sub(r"Dashed lines? = [^·.]*·\s*", "", t)
+    t = re.sub(r"\s*Crops show the buy section[^.]*\.", "", t)
+    return t.strip()
+for e in data:
+    for r in e["rounds"]:
+        for ch in r.get("charts", []):
+            ch["insight"] = clean_insight(ch.get("insight"))
 
 # ---- reinyectar ----
 html = open(HTML, encoding="utf-8").read()
