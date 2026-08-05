@@ -3,9 +3,12 @@
 mezcla con los JSON narrativos nuevos y reinyecta el bloque en combe/index.html."""
 import json, re, sys
 
-S = "/private/tmp/claude-501/-Users-maggiorejosemi-Claude-Projects-Virutex/899d02db-861a-4553-b4d1-0ed22ffc07ac/scratchpad"
-HTML = S + "/hub-combe-src/repo/combe/index.html"
-BLOCK = S + "/iepv2-block2.html"
+import os
+# Rutas relativas al repo: tools/ y combe/ cuelgan de la raíz
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+HTML = os.path.join(ROOT, "combe", "index.html")
+BLOCK = os.path.join(ROOT, "tools", "iepv2-block2.html")
+DATA = os.path.join(ROOT, "tools", "iepv2-data")
 
 def v1_to_v2(e):
     """Convierte un experimento del esquema v1 (results planos) al esquema narrativo v2."""
@@ -83,9 +86,9 @@ def finalize(e):
     return e
 
 # ---- cargar datos ----
-v1 = json.load(open(S + "/data-jfm1.json", encoding="utf-8"))          # E01, E02, E03 (v1)
-new_jfm = json.load(open(S + "/data2-jfm45.json", encoding="utf-8"))   # E04, E05 (v2 narrativo)
-new_vag = json.load(open(S + "/data2-vagisil.json", encoding="utf-8")) # Vag E01, E02 (v2 narrativo)
+v1 = json.load(open(DATA + "/data-jfm1.json", encoding="utf-8"))          # E01, E02, E03 (v1)
+new_jfm = json.load(open(DATA + "/data2-jfm45.json", encoding="utf-8"))   # E04, E05 (v2 narrativo)
+new_vag = json.load(open(DATA + "/data2-vagisil.json", encoding="utf-8")) # Vag E01, E02 (v2 narrativo)
 
 data = [finalize(v1_to_v2(e)) for e in v1] + [finalize(e) for e in new_jfm] + [finalize(e) for e in new_vag]
 
