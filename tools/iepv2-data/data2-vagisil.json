@@ -489,7 +489,7 @@
   "category": "Feminine Care",
   "status": "in_progress",
   "headline": "Vagisil Wash — Project Compass E02R01",
-  "subtitle": "Iterative Experiment Platform · 2026.07.27",
+  "subtitle": "Project Compass E02R01 · LIVE — results streaming directly from the Meta API while the experiment runs.",
   "background": "Itch Protect Mousse Wash was introduced to the Vagisil portfolio to replace the 12 oz Itch Protect gel wash to reverse sales softness and reinvigorate the product. Mousse wash is an increasingly popular format and adds to the premiumization of the brands. Since the launch in Spring 2026, this new format and design does not seem to be resonating with consumers and sales have been slow to ramp up. Hypotheses for poor performance are that \"Itch Protect\" is not an intuitive product benefit and consumers don't understand what problem the product solves. Mousse is also more expensive but is not delivering on perceived superiority to gel wash. The current packaging is doing a better job at communicating format rather than function (mousse vs. benefit to consumer). Communication and design feel more clinical than reassuring (comforting).",
   "objective": "Which concept has more Stopping Power at shelf and which concept drives more purchase intent (Closing Power): \"Sensitive\" or \"Hydration+\"? Benchmark \"Sensitive\" and \"Hydration+\" against Summer's Eve Simply Sensitive concept, and against the current \"Itch Protect\" Wash.",
   "hypothesis": "\"Itch Protect\" is not an intuitive product benefit and consumers don't understand what problem the product solves; the current packaging communicates format (mousse) rather than function, and the communication and design feel more clinical than reassuring.",
@@ -516,64 +516,181 @@
   "rounds": [
    {
     "round": 1,
-    "dates": "July 2026 — in field",
+    "dates": "In field — July 2026 · live data as of Aug 5, 2026",
     "charts": [
      {
-      "title": "E02R01 — Stopping Power (results pending)",
+      "title": "LIVE · Stopping Power by concept — All women 25-54 (updated Aug 5, 2026)",
       "metric": "stopping",
-      "audience": "Female 25-54",
-      "benchmark": null,
+      "audience": "Women 25-54 · pooled",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
       "rows": [
        {
-        "label": "Sensitive Daily Intimate Wash — \"Made for your most sensitive intimate skin\"",
-        "ref": "01",
+        "label": "Sensitive",
+        "ref": "A",
         "group": null,
-        "value": null,
-        "extra": null,
+        "value": 3.22,
+        "extra": "Reach 6,359 · Unique clicks 205 · LP views 126",
         "better_than": null,
         "winner": false
        },
        {
-        "label": "Hydration+ Daily Intimate Wash — \"Hydration Packed Intimate Care\"",
-        "ref": "02",
+        "label": "Hydration+",
+        "ref": "B",
         "group": null,
-        "value": null,
-        "extra": null,
-        "better_than": null,
+        "value": 3.97,
+        "extra": "Reach 7,651 · Unique clicks 304 · LP views 221",
+        "better_than": "A",
         "winner": false
        },
        {
-        "label": "Itch Protect Mousse Wash — \"Break the cycle of itch for good\"",
-        "ref": "03",
+        "label": "Itch Protect",
+        "ref": "C",
         "group": null,
-        "value": null,
-        "extra": null,
-        "better_than": null,
+        "value": 5.37,
+        "extra": "Reach 6,068 · Unique clicks 326 · LP views 236",
+        "better_than": "ABDE",
+        "winner": true
+       },
+       {
+        "label": "Simply Sensitive (Summer's Eve)",
+        "ref": "D",
+        "group": null,
+        "value": 3.86,
+        "extra": "Reach 7,928 · Unique clicks 306 · LP views 212",
+        "better_than": "A",
         "winner": false
        },
        {
-        "label": "Simply Sensitive pH-Balanced Cleansing Wash (Summer's Eve) — \"Gentle cleansing for your intimate area\"",
-        "ref": "04",
+        "label": "Joyful",
+        "ref": "E",
         "group": null,
-        "value": null,
-        "extra": null,
-        "better_than": null,
-        "winner": false
-       },
-       {
-        "label": "Joyful Daily Intimate Wash — \"Freshen, soothe and set your mood\"",
-        "ref": "05",
-        "group": null,
-        "value": null,
-        "extra": null,
-        "better_than": null,
+        "value": 4.5,
+        "extra": "Reach 5,951 · Unique clicks 268 · LP views 179",
+        "better_than": "A",
         "winner": false
        }
       ],
-      "insight": "The experiment is live on Meta right now. Attention results for the five concepts will appear here as soon as the round closes."
+      "insight": "An early plot twist: the current product is winning attention. “Itch Protect” — the concept the experiment set out to replace — leads Stopping Power at 5.37%, statistically above every other concept so far, with “Joyful” second at 4.50%. Every concept clears the benchmark ceiling, and the round is still in field — the real verdict comes with Closing Power, where attention has been known to evaporate (see EasyCombIn R1)."
      },
      {
-      "title": "E02R01 — Closing Power (results pending)",
+      "title": "LIVE · Stopping Power by concept — Women 25-35",
+      "metric": "stopping",
+      "audience": "Women 25-35",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Sensitive",
+        "ref": "A",
+        "group": null,
+        "value": 2.17,
+        "extra": "Reach 2,305 · Unique clicks 50 · LP views 31",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Hydration+",
+        "ref": "B",
+        "group": null,
+        "value": 3.3,
+        "extra": "Reach 4,453 · Unique clicks 147 · LP views 94",
+        "better_than": "A",
+        "winner": false
+       },
+       {
+        "label": "Itch Protect",
+        "ref": "C",
+        "group": null,
+        "value": 4.89,
+        "extra": "Reach 4,173 · Unique clicks 204 · LP views 131",
+        "better_than": "ABD",
+        "winner": true
+       },
+       {
+        "label": "Simply Sensitive (Summer's Eve)",
+        "ref": "D",
+        "group": null,
+        "value": 3.29,
+        "extra": "Reach 4,351 · Unique clicks 143 · LP views 96",
+        "better_than": "A",
+        "winner": false
+       },
+       {
+        "label": "Joyful",
+        "ref": "E",
+        "group": null,
+        "value": 4.05,
+        "extra": "Reach 3,209 · Unique clicks 130 · LP views 86",
+        "better_than": "A",
+        "winner": false
+       }
+      ],
+      "insight": "Younger women follow the same pattern. At 25-35, “Itch Protect” leads at 4.89% — significantly above “Sensitive” and “Hydration+” — while “Sensitive”, one of the two new concepts, trails the field at 2.17%."
+     },
+     {
+      "title": "LIVE · Stopping Power by concept — Women 36-54",
+      "metric": "stopping",
+      "audience": "Women 36-54",
+      "benchmark": {
+       "lo": 1.18,
+       "hi": 2.48
+      },
+      "rows": [
+       {
+        "label": "Sensitive",
+        "ref": "A",
+        "group": null,
+        "value": 3.82,
+        "extra": "Reach 4,054 · Unique clicks 155 · LP views 95",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Hydration+",
+        "ref": "B",
+        "group": null,
+        "value": 4.91,
+        "extra": "Reach 3,198 · Unique clicks 157 · LP views 127",
+        "better_than": "A",
+        "winner": false
+       },
+       {
+        "label": "Itch Protect",
+        "ref": "C",
+        "group": null,
+        "value": 6.44,
+        "extra": "Reach 1,895 · Unique clicks 122 · LP views 105",
+        "better_than": "ABDE",
+        "winner": true
+       },
+       {
+        "label": "Simply Sensitive (Summer's Eve)",
+        "ref": "D",
+        "group": null,
+        "value": 4.56,
+        "extra": "Reach 3,577 · Unique clicks 163 · LP views 116",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Joyful",
+        "ref": "E",
+        "group": null,
+        "value": 5.03,
+        "extra": "Reach 2,742 · Unique clicks 138 · LP views 93",
+        "better_than": "A",
+        "winner": false
+       }
+      ],
+      "insight": "The older group pays the most attention overall. Every concept runs hotter at 36-54, again led by “Itch Protect” at 6.44%. “Hydration+” performs notably better here (4.91%) than with the younger group, an early hint that the new concepts may skew older."
+     },
+     {
+      "title": "Closing Power — pending",
       "metric": "closing",
       "audience": "Female 25-54",
       "benchmark": null,
@@ -624,7 +741,7 @@
         "winner": false
        }
       ],
-      "insight": "Conversion data lands here once the round wraps up — the key read will be whether the new “Sensitive” and “Hydration+” concepts out-convert the current Itch Protect and the Summer's Eve benchmark."
+      "insight": "Add-to-cart events are not flowing into the ads data yet, so Closing Power can't be computed from the API for now — the key read (do the new concepts out-convert Itch Protect?) stays open until the round closes or the pixel events are reconciled."
      }
     ],
     "narrative": [
@@ -653,7 +770,7 @@
       "body": "Additional concept banner. Claim: \"Freshen, soothe and set your mood\". Landing page: https://www.vagisil.store/daily-wash/joyful-wash"
      }
     ],
-    "outcome": "Currently testing which daily intimate wash concept has more Stopping Power at shelf and which drives more purchase intent (Closing Power) — \"Sensitive\" vs. \"Hydration+\" — benchmarked against Summer's Eve Simply Sensitive, the current Itch Protect Mousse Wash and the Joyful concept, across women 25-35 and 36-54 in the US. The experiment is in field (July 2026) and results are expected soon."
+    "outcome": "Live snapshot from the Meta API (Aug 5): all five concepts are comfortably above the attention benchmark, and — in an early twist — the current “Itch Protect” leads Stopping Power in both age groups, which challenges the hypothesis that its benefit fails to catch the shopper's eye. Whether that attention converts is still the open question: Closing Power lands when the round wraps."
    }
   ],
   "learnings": [],
