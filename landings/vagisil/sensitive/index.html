@@ -11,6 +11,13 @@
   franja #F060A6 (44px), botón #1A4497 radio 15px 180x42.
   Variables por variante: claim (hero-claim), beneficios, precio, imágenes.
   Tracking: reemplazar PIXEL_ID y descomentar el bloque de Meta Pixel antes de campaña.
+
+  MEDICIÓN DE CLOSING POWER (metodología IEP V2):
+  1) El botón dispara fbq('track','AddToCart') ANTES de navegar — Meta atribuye el evento
+     automáticamente al anuncio/claim que originó la visita. El CP por claim se lee directo
+     de la API (actions_add_to_cart por ad), sin nomenclaturas ni conteo manual.
+  2) Redundancia: el link lleva ?c=<claim> hacia la thank-you, así el rastro queda también
+     en cualquier analytics de páginas (equivalente moderno de la nomenclatura de Lais).
 -->
 <!-- Meta Pixel (activar en campaña)
 <script>
@@ -114,7 +121,7 @@ footer{margin-top:44px;background:var(--blue);color:#fff;padding:44px 0;text-ali
       </ul>
       <div class="price">$5.99</div>
       <div class="buy-wrap">
-        <a class="atc" id="atc" href="thank-you/" onclick="trackATC()">Add to Cart</a>
+        <a class="atc" id="atc" href="thank-you/?c=sensitive" onclick="trackATC()">Add to Cart</a>
       </div>
     </div>
 
