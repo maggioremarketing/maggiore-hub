@@ -25,12 +25,17 @@ fbq('track', 'ViewContent', {content_name: 'Vagisil Sensitive'});
 </script>
 -->
 <style>
+@font-face{font-family:"FuturaBookBT";src:url("fonts/futura-book.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"FuturaMediumBT";src:url("fonts/futura-tercera.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"FuturaHeavyBT";src:url("fonts/futura-heavy.woff2") format("woff2");font-weight:400;font-display:swap}
 :root{
   --blue:#1A4497; --pink:#F060A6; --bg:#ffffff;
-  --futura:"Futura","Century Gothic","URW Gothic","Jost","Trebuchet MS",Arial,sans-serif;
+  --book:"FuturaBookBT","Century Gothic",Arial,sans-serif;
+  --medium:"FuturaMediumBT","Century Gothic",Arial,sans-serif;
+  --heavy:"FuturaHeavyBT","Century Gothic",Arial,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--futura);background:var(--bg);color:var(--blue);line-height:1.6}
+body{font-family:var(--book);background:var(--bg);color:var(--blue);line-height:1.6;font-weight:400}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 header{padding:16px 0}
 header .wrap{display:flex;align-items:center;justify-content:center}
@@ -44,21 +49,21 @@ main{padding:40px 0 10px}
 .g-info{grid-area:info}
 .g-hero{grid-area:hero;margin-top:26px}
 .g-clean{grid-area:clean;align-self:end;padding-bottom:8px}
-.g-title h1{font-size:40px;font-weight:700;letter-spacing:0.01em;line-height:1.15}
+.g-title h1{font-family:var(--heavy);font-size:40px;font-weight:400;letter-spacing:0.01em;line-height:1.15}
 .g-title p{font-size:22px;margin-top:4px}
 .g-product img{width:100%;height:auto;display:block}
 .claim{font-size:19px;line-height:1.6;margin:26px 0 18px}
-.claim b{font-weight:700}
+.claim b{font-family:var(--medium);font-weight:400}
 ul.benefits{padding-left:22px;display:flex;flex-direction:column;gap:14px}
 ul.benefits li{font-size:16.5px;line-height:1.55}
-ul.benefits b{font-weight:700}
+ul.benefits b{font-family:var(--medium);font-weight:400}
 .price{font-size:24px;margin-top:26px}
-.atc{margin-top:14px;display:inline-block;background:var(--blue);color:#fff;border:none;border-radius:15px;
-  width:180px;height:42px;font-size:16px;font-weight:600;font-family:var(--futura);cursor:pointer;transition:filter .12s}
+.atc{margin-top:14px;display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;text-decoration:none;border:none;border-radius:15px;
+  width:180px;height:42px;font-size:16px;font-weight:400;font-family:Arial,Helvetica,sans-serif;cursor:pointer;transition:filter .12s}
 .atc:hover{filter:brightness(1.12)}
-.added{display:none;margin-top:10px;font-weight:600;font-size:14px}
+.added{display:none}
 .g-hero img{width:100%;height:auto;display:block}
-.g-clean h2{font-size:34px;font-weight:400;line-height:1.25;max-width:420px}
+.g-clean h2{font-family:var(--heavy);font-size:34px;font-weight:400;line-height:1.25;max-width:420px}
 .g-clean p{font-size:16px;margin-top:14px;max-width:440px}
 footer{margin-top:44px;background:var(--blue);color:#fff;padding:44px 0;text-align:center;font-size:16px}
 @media(max-width:880px){
@@ -109,8 +114,7 @@ footer{margin-top:44px;background:var(--blue);color:#fff;padding:44px 0;text-ali
       </ul>
       <div class="price">$5.99</div>
       <div class="buy-wrap">
-        <button class="atc" id="atc" onclick="addToCart()">Add to Cart</button>
-        <div class="added" id="added">&#10003; Added to cart</div>
+        <a class="atc" id="atc" href="thank-you/" onclick="trackATC()">Add to Cart</a>
       </div>
     </div>
 
@@ -126,9 +130,7 @@ footer{margin-top:44px;background:var(--blue);color:#fff;padding:44px 0;text-ali
 <footer>&copy; 2026 Vagisil.</footer>
 
 <script>
-function addToCart(){
-  document.getElementById("added").style.display="block";
-  document.getElementById("atc").textContent="In Cart";
+function trackATC(){
   if(typeof fbq==="function"){fbq('track','AddToCart',{content_name:'Vagisil Sensitive',value:5.99,currency:'USD'});}
 }
 </script>
