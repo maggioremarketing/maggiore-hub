@@ -959,6 +959,13 @@ body { margin: 0; background: var(--ink-deep); color: var(--fg); }
     .lucide { stroke-width: 1.75; }
   
 
+/* --- fixes de navegación --- */
+section[id], div[id="iep-v2-explorer"] { scroll-margin-top: 84px; }
+[data-screen-label="Nav"] { flex-wrap: nowrap; }
+[data-screen-label="Nav"] > div { flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; scrollbar-width: none; }
+[data-screen-label="Nav"] > div::-webkit-scrollbar { display: none; }
+@media (max-width: 1180px){ [data-screen-label="Nav"] a { font-size: 12px !important; } }
+
 </style>
 </head>
 <body>
@@ -1576,11 +1583,12 @@ function v2Open(i){
       }), ch.benchmark);
     });
   });
-  window.scrollTo({top:0,behavior:"smooth"});
+  window.scrollTo(0, Math.min(window.scrollY, (document.getElementById("iep-v2-explorer")||{getBoundingClientRect:function(){return {top:0}}}).getBoundingClientRect().top + window.scrollY - 80));
 }
 function v2Close(){
   document.getElementById("iepV2Detail").classList.remove("open");
   document.getElementById("iepV2Home").style.display="block";
+  var _ex=document.getElementById("iep-v2-explorer"); if(_ex){window.scrollTo({top:_ex.getBoundingClientRect().top+window.scrollY-80,behavior:"smooth"});}
 }
 
 function v2Round(e,r,ri){
@@ -2085,8 +2093,8 @@ function wireIEP(){
     });
     if (small.length) small[small.length-1].textContent = e.rounds.length + ' round' + (e.rounds.length>1?'s':'') + (e.status==='in_progress' ? ' · LIVE' : '');
     c.addEventListener('click', function(){
+      showTab('iep-v2');
       v2Open(idx);
-      document.getElementById('iep-v2-explorer').scrollIntoView({behavior:'smooth'});
     });
     grid.appendChild(c);
   });
@@ -2158,7 +2166,7 @@ function wireAsk(){
     });
     IEPV2_DATA.forEach(function(e, idx){
       var hay = (e.name+' '+(e.headline||'')+' '+(e.objective||'')+' '+e.brand).toLowerCase();
-      if (hay.indexOf(q)>=0) hits.push({t:e.headline||e.name, s:'IEP · '+e.brand+' · '+e.experiment_id, fn:function(){ v2Open(idx); document.getElementById('iep-v2-explorer').scrollIntoView({behavior:'smooth'}); }});
+      if (hay.indexOf(q)>=0) hits.push({t:e.headline||e.name, s:'IEP · '+e.brand+' · '+e.experiment_id, fn:function(){ showTab('iep-v2'); v2Open(idx); }});
     });
     hits.slice(0,6).forEach(function(h){
       var d = document.createElement('div');
@@ -2178,24 +2186,49 @@ function wireAsk(){
   input.addEventListener('keydown', function(ev){ if (ev.key==='Enter') go(); });
 }
 
-function navActive(){
-  var links = document.querySelectorAll('nav a[href^="#"], [data-screen-label="Nav"] a[href^="#"]');
-  var map = {};
-  Array.prototype.forEach.call(links, function(a){ map[a.getAttribute('href').slice(1)] = a; });
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if (!en.isIntersecting) return;
-      Array.prototype.forEach.call(links, function(a){
-        a.style.color = 'var(--fg-2)'; a.style.borderBottom = '0';
-      });
-      var a = map[en.target.id];
-      if (a){ a.style.color = 'var(--fg)'; a.style.borderBottom = '1px solid var(--primary)'; }
-    });
-  }, {rootMargin: '-40% 0px -55% 0px'});
-  Object.keys(map).forEach(function(id){
-    var el = document.getElementById(id);
-    if (el) obs.observe(el);
+var TABS = {
+  'hub': ['Hero', 'Brand Portfolio'],
+  'social-listening': ['Social Listening'],
+  'iep': ['IEP'],
+  'iep-v2': ['IEP V2'],
+  'insights': ['Key Insights'],
+  'ask': ['Ask the Hub'],
+  'ai-audit': ['AI Audit'],
+  'jtbd': ['JTBD']
+};
+function allTabSections(){
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-screen-label]'));
+  els = els.filter(function(e){ var l=e.getAttribute('data-screen-label'); return l!=='Nav' && l!=='Footer'; });
+  var ex = document.getElementById('iep-v2-explorer');
+  if (ex) els.push(ex);
+  return els;
+}
+function sectionsFor(tab){
+  var els = [];
+  (TABS[tab]||[]).forEach(function(lbl){
+    Array.prototype.forEach.call(document.querySelectorAll('[data-screen-label="'+lbl+'"]'), function(e){ els.push(e); });
   });
+  if (tab === 'iep-v2'){ var ex = document.getElementById('iep-v2-explorer'); if (ex) els.push(ex); }
+  return els;
+}
+function showTab(tab){
+  if (!TABS[tab]) tab = 'hub';
+  allTabSections().forEach(function(sn){ sn.style.display = 'none'; });
+  sectionsFor(tab).forEach(function(sn){ sn.style.display = ''; });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-screen-label="Nav"] a[href^="#"]'), function(a){
+    var on = a.getAttribute('href') === '#' + tab;
+    a.style.color = on ? 'var(--fg)' : 'var(--fg-2)';
+    a.style.borderBottom = on ? '1px solid var(--primary)' : '0';
+  });
+  window.scrollTo(0, 0);
+  try{ history.replaceState(null, '', '#' + tab); }catch(e){}
+}
+function navActive(){
+  Array.prototype.forEach.call(document.querySelectorAll('[data-screen-label="Nav"] a[href^="#"]'), function(a){
+    a.addEventListener('click', function(ev){ ev.preventDefault(); showTab(a.getAttribute('href').slice(1)); });
+  });
+  var initial = (location.hash || '#hub').slice(1);
+  showTab(initial);
 }
 </script>
 
