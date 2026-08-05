@@ -6,7 +6,7 @@
   "category": "Hair Care",
   "status": "completed",
   "headline": "The name that closes for Easy Comb-In.",
-  "subtitle": "A sub-brand naming recommendation for Just For Men Easy Comb-In — built on Stopping Power and Closing Power across three audiences.",
+  "subtitle": "Two rounds: the sub-brand name (R1) and the on-pack claims (R2) — Stopping & Closing Power across three audiences.",
   "background": "Just For Men is seeking dual placement for Easy Comb-In between the Men's Shave aisle and the Women's Hair Color aisle. The test identifies which title best positions the product — with special attention to Closing Power for the Women's HC set.",
   "objective": "Which sub-brand title gives Easy Comb-In the strongest Closing Power? Does the winner hold up across male English, male Spanish and female audiences?",
   "hypothesis": "One of the proposed sub-brand titles will have greater closing power than the current “Easy Comb-In Color” title.",
@@ -133,7 +133,7 @@
         "winner": false
        }
       ],
-      "insight": "“Quick Fix” lifts both KPIs. The only title significantly above the control on both KPIs. And while the current title closes below the IEP benchmark norm (8.70% vs. a 9.52% floor), Quick Fix and Precision sit at its ceiling. Stopping power = % who paused on the title (click-through). ▲ Stat. sig. above control at 95% confidence · Dashed line = control level · Shaded band = IEP benchmark (SP 1.18–2.49% · CP 9.52–17.38%)."
+      "insight": "Four challengers out-stop the current name. “Targeted” (2.32%), “Clean-Up” (2.03%), “Easy Touch-Up” (1.91%) and “Quick Fix” (1.90%) all caught significantly more male attention than “Easy Comb-In Color”, which sits near the bottom of the field at 1.51%. Attention alone doesn't decide a rename, though — the next chart shows which of these titles turn that attention into intent."
      },
      {
       "title": "Closing Power by title — Men 30–64 (EN + ES combined)",
@@ -217,7 +217,7 @@
         "winner": false
        }
       ],
-      "insight": "“Quick Fix” lifts both KPIs. The only title significantly above the control on both KPIs. And while the current title closes below the IEP benchmark norm (8.70% vs. a 9.52% floor), Quick Fix and Precision sit at its ceiling. Closing power = % with purchase intent (add-to-cart). ▲ Stat. sig. above control at 95% confidence · Dashed line = control level · Shaded band = IEP benchmark (SP 1.18–2.49% · CP 9.52–17.38%)."
+      "insight": "“Quick Fix” lifts both KPIs. It is the only title significantly above the control on attention and conversion at once, closing at 17.13% among men — right at the benchmark ceiling — while the current name closes below the benchmark floor (8.70% vs. 9.52%). “Precision” converts almost as well (16.67%), but without adding any attention."
      },
      {
       "title": "Stopping Power by title — Men (EN + ES combined) vs. Women",
@@ -373,7 +373,7 @@
         "winner": false
        }
       ],
-      "insight": "Naming moves men — not the female shopper. Women pause on the banners far more than men — then convert ≈3× less (CP 10.70% men vs. 3.70% women pooled, stat. sig.). They look, but don't commit: a proxy purchase. Dashed lines = each group's control level (gray = men, red = women) · Shaded band = IEP benchmark (SP 1.18–2.49% · CP 9.52–17.38%) · n = 1,627 men · 756 women."
+      "insight": "Women stop far more than men. Nearly every title caught more female attention — “Easy Touch-Up” reached a striking 12.82% — which fits a proxy purchase: women notice the product, often while shopping for someone else. The real question is whether all that attention converts, and the next chart answers it."
      },
      {
       "title": "Closing Power by title — Men (EN + ES combined) vs. Women",
@@ -529,7 +529,7 @@
         "winner": true
        }
       ],
-      "insight": "Naming moves men — not the female shopper. Women pause on the banners far more than men — then convert ≈3× less (CP 10.70% men vs. 3.70% women pooled, stat. sig.). They look, but don't commit: a proxy purchase. Dashed lines = each group's control level (gray = men, red = women) · Shaded band = IEP benchmark (SP 1.18–2.49% · CP 9.52–17.38%) · n = 1,627 men · 756 women."
+      "insight": "Naming moves men — not the female shopper. For all their extra attention, women converted about three times less than men (3.70% vs. 10.70% pooled, statistically significant): they look, but they don't commit. No title fixed that gap, though “No Mix” came closest at 7.61% — the strongest title with women in the test."
      },
      {
       "title": "Closing Power by title — Male English vs. Male Spanish",
@@ -685,7 +685,7 @@
         "winner": false
        }
       ],
-      "insight": "The winners travel across languages. NO OVERALL LANGUAGE GAP — 11.51% EN vs. 9.82% ES pooled across all titles — no significant difference. And the two winning titles are language-proof: Quick Fix (16.51 / 17.76) and Precision (15.93 / 17.72). ONE TITLE DOESN'T TRAVEL — “Touch-Up” collapses in Spanish: 13.59% EN vs. 2.02% ES — the only statistically significant language gap in the test. A caution flag if this title is ever considered. DIRECTIONAL WATCH-OUT — The current title leans Spanish (11.63% ES vs. 6.12% EN, directional) — renaming should be validated in Spanish-language media first."
+      "insight": "The winners travel across languages. Pooled across all titles there is no meaningful gap between English and Spanish (11.51% vs. 9.82%), and both winning titles hold up on each side — Quick Fix closes at 16.51% in English and 17.76% in Spanish. The exception is “Touch-Up”, which collapses from 13.59% in English to 2.02% in Spanish, the only significant language gap in the test and a caution flag if that title is ever considered. Worth noting: the current name actually leans Spanish (11.63% vs. 6.12%, directional), so any rename should be validated in Spanish-language media first."
      },
      {
       "title": "Closing Power on Hotjar click heat-map landing pages — All audiences",
@@ -733,7 +733,7 @@
         "winner": false
        }
       ],
-      "insight": "Winning titles focus the click. INTENT LOOKS LIKE THIS — On the winning pages, clicks pile onto one place: Add to Cart. Quick Fix and Precision show a single hot core on the buy button and little else — visitors arrive already decided. ATTENTION ≠ INTENT — “Easy Touch-Up” is the cautionary tale: the most-explored page of the test — clicks scattered over the pack, the title, the copy — and one of the lowest closing rates. The current title shows the same diffuse pattern, echoing its below-benchmark CP. Crops show the buy section of each landing page · full-length heat maps available on request."
+      "insight": "Winning titles focus the click. On the Quick Fix and Precision pages, the heat maps show clicks piling onto a single spot — the Add to Cart button — a sign that visitors arrive already decided. “Easy Touch-Up” tells the opposite story: the most-explored page of the test, with clicks scattered across the pack, the title and the copy, yet one of the lowest closing rates. The current title shows the same diffuse pattern, echoing its below-benchmark conversion. Attention is not intent."
      }
     ],
     "narrative": [
@@ -743,17 +743,686 @@
      }
     ],
     "outcome": "Hypothesis confirmed — two titles beat the control with statistical significance. Recommendation: rename to Quick Fix Hair Color — all three audiences combined, and still the only title that lifts both attention and conversion versus the current name."
+   },
+   {
+    "round": 2,
+    "dates": "July 26 – August 3, 2026",
+    "charts": [
+     {
+      "title": "Stopping Power — Men Total (English + Spanish combined)",
+      "metric": "stopping",
+      "audience": "Male 30–64 (EN + ES combined)",
+      "benchmark": {
+       "lo": 1.19,
+       "hi": 2.47
+      },
+      "rows": [
+       {
+        "label": "Refresh Just the Gray",
+        "ref": "13",
+        "group": "EARLY GRAYS ACTION",
+        "value": 2.07,
+        "extra": "Rank #1",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Targeted Gray Blending",
+        "ref": "11",
+        "group": "TARGETED GRAY",
+        "value": 1.9,
+        "extra": "Rank #2",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Blends Away Early Grays",
+        "ref": "14",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.79,
+        "extra": "Rank #3 (tie)",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Controls Early Grays",
+        "ref": "15",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.79,
+        "extra": "Rank #3 (tie)",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Nourishing Conditioner",
+        "ref": "09",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.74,
+        "extra": "Rank #5 (tie)",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Soft & Smooth Conditioner",
+        "ref": "08",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.74,
+        "extra": "Rank #5 (tie)",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Refresh",
+        "ref": "12",
+        "group": "TARGETED GRAY",
+        "value": 1.69,
+        "extra": "Rank #7",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch Up Your Temples & Roots",
+        "ref": "03",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.68,
+        "extra": "Rank #8",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "01",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.62,
+        "extra": "Rank #9",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Color Lock Conditioner",
+        "ref": "06",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.59,
+        "extra": "Rank #10",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Just Use Where You Need It",
+        "ref": "05",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.58,
+        "extra": "Rank #11",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Moisture Lock Conditioner",
+        "ref": "07",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.48,
+        "extra": "Rank #12",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Refresh Your Temples & Roots",
+        "ref": "04",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.42,
+        "extra": "Rank #13",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Coverage",
+        "ref": "10",
+        "group": "TARGETED GRAY",
+        "value": 1.39,
+        "extra": "Rank #14",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Multiple Use Hair Color",
+        "ref": "02",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.26,
+        "extra": "Rank #15",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Gray messaging clearly leads among men, with three claims statistically tied for first place: Refresh Just the Gray, Targeted Gray Blending, and Blends Away Early Grays. The numeric leader, Refresh Just the Gray at 2.07%, comes with an asterisk because its performance does not hold up across languages. Encouragingly, all fifteen claims landed inside the IEP benchmark range for Stopping Power, so nothing tested was a true dud."
+     },
+     {
+      "title": "Stopping Power — Male English",
+      "metric": "stopping",
+      "audience": "Male 30–64 (English)",
+      "benchmark": {
+       "lo": 1.19,
+       "hi": 2.47
+      },
+      "rows": [
+       {
+        "label": "Refresh Just the Gray",
+        "ref": "13",
+        "group": "EARLY GRAYS ACTION",
+        "value": 2.33,
+        "extra": "Rank #1 · ES: 1.77%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Blending",
+        "ref": "11",
+        "group": "TARGETED GRAY",
+        "value": 1.93,
+        "extra": "Rank #2 · ES: 1.87%",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Blends Away Early Grays",
+        "ref": "14",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.9,
+        "extra": "Rank #3 · ES: 1.70%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Refresh",
+        "ref": "12",
+        "group": "TARGETED GRAY",
+        "value": 1.76,
+        "extra": "Rank #4 · ES: 1.46%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Soft & Smooth Conditioner",
+        "ref": "08",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.75,
+        "extra": "Rank #5 (tie) · ES: 1.63%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch Up Your Temples & Roots",
+        "ref": "03",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.75,
+        "extra": "Rank #5 (tie) · ES: 1.55%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Just Use Where You Need It",
+        "ref": "05",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.73,
+        "extra": "Rank #7 · ES: 1.44%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Controls Early Grays",
+        "ref": "15",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.71,
+        "extra": "Rank #8 (tie) · ES: 1.93%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Nourishing Conditioner",
+        "ref": "09",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.71,
+        "extra": "Rank #8 (tie) · ES: 1.82%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "01",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.67,
+        "extra": "Rank #10 · ES: 1.52%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Refresh Your Temples & Roots",
+        "ref": "04",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.57,
+        "extra": "Rank #11 · ES: 1.11%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Coverage",
+        "ref": "10",
+        "group": "TARGETED GRAY",
+        "value": 1.5,
+        "extra": "Rank #12 · ES: 1.25%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Color Lock Conditioner",
+        "ref": "06",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.43,
+        "extra": "Rank #13 · ES: 1.75%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Moisture Lock Conditioner",
+        "ref": "07",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.28,
+        "extra": "Rank #14 · ES: 1.67%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Multiple Use Hair Color",
+        "ref": "02",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.15,
+        "extra": "Rank #15 · Below benchmark floor (1.19%) · ES: 1.54%",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Among English-speaking men, Refresh Just the Gray posts the strongest score at 2.33%, but the deck flags it as a caution because that lead evaporates in Spanish. Targeted Gray Blending sits right behind at 1.93% and, crucially, holds essentially the same score in both languages, which makes it the language-proof pick. The only claim to slip below the benchmark floor here was Multiple Use Hair Color at 1.15%, which interestingly performs noticeably better in Spanish."
+     },
+     {
+      "title": "Stopping Power — Male Spanish",
+      "metric": "stopping",
+      "audience": "Male 30–64 (Spanish)",
+      "benchmark": {
+       "lo": 1.19,
+       "hi": 2.47
+      },
+      "rows": [
+       {
+        "label": "Controls Early Grays",
+        "ref": "15",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.93,
+        "extra": "Rank #1 · EN: 1.71%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Blending",
+        "ref": "11",
+        "group": "TARGETED GRAY",
+        "value": 1.87,
+        "extra": "Rank #2 · EN: 1.93%",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Includes Nourishing Conditioner",
+        "ref": "09",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.82,
+        "extra": "Rank #3 · EN: 1.71%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Refresh Just the Gray",
+        "ref": "13",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.77,
+        "extra": "Rank #4 · EN: 2.33%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Color Lock Conditioner",
+        "ref": "06",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.75,
+        "extra": "Rank #5 · EN: 1.43%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Blends Away Early Grays",
+        "ref": "14",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.7,
+        "extra": "Rank #6 · EN: 1.90%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Moisture Lock Conditioner",
+        "ref": "07",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.67,
+        "extra": "Rank #7 · EN: 1.28%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Soft & Smooth Conditioner",
+        "ref": "08",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.63,
+        "extra": "Rank #8 · EN: 1.75%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch Up Your Temples & Roots",
+        "ref": "03",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.55,
+        "extra": "Rank #9 · EN: 1.75%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Multiple Use Hair Color",
+        "ref": "02",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.54,
+        "extra": "Rank #10 · EN: 1.15%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "01",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.52,
+        "extra": "Rank #11 · EN: 1.67%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Refresh",
+        "ref": "12",
+        "group": "TARGETED GRAY",
+        "value": 1.46,
+        "extra": "Rank #12 · EN: 1.76%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Just Use Where You Need It",
+        "ref": "05",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.44,
+        "extra": "Rank #13 · EN: 1.73%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Coverage",
+        "ref": "10",
+        "group": "TARGETED GRAY",
+        "value": 1.25,
+        "extra": "Rank #14 · EN: 1.50%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Refresh Your Temples & Roots",
+        "ref": "04",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.11,
+        "extra": "Rank #15 · Below benchmark floor (1.19%) · EN: 1.57%",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "The Spanish-language picture reshuffles the leaderboard: Controls Early Grays rises to the top at 1.93%, while the English winner Refresh Just the Gray drops to 1.77%, confirming that the numeric leader does not travel across languages. Targeted Gray Blending is the story here, holding at 1.87% versus 1.93% in English with no meaningful gap. On the downside, Refresh Your Temples & Roots falls to 1.11%, just below the benchmark floor, while conditioner claims generally do a bit better with Spanish speakers than English speakers."
+     },
+     {
+      "title": "Stopping Power — Female 30–64",
+      "metric": "stopping",
+      "audience": "Female 30–64",
+      "benchmark": {
+       "lo": 1.19,
+       "hi": 2.47
+      },
+      "rows": [
+       {
+        "label": "Controls Early Grays",
+        "ref": "15",
+        "group": "EARLY GRAYS ACTION",
+        "value": 2.52,
+        "extra": "Rank #1 · Above benchmark top (2.47%)",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Targeted Gray Coverage",
+        "ref": "10",
+        "group": "TARGETED GRAY",
+        "value": 2.03,
+        "extra": "Rank #2",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Touch Up Your Temples & Roots",
+        "ref": "03",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.94,
+        "extra": "Rank #3",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Mix Hair Color",
+        "ref": "01",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.87,
+        "extra": "Rank #4",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Nourishing Conditioner",
+        "ref": "09",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.86,
+        "extra": "Rank #5",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Blending",
+        "ref": "11",
+        "group": "TARGETED GRAY",
+        "value": 1.84,
+        "extra": "Rank #6 (tie)",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Refresh Your Temples & Roots",
+        "ref": "04",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.84,
+        "extra": "Rank #6 (tie)",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Blends Away Early Grays",
+        "ref": "14",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.82,
+        "extra": "Rank #8",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Moisture Lock Conditioner",
+        "ref": "07",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.81,
+        "extra": "Rank #9",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Refresh Just the Gray",
+        "ref": "13",
+        "group": "EARLY GRAYS ACTION",
+        "value": 1.8,
+        "extra": "Rank #10",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Multiple Use Hair Color",
+        "ref": "02",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.74,
+        "extra": "Rank #11",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Refresh",
+        "ref": "12",
+        "group": "TARGETED GRAY",
+        "value": 1.73,
+        "extra": "Rank #12",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Just Use Where You Need It",
+        "ref": "05",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.54,
+        "extra": "Rank #13",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Soft & Smooth Conditioner",
+        "ref": "08",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.4,
+        "extra": "Rank #14",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Includes Color Lock Conditioner",
+        "ref": "06",
+        "group": "CONDITIONER INGREDIENT",
+        "value": 1.25,
+        "extra": "Rank #15",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Women delivered the cleanest result of the round: Controls Early Grays stands alone at 2.52%, statistically above every other top-tier claim and the only score in the entire test to clear the top of the IEP benchmark band. There is no ambiguity or tie to argue about here, which is rare in these tests. The rest of the female leaderboard also runs noticeably hotter than the men's, echoing the pattern seen in Round 1."
+     },
+     {
+      "title": "Where Women Out-Index Men Most (R2, secondary detail)",
+      "metric": "stopping",
+      "audience": "Female vs Male 30–64",
+      "benchmark": null,
+      "rows": [
+       {
+        "label": "Controls Early Grays",
+        "ref": "15",
+        "group": "EARLY GRAYS ACTION",
+        "value": 2.52,
+        "extra": "Men 1.79% → Women 2.52%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Targeted Gray Coverage",
+        "ref": "10",
+        "group": "TARGETED GRAY",
+        "value": 2.03,
+        "extra": "Men 1.39% → Women 2.03%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Refresh Your Temples & Roots",
+        "ref": "04",
+        "group": "TEMPLES & ROOTS",
+        "value": 1.84,
+        "extra": "Men 1.42% → Women 1.84%",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Multiple Use Hair Color",
+        "ref": "02",
+        "group": "USAGE FLEXIBILITY",
+        "value": 1.74,
+        "extra": "Men 1.26% → Women 1.74%",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Across two rounds testing two different variables, sub-brand naming and now on-pack claims, women have consistently paused more than men on Easy Comb-In creative, and both rounds reached statistical significance. In Round 2 the pooled gap was 1.86% for women versus 1.65% for men, with the widest individual spreads on Controls Early Grays and Targeted Gray Coverage. This is starting to look like a durable, brand-level pattern rather than a quirk of any single test."
+     }
+    ],
+    "narrative": [
+     {
+      "title": "What we set out to answer",
+      "body": "This round asked which of fifteen on-pack claims captures the most attention across three audiences, so the team can recommend what actually goes on the physical product box. Unlike Round 1, which tested sub-brand titles, this test isolated the claim text itself: same pack, same media, same audiences, with only the banner copy rotating. The hypothesis was that claims naming a specific, targeted benefit, like gray-blending precision or early-gray action, would outperform generic usage-flexibility or ingredient-only claims. Importantly, this round measured Stopping Power only, with no Closing Power read."
+     },
+     {
+      "title": "The top claim doesn't travel",
+      "body": "Refresh Just the Gray was the numeric leader among men overall at 2.07%, but the language cut told a different story: it scored 2.33% in English and collapsed to 1.77% in Spanish. Targeted Gray Blending, by contrast, held essentially steady at 1.93% in English and 1.87% in Spanish, making it the language-proof option among the statistically tied leaders. When a claim is going on a box that both English and Spanish speakers will see, that consistency matters more than a fragile numeric edge."
+     },
+     {
+      "title": "Women rally around one clear claim",
+      "body": "The female audience produced the single strongest result of the entire round: Controls Early Grays reached 2.52%, standing statistically above every other top-tier claim and clearing the top of the IEP benchmark, the only claim in the test to do so. Where the men's results came in clusters and ties, women converged decisively on one message. It suggests the early-gray-control framing has real pull with this audience."
+     },
+     {
+      "title": "Women pause more than men, twice now",
+      "body": "Project Compass now has the same directional finding from two consecutive rounds built on completely different variables. In Round 2, women pooled at 1.86% Stopping Power against 1.65% for men, and both rounds' gaps were statistically significant. Since this held first for sub-brand naming and now for on-pack claims, it reads as a reinforced, brand-level pattern: women consistently stop for Easy Comb-In creative more than the men the product is aimed at."
+     },
+     {
+      "title": "Conditioner claims open a diversification path",
+      "body": "Outside the gray-messaging territory, the ingredient and care claims held their own, with Includes Nourishing Conditioner landing in the men's top five at 1.74%. That gives the brand a genuinely different story to tell on-pack alongside a gray claim, rather than stacking three variations of the same message. It is a useful reminder that the box does not have to say the same thing three ways."
+     }
+    ],
+    "outcome": "The round settled the question it was built for: gray messaging is the territory that stops men, but the safest single claim for the box is Targeted Gray Blending, which ties statistically for the top men's score at 1.90% and shows no English/Spanish gap, unlike the fragile numeric leader Refresh Just the Gray. Every one of the fifteen claims landed within the IEP benchmark, and among women one claim, Controls Early Grays at 2.52%, stood decisively above everything else and above the benchmark itself. The test also reconfirmed, for the second consecutive round, that women pause for this creative significantly more than men."
    }
   ],
   "learnings": [
-   "Women convert far below men. CP 10.70% men vs. 3.70% women pooled — a ≈3× gap, stat. sig. — even though women pause on the banners nearly 2× more (SP 3.40% vs. 1.78%). A proxy purchase: they look, but don't commit, and no title fixed it. Next step: elevate “No Mix” as a highlighted on-pack claim to speak to the female shopper.",
-   "The best name is “Quick Fix Hair Color.” The only title significantly above the control on Stopping Power and Closing Power — CP 12.42% vs. 7.01% across all audiences, rising to 17.13% among men, where the current title closes below the IEP benchmark floor. “Precision Hair Color” is a validated alternative (CP 12.33%, stat. sig.).",
-   "Spanish and English agree on the winner. No overall language gap (11.51% EN vs. 9.82% ES, n.s.) and the winning titles are language-proof: Quick Fix 16.51 / 17.76 and Precision 15.93 / 17.72. One caution: “Touch-Up” collapses in Spanish (13.59% → 2.02%, the only stat. sig. language gap of the test)."
+   "Women convert far below men. They pause on the banners nearly twice as often, yet close about three times less (3.70% vs. 10.70%, statistically significant) — a classic proxy-purchase pattern: they notice the product, but the decision isn't theirs. No title fixed it, so the way to reach them is on-pack, not through the name.",
+   "The best name is “Quick Fix Hair Color”. It was the only title significantly above the control on both attention and conversion — closing at 12.42% across all audiences and 17.13% among men, where the current name falls below the benchmark floor. “Precision Hair Color” is a validated alternative: statistically tied on conversion, but without the attention lift.",
+   "Spanish and English agree on the winner. There is no overall language gap (11.51% vs. 9.82%) and both winning titles hold their numbers in each language. The one caution is “Touch-Up”, which collapses in Spanish (13.59% → 2.02%) — the only significant language gap of the test.",
+   "A numeric winner is not automatically the right winner. Refresh Just the Gray topped the men's combined table at 2.07%, but its English score of 2.33% fell to 1.77% in Spanish, so a claim destined for a bilingual shelf needs to pass a language check before it earns the box.",
+   "Targeted, benefit-specific gray claims outperformed generic flexibility and ingredient-only claims among men, broadly confirming the round's hypothesis. The top of the men's table was dominated by gray-blending and early-gray-action messaging, while claims like Multiple Use Hair Color sat at the bottom and even dipped below the benchmark floor in English.",
+   "Women responded far more decisively than men, rallying around Controls Early Grays at 2.52%, the only score in the test to clear the benchmark ceiling. Combined with the pooled gap of 1.86% versus 1.65%, this is the second round in a row where women showed higher Stopping Power on Easy Comb-In creative, making it a durable brand-level pattern rather than a one-off.",
+   "Conditioner and care claims are a viable second story for the pack. Includes Nourishing Conditioner reached the men's top five at 1.74% and performed even better in Spanish, showing the brand can diversify its on-pack messaging beyond gray coverage without sacrificing attention."
   ],
   "recommendations": [
-   "PRIMARY · WINNER — Rename to Quick Fix Hair Color. Highest Closing Power of the test (stat. sig. above control, 12.42% all audiences) and significantly above it on Stopping Power (2.45%). Wins with men in both languages (CP 16.51% EN · 17.76% ES) and keeps the lead in the full aggregate.",
-   "VALIDATED ALTERNATIVE — Precision Hair Color. Statistically tied with Quick Fix on Closing Power (12.33% vs. 12.42%) and equally language-proof — but its Stopping Power stays at control level (1.90%), so it converts without adding attention.",
-   "BEST FOR THE FEMALE SHOPPER — No Mix Hair Color. The strongest title with women (CP 7.61%, directional) and third overall (CP total 10.28%, directional). Rather than renaming, elevate “No Mix” as a highlighted on-pack claim to speak to the Women's HC aisle shopper."
+   "Rename to “Quick Fix Hair Color”. It delivered the test's highest Closing Power (12.42% across all audiences, statistically above the control) while also lifting attention (2.45%), and it wins with men in both languages (16.51% EN · 17.76% ES).",
+   "Keep “Precision Hair Color” as the validated alternative. It ties Quick Fix on conversion (12.33%) and is equally language-proof, but its attention stays at control level — it converts without drawing extra eyes.",
+   "Speak to the female shopper with “No Mix” on the pack. It was the strongest title with women (7.61%, directional) and third overall; rather than renaming for her, elevate it as a highlighted on-pack claim for the Women's Hair Color aisle.",
+   "Make Targeted Gray Blending the primary claim on the box. It is statistically tied for the top Stopping Power score among men at 1.90%, and unlike the raw numeric leader it shows no significant gap between English and Spanish, which makes it the more reliable choice for a claim that has to work across both languages.",
+   "Add Includes Nourishing Conditioner as the secondary claim. This is a deliberate shift out of gray-coverage territory into an ingredient and care benefit, and it earned a respectable, statistically competitive top-five score among men at 1.74%, giving the pack a genuinely different second message.",
+   "Round out the box with Touch Up Your Temples & Roots as the third claim. At 1.68% among men it is statistically even with the conditioner claim, shows no English/Spanish gap, and opens a third distinct territory, precision touch-up, so the three claims cover gray coverage, care ingredients, and application precision without repeating themselves. A near-duplicate fourth option, Blends Away Early Grays, was deliberately set aside to keep the territories distinct, and all three picks should be treated as directional recommendations."
   ]
  },
  {
@@ -903,7 +1572,7 @@
         "winner": false
        }
       ],
-      "insight": "The 10 claims worth testing on the box. Two themes dominate this list: Moisture & nourishment (Aloe & Coconut Oil) and Ease of application each account for 3 of the top 10. Bars show Stopping Power against the IEP benchmark band; ▲ marks claims significantly above the men's pooled average (95% confidence). Men's pooled average across all 31 claims: 1.42%."
+      "insight": "The ten claims worth testing on the box. Two themes dominate the men's list — moisture &amp; nourishment (the Aloe &amp; Coconut Oil family) and ease of application each place three claims in the top ten, led by “Precision brush for root touchups” (1.89%) and “Smooth, conditioned feel with Aloe &amp; Coconut Oil” (1.88%). Every claim shown here sits significantly above the men's pooled average of 1.42%."
      },
      {
       "title": "Stopping Power Top 10 by audience — Men EN",
@@ -1005,7 +1674,7 @@
         "winner": false
        }
       ],
-      "insight": "Top Claims by audience. Only two claims land in every audience's top 10: “3 easy steps” and “Natural-looking color for mustache & beard” (marked ★). Everything else is audience-specific. Men EN pool avg 1.46%. Stopping Power = unique link clicks / reach. All values fall within the IEP benchmark band [1.18% - 2.48%]."
+      "insight": "English-speaking men lead with practicality. “Up to 3 uses: Reusable for Future Use” tops their list at 2.22%, followed by usage-scope and Aloe &amp; Coconut Oil claims. The test's two universal claims — “3 easy steps” and “Natural-looking color for mustache &amp; beard” (★) — appear here as well, as they do with every audience."
      },
      {
       "title": "Stopping Power Top 10 by audience — Men ES",
@@ -1107,7 +1776,7 @@
         "winner": false
        }
       ],
-      "insight": "Top Claims by audience. Only two claims land in every audience's top 10: “3 easy steps” and “Natural-looking color for mustache & beard” (marked ★). Everything else is audience-specific. Men ES pool avg 1.37%. Stopping Power = unique link clicks / reach. All values fall within the IEP benchmark band [1.18% - 2.48%]."
+      "insight": "Spanish-speaking men respond to precision. “Precision brush for root touchups” clearly leads at 2.60% — the strongest single result among men in the whole test — with brush-tool and conditioning claims filling out the list. The two universal claims (★) hold their place in this audience too."
      },
      {
       "title": "Stopping Power Top 10 by audience — Women",
@@ -1209,7 +1878,7 @@
         "winner": false
        }
       ],
-      "insight": "Top Claims by audience. Only two claims land in every audience's top 10: “3 easy steps” and “Natural-looking color for mustache & beard” (marked ★). Everything else is audience-specific. Women pool avg 1.74%. Stopping Power = unique link clicks / reach. All values fall within the IEP benchmark band [1.18% - 2.48%]."
+      "insight": "Women reward precision and gentleness. “Built for precise facial hair application” (2.88%) and “Gentle Formula Specifically Designed for Facial Hair” (2.64%) lead a list that looks quite different from the men's — women index on control and skin-friendliness, consistent with shopping for someone else. Only the two universal claims (★) repeat across every audience."
      },
      {
       "title": "Stopping Power — All 31 claims ranked by Men (EN+ES) pooled, with per-audience lookup",
@@ -1500,7 +2169,7 @@
         "winner": false
        }
       ],
-      "insight": "Full results — for reference. Ranked by pooled Men (English + Spanish) Stopping Power, with each audience's individual result alongside for lookup. Top 10 with men: strongest candidates for on-pack claims. Significantly below men's pool average: lower priority. All figures are Stopping Power (%). EN/ES/W = Male English, Male Spanish, Women. All 31 claims fall within the IEP benchmark [1.18% – 2.48%] — this ranks relative performance, not pass/fail."
+      "insight": "The full field, ranked by the men's pooled result. Use this as a lookup table: each claim carries its English, Spanish and female result alongside. All 31 claims land inside the IEP benchmark band, so the reading is about relative strength — the top ten with men are the strongest on-pack candidates, and anything significantly below the pool average can be deprioritized."
      }
     ],
     "narrative": [
@@ -1523,14 +2192,10 @@
    "All 31 claims fall within the IEP benchmark band [1.18% – 2.48%] — the read ranks relative performance, not pass/fail. Pool averages: Men (EN+ES) 1.42% · Men EN 1.46% · Men ES 1.37% · Women 1.74%."
   ],
   "recommendations": [
-   "Two safe bets, four sharp for men: with two claims already proven across every audience and four of the strongest results specifically with men, this set gives the box both safety and strength, enough range to fill front and back without repeating a single claim.",
-   "UNIVERSAL · PROVEN WITH EVERY AUDIENCE — “3 easy steps” (Men 1.60%, rank #7 of 31).",
-   "UNIVERSAL · PROVEN WITH EVERY AUDIENCE — “Natural-looking color for mustache & beard” (Men 1.68%, rank #6 of 31).",
-   "TOP PERFORMER FOR MEN (EN + ES combined) · PRECISION & BRUSH TOOL — “Precision brush for root touchups” (Men 1.89%).",
-   "TOP PERFORMER FOR MEN (EN + ES combined) · MOISTURE & NOURISHMENT — “Smooth, conditioned feel with Aloe & Coconut Oil” (Men 1.88%).",
-   "TOP PERFORMER FOR MEN (EN + ES combined) · EASE OF APPLICATION — “Up to 3 uses: Reusable for Future Use” (Men 1.82%).",
-   "TOP PERFORMER FOR MEN (EN + ES combined) · EASE OF APPLICATION — “Easy Brush-In Application” (Men 1.73%).",
-   "“Aloe & Coconut Oil” repeats in 3 of the men's top 10; shown is the strongest (“Smooth, conditioned feel”, 1.88%); “Infused with Aloe & Coconut Oil for Softer Feeling Hair” (1.70%) and “Aloe & Coconut Oil to Help Hydrate as it Colors” (1.55%) are equally valid alternates. Men's pool average across all 31 claims: 1.42%."
+   "Anchor the pack with the two universal claims: “3 easy steps” and “Natural-looking color for mustache &amp; beard” — the only two that made every audience's top ten.",
+   "Add the strongest men's claims for punch: “Precision brush for root touchups” (1.89%) and “Smooth, conditioned feel with Aloe &amp; Coconut Oil” (1.88%), the top performers with men in both languages.",
+   "Round out with ease of application: “Up to 3 uses: Reusable for Future Use” (1.82%) and “Easy Brush-In Application” (1.73%) complete a six-claim set that fills front and back of the box without repeating a message.",
+   "If more moisture claims are needed, “Infused with Aloe &amp; Coconut Oil for Softer Feeling Hair” (1.70%) and “Aloe &amp; Coconut Oil to Help Hydrate as it Colors” (1.55%) are validated alternates from the same family."
   ]
  }
 ]
