@@ -32,10 +32,9 @@ fbq('track', 'ViewContent', {content_name: 'Vagisil Sensitive'});
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--futura);background:var(--bg);color:var(--blue);line-height:1.6}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-header{padding:14px 0}
-header .wrap{display:flex;align-items:center;justify-content:space-between}
-header img{height:56px;width:auto}
-header nav a{font-size:15px;color:var(--blue);text-decoration:none;font-weight:600}
+header{padding:16px 0}
+header .wrap{display:flex;align-items:center;justify-content:center}
+header img{height:60px;width:auto}
 .band{background:var(--pink);height:44px}
 main{padding:40px 0 10px}
 .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:20px 56px;align-items:start;
@@ -61,7 +60,7 @@ ul.benefits b{font-weight:700}
 .g-hero img{width:100%;height:auto;display:block}
 .g-clean h2{font-size:34px;font-weight:400;line-height:1.25;max-width:420px}
 .g-clean p{font-size:16px;margin-top:14px;max-width:440px}
-footer{padding:34px 0 44px;text-align:center;font-size:14px}
+footer{margin-top:44px;background:var(--blue);color:#fff;padding:44px 0;text-align:center;font-size:16px}
 @media(max-width:880px){
   header img{height:44px}
   main{padding:22px 0 0}
@@ -73,7 +72,11 @@ footer{padding:34px 0 44px;text-align:center;font-size:14px}
   .claim{font-size:16.5px;margin-top:22px}
   .g-hero{margin-top:30px}
   .g-clean{padding:28px 0 0}
-  .g-clean h2{font-size:24px}
+  .g-clean h2{font-size:24px;text-align:center;max-width:none;margin:0 auto}
+  .g-clean p{text-align:justify;max-width:none}
+  .price{text-align:center}
+  .buy-wrap{text-align:center}
+  .atc{width:min(360px,86%);height:52px;border-radius:28px}
 }
 </style>
 </head>
@@ -82,7 +85,6 @@ footer{padding:34px 0 44px;text-align:center;font-size:14px}
 <header>
   <div class="wrap">
     <img src="img/logo.png" alt="Vagisil">
-    <nav><a href="#">Daily Intimate Wash</a></nav>
   </div>
 </header>
 <div class="band"></div>
@@ -106,8 +108,10 @@ footer{padding:34px 0 44px;text-align:center;font-size:14px}
         <li><b>Clinically and gynecologist tested</b> for sensitive intimate skin, with a soft, gentle cleansing experience.</li>
       </ul>
       <div class="price">$5.99</div>
-      <button class="atc" id="atc" onclick="addToCart()">Add to Cart</button>
-      <div class="added" id="added">&#10003; Added to cart</div>
+      <div class="buy-wrap">
+        <button class="atc" id="atc" onclick="addToCart()">Add to Cart</button>
+        <div class="added" id="added">&#10003; Added to cart</div>
+      </div>
     </div>
 
     <div class="g-hero"><img src="img/hero.webp" alt=""></div>
