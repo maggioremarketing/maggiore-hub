@@ -3,14 +3,32 @@
 mock renderizado + fuentes reales + datos reales + explorador IEP V2 dark."""
 import re, os, shutil, json
 
-S = "/private/tmp/claude-501/-Users-maggiorejosemi-Claude-Projects-Virutex/899d02db-861a-4553-b4d1-0ed22ffc07ac/scratchpad"
-RD = S + "/redesign"
-HANDOFF = RD + "/design_handoff_combe_hub"
-REPO = S + "/hub-combe-src/repo"
+import os as _os
+# Rutas relativas al repo: este archivo vive en tools/redesign/
+RD = _os.path.dirname(_os.path.abspath(__file__))
+REPO = _os.path.dirname(_os.path.dirname(RD))
+HANDOFF = RD + "/design_handoff_combe_hub"  # opcional (no versionado)
 
 body = open(RD + "/mock-body.html", encoding="utf-8").read()
 css = open(RD + "/mock-styles.css", encoding="utf-8").read()
 realdata = open(RD + "/real-data.js", encoding="utf-8").read()
+_sl = REPO + "/tools/sl-data/studies.json"
+if os.path.exists(_sl):
+    _studies = [st for st in json.load(open(_sl, encoding="utf-8")) if st.get("show", True)]
+    _projects_js = "const projects = " + json.dumps([
+        {"year": st["year"], "month": st.get("month",""), "category": st.get("category",""),
+         "brand": st["brand"], "theme": st["theme"], "tools": st.get("tools",""),
+         "summary": st.get("summary",""), "link": st.get("link",""), "file": st.get("file","")} for st in _studies
+    ], ensure_ascii=False) + ";"
+    _i = realdata.index("const projects")
+    _j = realdata.index("[", _i)
+    _d = 0
+    for _k in range(_j, len(realdata)):
+        if realdata[_k] == "[": _d += 1
+        elif realdata[_k] == "]":
+            _d -= 1
+            if _d == 0: break
+    realdata = realdata[:_i] + _projects_js + realdata[_k+1:].lstrip(";")
 auditport = open(RD + "/audit-port.js", encoding="utf-8").read()
 cur = open(REPO + "/combe/index.html", encoding="utf-8").read()
 
@@ -20,22 +38,23 @@ os.makedirs(REPO + "/combe/assets", exist_ok=True)
 picks = ["NeueHaasGroteskDisplay-350.ttf", "NeueHaasGroteskDisplay-400.ttf",
          "NeueHaasGroteskDisplay-500.ttf", "NeueHaasGroteskDisplay-700.ttf",
          "Switzer-100.ttf", "Switzer-100-italic.ttf"]
-for p in picks:
-    shutil.copy(HANDOFF + "/extracted-fonts/" + p, REPO + "/combe/fonts/" + p)
-shutil.copy(HANDOFF + "/source/assets/logo-blanco.svg", REPO + "/combe/assets/logo-blanco.svg")
+if os.path.isdir(HANDOFF + "/extracted-fonts"):
+    for p in picks:
+        shutil.copy(HANDOFF + "/extracted-fonts/" + p, REPO + "/combe/fonts/" + p)
+    shutil.copy(HANDOFF + "/source/assets/logo-blanco.svg", REPO + "/combe/assets/logo-blanco.svg")
 
 fonts_css = """
-@font-face{font-family:"Neue Haas Grotesk Display";font-weight:350;font-style:normal;font-display:swap;src:url("fonts/NeueHaasGroteskDisplay-350.ttf") format("truetype")}
-@font-face{font-family:"Neue Haas Grotesk Display";font-weight:400;font-style:normal;font-display:swap;src:url("fonts/NeueHaasGroteskDisplay-400.ttf") format("truetype")}
-@font-face{font-family:"Neue Haas Grotesk Display";font-weight:500;font-style:normal;font-display:swap;src:url("fonts/NeueHaasGroteskDisplay-500.ttf") format("truetype")}
-@font-face{font-family:"Neue Haas Grotesk Display";font-weight:700;font-style:normal;font-display:swap;src:url("fonts/NeueHaasGroteskDisplay-700.ttf") format("truetype")}
-@font-face{font-family:"Switzer";font-weight:100 900;font-style:normal;font-display:swap;src:url("fonts/Switzer-100.ttf") format("truetype")}
-@font-face{font-family:"Switzer";font-weight:100 900;font-style:italic;font-display:swap;src:url("fonts/Switzer-100-italic.ttf") format("truetype")}
+@font-face{font-family:"Neue Haas Grotesk Display";font-weight:350;font-style:normal;font-display:swap;src:url("/combe/fonts/NeueHaasGroteskDisplay-350.ttf") format("truetype")}
+@font-face{font-family:"Neue Haas Grotesk Display";font-weight:400;font-style:normal;font-display:swap;src:url("/combe/fonts/NeueHaasGroteskDisplay-400.ttf") format("truetype")}
+@font-face{font-family:"Neue Haas Grotesk Display";font-weight:500;font-style:normal;font-display:swap;src:url("/combe/fonts/NeueHaasGroteskDisplay-500.ttf") format("truetype")}
+@font-face{font-family:"Neue Haas Grotesk Display";font-weight:700;font-style:normal;font-display:swap;src:url("/combe/fonts/NeueHaasGroteskDisplay-700.ttf") format("truetype")}
+@font-face{font-family:"Switzer";font-weight:100 900;font-style:normal;font-display:swap;src:url("/combe/fonts/Switzer-100.ttf") format("truetype")}
+@font-face{font-family:"Switzer";font-weight:100 900;font-style:italic;font-display:swap;src:url("/combe/fonts/Switzer-100-italic.ttf") format("truetype")}
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
 """
 
 # ---------- 2. body: logo real ----------
-body = re.sub(r'src="blob:[^"]+"', 'src="assets/logo-blanco.svg"', body)
+body = re.sub(r'src="blob:[^"]+"', 'src="/combe/assets/logo-blanco.svg"', body)
 
 # ---------- 3. explorador IEP V2 dark ----------
 block = open(REPO + "/tools/iepv2-block2.html", encoding="utf-8").read()
@@ -76,6 +95,10 @@ explorer = ('\n<section id="iep-v2-explorer" style="padding:0 80px 96px;">'
             '<div class="v2-grid" id="iepV2Grid"></div></div>'
             '<div id="iepV2Detail" class="v2-detail"></div>'
             '</div></section>\n' + block + '\n')
+
+# renombrar visible "IEP V2" -> "IEP" (los ids no cambian)
+body = body.replace(">IEP V2<", ">IEP<")
+body = body.replace(">IEP V2 <", ">IEP <")
 
 # insertar después del </section> de la sección iep-v2 del mock
 i = body.find('id="iep-v2"')
@@ -149,8 +172,18 @@ function wireSL(){
       head.children[0].textContent = p.brand;
       head.children[1].textContent = p.year + ' · ' + (p.month||'');
       c.children[1].textContent = p.theme;
-      c.title = p.summary || '';
-      c.addEventListener('click', function(){ window.open(p.link, '_blank'); });
+      if (p.summary){
+        var sm = document.createElement('div');
+        sm.style.cssText = 'font-size:12.5px;color:var(--fg-3);line-height:1.55;font-weight:350;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;';
+        sm.textContent = p.summary;
+        c.insertBefore(sm, c.children[2]);
+      }
+      if (p.link){
+        c.addEventListener('click', function(){ window.open(p.link, '_blank'); });
+      } else {
+        c.style.cursor = 'default';
+        c.title = 'Deck disponible en la Clients Folder: ' + (p.file || '');
+      }
       grid.appendChild(c);
     });
   }
@@ -362,7 +395,6 @@ function wireJTBD(){
 var TABS = {
   'hub': ['Hero', 'Brand Portfolio'],
   'social-listening': ['Social Listening'],
-  'iep': ['IEP'],
   'iep-v2': ['IEP V2'],
   'insights': ['Key Insights'],
   'ask': ['Ask the Hub'],
@@ -398,7 +430,8 @@ function showTab(tab){
 }
 function navActive(){
   Array.prototype.forEach.call(document.querySelectorAll('[data-screen-label="Nav"] a[href^="#"]'), function(a){
-    a.addEventListener('click', function(ev){ ev.preventDefault(); showTab(a.getAttribute('href').slice(1)); });
+    if (a.getAttribute('href') === '#iep' && a.textContent.trim() === 'IEP'){ a.style.display = 'none'; return; }
+    a.addEventListener('click', function(ev){ ev.preventDefault(); var t = a.getAttribute('href').slice(1); showTab(t === 'iep' ? 'iep-v2' : t); });
   });
   var initial = (location.hash || '#hub').slice(1);
   showTab(initial);
