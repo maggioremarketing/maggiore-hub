@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 677.61 517.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_17-3);
+      }
+
+      .cls-2 {
+        fill: url(#Degradado_sin_nombre_17);
+      }
+
+      .cls-3 {
+        fill: url(#Degradado_sin_nombre_17-2);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_17" data-name="Degradado sin nombre 17" x1="155.34" y1="298.42" x2="338.81" y2="298.42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#005c97"/>
+      <stop offset="1" stop-color="#55b9a2"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_17-2" data-name="Degradado sin nombre 17" x1="312.14" x2="495.6" xlink:href="#Degradado_sin_nombre_17"/>
+    <linearGradient id="Degradado_sin_nombre_17-3" data-name="Degradado sin nombre 17" x1="468.94" x2="652.4" xlink:href="#Degradado_sin_nombre_17"/>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <polygon class="cls-2" points="338.81 517.93 285.47 517.93 155.34 153.58 182.01 78.92 338.81 517.93"/>
+      <polygon class="cls-3" points="495.6 517.93 442.27 517.93 312.14 153.58 338.81 78.92 495.6 517.93"/>
+      <polygon class="cls-1" points="652.4 517.93 599.07 517.93 468.94 153.58 495.6 78.92 652.4 517.93"/>
+      <path d="M652.4,517.93h25.21C617.21,345.29,495.6,0,495.6,0c0,0-35.91,101.97-78.4,222.78C374.72,101.97,338.81,0,338.81,0c0,0-35.91,101.97-78.4,222.78C217.92,101.97,182.01,0,182.01,0,182.01,0,60.4,345.29,0,517.93h25.21L182.01,78.92l65,181.98c-32.06,91.2-66.04,187.94-90.21,257.03h25.21l78.4-219.51,78.4,219.51,78.4-219.51,78.4,219.51h25.21c-24.17-69.09-58.15-165.84-90.21-257.03l65-181.98,156.8,439.02ZM338.81,445.97c-20.04-57.13-42.97-122.41-65-185.07l65-181.98,65,181.98c-22.03,62.66-44.96,127.94-65,185.07Z"/>
+    </g>
+  </g>
+</svg>
