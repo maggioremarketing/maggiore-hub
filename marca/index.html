@@ -124,6 +124,9 @@ p strong { color: var(--ink); font-weight: 600; }
   place-items: center; background: var(--turquesa); color: #0d0d12; font-size: 11px;
   font-weight: 600; letter-spacing: .04em; }
 .vals3 { display: flex; flex-direction: column; gap: 2px; margin: 2px 0; }
+/* la grilla estira las columnas a la misma altura: la franja de apoyo se
+   ancla abajo, así un CMYK a dos líneas (Azul) no la desalinea del resto */
+.cols .colcol > .blq:last-child { margin-top: auto; }
 .vals3 div { display: flex; gap: 8px; align-items: baseline; }
 .vals3 i { font-style: normal; font-size: 10px; letter-spacing: .08em; color: var(--dim);
   width: 34px; flex: 0 0 34px; }
