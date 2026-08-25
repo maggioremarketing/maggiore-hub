@@ -102,32 +102,46 @@ p strong { color: var(--ink); font-weight: 600; }
   text-transform: uppercase; color: #fcfcfc; border: 1px solid rgba(252,252,252,.4);
   border-radius: 100px; padding: 5px 14px; margin-bottom: 24px; font-weight: 400; }
 
-/* ── swatches: tarjetas blancas con borde, como la lámina de paleta ────── */
-.sw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(244px, 1fr)); gap: 10px; }
-.sw { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
-  background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 11px;
-  color: inherit; font: inherit; cursor: pointer; position: relative; transition: .15s; }
-.sw:hover { border-color: var(--turquesa); transform: translateY(-1px); }
-.sw-chip { width: 44px; height: 44px; border-radius: 8px; flex: 0 0 44px;
-  border: 1px solid var(--line); }
-.sw-meta { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
-.sw-meta b { font-size: 13.5px; font-weight: 600; }
-.sw-meta code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 12px; color: var(--tsobre-blanco); }
-.sw-meta small { font-size: 11px; line-height: 15px; color: var(--dim); }
-.pct { margin-left: auto; font-size: 12px; color: var(--muted); padding-left: 8px; }
-.sw.ok::after { content: 'copiado'; position: absolute; inset: 0; display: grid;
-  place-items: center; background: var(--turquesa); color: #0d0d12; font-size: 12px;
-  font-weight: 600; border-radius: 9px; letter-spacing: .04em; }
+/* ── color: la anatomía de la lámina — nombre, rectángulo, valores, franja ── */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+  gap: 18px 14px; }
+.cols-mini { display: grid; grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+  gap: 16px 12px; }
+.colcol { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.colname { font-size: 13px; line-height: 17px; font-weight: 400; color: var(--ink); }
+.blq { display: flex; align-items: flex-end; justify-content: flex-start; width: 100%;
+  border: 0; border-radius: 0; padding: 6px 8px; cursor: pointer; font: inherit;
+  position: relative; transition: transform .15s; }
+.blq:hover { transform: translateY(-1px); }
+.blq span { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px;
+  color: rgba(252,252,252,.92); }
+.blq.claro { box-shadow: inset 0 0 0 1px var(--line); }
+.blq.claro span { color: var(--muted); }
+.blq.ok::after { content: 'copiado'; position: absolute; inset: 0; display: grid;
+  place-items: center; background: var(--turquesa); color: #0d0d12; font-size: 11px;
+  font-weight: 600; letter-spacing: .04em; }
+.vals3 { display: flex; flex-direction: column; gap: 2px; margin: 2px 0; }
+.vals3 div { display: flex; gap: 8px; align-items: baseline; }
+.vals3 i { font-style: normal; font-size: 10px; letter-spacing: .08em; color: var(--dim);
+  width: 34px; flex: 0 0 34px; }
+.vals3 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px;
+  color: var(--muted); }
+.colusos { list-style: none; margin-top: 4px; }
+.colusos li { font-size: 11px; line-height: 16px; color: var(--dim); padding-left: 10px;
+  position: relative; }
+.colusos li::before { content: '•'; position: absolute; left: 0; }
 
-.sem { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-  padding: 16px; margin-bottom: 10px; }
-.sem-head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline;
-  margin-bottom: 12px; }
-.sem-head b { font-size: 15px; font-weight: 600; }
-.sem-head span { font-size: 12px; line-height: 16px; color: var(--dim); }
-.sem-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
-.sem .sw { background: var(--paper); }
+/* barra de proporciones de uso (lámina 23) */
+.propbar { display: flex; height: 96px; margin: 6px 0 8px; }
+.seg { display: flex; align-items: flex-start; padding: 8px 0 0 8px; min-width: 0;
+  overflow: hidden; }
+.seg span { font-size: 11px; font-weight: 400; color: rgba(252,252,252,.92);
+  white-space: nowrap; }
+.seg.claro { box-shadow: inset 0 0 0 1px var(--line); }
+.seg.claro span { color: var(--muted); }
+.propcaps { display: flex; justify-content: space-between; gap: 20px; }
+.propcaps small { font-size: 11px; line-height: 16px; color: var(--dim); max-width: 220px; }
+.propcaps small:last-child { text-align: right; }
 
 /* ── tipografía ────────────────────────────────────────────────────────── */
 .scale-row { display: flex; gap: 22px; align-items: baseline; padding: 13px 0;
@@ -8519,6 +8533,9 @@ footer { color: var(--dim); font-size: 12px; line-height: 16px;
     <div class="scale-demo" style="font-size:16px;line-height:24px">Maggiore significa mayor</div></div><div class="scale-row"><div class="scale-tag">Caption<small>12/16 px</small></div>
     <div class="scale-demo" style="font-size:12px;line-height:16px">Maggiore significa mayor</div></div>
       <h3>Uso tipográfico</h3>
+      <p style="max-width:78ch">La jerarquía se construye por <strong>proporción de
+      tamaño</strong> — 4x para el encabezado principal, 2x para los encabezados intermedios y
+      x para el cuerpo — y por contraste de peso, no por decoración.</p>
       <div class="usage">
         <div class="card"><b>Encabezado principal (H1)</b>
           <p>Light, destacando por tamaño. Opcionalmente, palabras clave en color primario.</p></div>
@@ -8533,124 +8550,36 @@ footer { color: var(--dim); font-size: 12px; line-height: 16px;
 
     <section id="color"><div class="pad">
       <div class="eyebrow">Paleta de colores</div><h2>Color</h2><div class="trule"></div>
-      <div class="split">
-        <div>
-          <p>La paleta combina <strong>profundidad, claridad y dirección</strong>. Inspirada en
-          la aurora boreal y en paisajes invernales, reúne tonos fríos y luminosos.</p>
-          <p>Los colores vibrantes funcionan como acentos; los oscuros y claros aportan
-          estructura y contraste. <strong>Clic en cualquier color para copiar su HEX.</strong></p>
-        </div>
-        <div>
-          <h3 style="margin-top:0">Paleta base</h3>
-          <div class="sw-grid"><button class="sw" data-copy="#2cced6" title="Clic para copiar #2cced6">
-      <span class="sw-chip" style="background:#2cced6"></span>
-      <span class="sw-meta"><b>Turquesa</b><code>#2cced6</code><small>RGB 44, 206, 214 · CMYK 65, 0, 22, 0</small></span><span class="pct">25%</span>
-    </button><button class="sw" data-copy="#00ff99" title="Clic para copiar #00ff99">
-      <span class="sw-chip" style="background:#00ff99"></span>
-      <span class="sw-meta"><b>Verde</b><code>#00ff99</code><small>RGB 0, 255, 153 · CMYK 61, 0, 62, 0</small></span><span class="pct">12%</span>
-    </button><button class="sw" data-copy="#a399ff" title="Clic para copiar #a399ff">
-      <span class="sw-chip" style="background:#a399ff"></span>
-      <span class="sw-meta"><b>Morado</b><code>#a399ff</code><small>RGB 163, 153, 255 · CMYK 46, 42, 0, 0</small></span><span class="pct">8%</span>
-    </button><button class="sw" data-copy="#142a55" title="Clic para copiar #142a55">
-      <span class="sw-chip" style="background:#142a55"></span>
-      <span class="sw-meta"><b>Azul</b><code>#142a55</code><small>RGB 20, 42, 85 · CMYK 100, 87, 38, 32</small></span><span class="pct">15%</span>
-    </button><button class="sw" data-copy="#112024" title="Clic para copiar #112024">
-      <span class="sw-chip" style="background:#112024"></span>
-      <span class="sw-meta"><b>Negro</b><code>#112024</code><small>RGB 17, 32, 36 · CMYK 89, 67, 58, 75</small></span><span class="pct">30%</span>
-    </button><button class="sw" data-copy="#fcfcfc" title="Clic para copiar #fcfcfc">
-      <span class="sw-chip" style="background:#fcfcfc"></span>
-      <span class="sw-meta"><b>Invierno</b><code>#fcfcfc</code><small>RGB 252, 252, 252 · CMYK 1, 1, 1, 0</small></span><span class="pct">5%</span>
-    </button></div>
-        </div>
+      <p style="max-width:78ch">La paleta cromática de Maggiore combina <strong>profundidad,
+      claridad y dirección</strong>. Inspirada en la aurora boreal y en paisajes invernales,
+      reúne tonos fríos y luminosos que proyectan una marca sofisticada, contemporánea y en
+      constante expansión. Los colores vibrantes funcionan como acentos visuales, mientras los
+      tonos oscuros y claros aportan estructura, contraste y equilibrio.
+      <strong>Clic en cualquier color para copiar su HEX.</strong></p>
+      <div class="cols" style="margin-top:26px"><div class="colcol"><div class="colname">Turquesa</div><button class="blq claro" data-copy="#2cced6" style="background:#2cced6;height:120px" title="Clic para copiar #2cced6"></button><div class="vals3"><div><i>HEX</i><code>#2cced6</code></div><div><i>RGB</i><code>44, 206, 214</code></div><div><i>CMYK</i><code>65, 0, 22, 0</code></div></div><button class="blq" data-copy="#00aab0" style="background:#00aab0;height:30px" title="Clic para copiar #00aab0"><span>#00aab0</span></button></div><div class="colcol"><div class="colname">Verde</div><button class="blq claro" data-copy="#00ff99" style="background:#00ff99;height:120px" title="Clic para copiar #00ff99"></button><div class="vals3"><div><i>HEX</i><code>#00ff99</code></div><div><i>RGB</i><code>0, 255, 153</code></div><div><i>CMYK</i><code>61, 0, 62, 0</code></div></div><button class="blq" data-copy="#00aab0" style="background:#00aab0;height:30px" title="Clic para copiar #00aab0"><span>#00aab0</span></button></div><div class="colcol"><div class="colname">Morado</div><button class="blq claro" data-copy="#a399ff" style="background:#a399ff;height:120px" title="Clic para copiar #a399ff"></button><div class="vals3"><div><i>HEX</i><code>#a399ff</code></div><div><i>RGB</i><code>163, 153, 255</code></div><div><i>CMYK</i><code>46, 42, 0, 0</code></div></div><button class="blq" data-copy="#00aab0" style="background:#00aab0;height:30px" title="Clic para copiar #00aab0"><span>#00aab0</span></button></div><div class="colcol"><div class="colname">Azul</div><button class="blq" data-copy="#142a55" style="background:#142a55;height:120px" title="Clic para copiar #142a55"></button><div class="vals3"><div><i>HEX</i><code>#142a55</code></div><div><i>RGB</i><code>20, 42, 85</code></div><div><i>CMYK</i><code>100, 87, 38, 32</code></div></div><button class="blq" data-copy="#00aab0" style="background:#00aab0;height:30px" title="Clic para copiar #00aab0"><span>#00aab0</span></button></div><div class="colcol"><div class="colname">Negro</div><button class="blq" data-copy="#112024" style="background:#112024;height:120px" title="Clic para copiar #112024"></button><div class="vals3"><div><i>HEX</i><code>#112024</code></div><div><i>RGB</i><code>17, 32, 36</code></div><div><i>CMYK</i><code>89, 67, 58, 75</code></div></div><button class="blq" data-copy="#111118" style="background:#111118;height:30px" title="Clic para copiar #111118"><span>#111118</span></button></div><div class="colcol"><div class="colname">Invierno</div><button class="blq claro" data-copy="#fcfcfc" style="background:#fcfcfc;height:120px" title="Clic para copiar #fcfcfc"></button><div class="vals3"><div><i>HEX</i><code>#fcfcfc</code></div><div><i>RGB</i><code>252, 252, 252</code></div><div><i>CMYK</i><code>1, 1, 1, 0</code></div></div><button class="blq claro" data-copy="#f8f8f8" style="background:#f8f8f8;height:30px" title="Clic para copiar #f8f8f8"><span>#f8f8f8</span></button></div></div>
+
+      <h3>Proporciones de uso</h3>
+      <p style="max-width:78ch">La paleta de colores de Maggiore se organiza en <strong>colores
+      base, tonos de apoyo y acentos visuales</strong>. Esta proporción es una guía para su uso
+      equilibrado, legible y consistente en todos los soportes.</p>
+      <div class="propbar"><div class="seg" style="background:#112024;flex:30" title="Negro · 30%"><span>30%</span></div><div class="seg claro" style="background:#2cced6;flex:25" title="Turquesa · 25%"><span>25%</span></div><div class="seg" style="background:#142a55;flex:15" title="Azul · 15%"><span>15%</span></div><div class="seg claro" style="background:#00ff99;flex:12" title="Verde · 12%"><span>12%</span></div><div class="seg claro" style="background:#a399ff;flex:8" title="Morado · 8%"><span>8%</span></div><div class="seg claro" style="background:#fcfcfc;flex:5" title="Invierno · 5%"><span>5%</span></div><div class="seg" style="background:#7b61ff;flex:5" title="Acento · 5%"><span>5%</span></div></div>
+      <div class="propcaps">
+        <small>Aportan solidez, autoridad y consistencia visual.</small>
+        <small>Aportan foco y diferenciación.</small>
       </div>
+
       <h3>Colores semánticos</h3>
-      <div class="sem">
-    <div class="sem-head"><b>Informativo</b><span>Información general · Links secundarios · Estados informativos · Indicadores neutrales</span></div>
-    <div class="sem-row"><button class="sw" data-copy="#00aab0" title="Clic para copiar #00aab0">
-      <span class="sw-chip" style="background:#00aab0"></span>
-      <span class="sw-meta"><b>Base</b><code>#00aab0</code></span>
-    </button><button class="sw" data-copy="#2cced6" title="Clic para copiar #2cced6">
-      <span class="sw-chip" style="background:#2cced6"></span>
-      <span class="sw-meta"><b>Medio</b><code>#2cced6</code></span>
-    </button><button class="sw" data-copy="#e6fcfd" title="Clic para copiar #e6fcfd">
-      <span class="sw-chip" style="background:#e6fcfd"></span>
-      <span class="sw-meta"><b>Claro</b><code>#e6fcfd</code></span>
-    </button></div>
-  </div><div class="sem">
-    <div class="sem-head"><b>Éxito</b><span>Acciones completadas · Validaciones correctas · Resultados positivos · Crecimiento</span></div>
-    <div class="sem-row"><button class="sw" data-copy="#00d97f" title="Clic para copiar #00d97f">
-      <span class="sw-chip" style="background:#00d97f"></span>
-      <span class="sw-meta"><b>Base</b><code>#00d97f</code></span>
-    </button><button class="sw" data-copy="#00ff99" title="Clic para copiar #00ff99">
-      <span class="sw-chip" style="background:#00ff99"></span>
-      <span class="sw-meta"><b>Medio</b><code>#00ff99</code></span>
-    </button><button class="sw" data-copy="#e1fff1" title="Clic para copiar #e1fff1">
-      <span class="sw-chip" style="background:#e1fff1"></span>
-      <span class="sw-meta"><b>Claro</b><code>#e1fff1</code></span>
-    </button></div>
-  </div><div class="sem">
-    <div class="sem-head"><b>Advertencia</b><span>Alertas preventivas · Atención · Revisión pendiente · Estados intermedios</span></div>
-    <div class="sem-row"><button class="sw" data-copy="#edc624" title="Clic para copiar #edc624">
-      <span class="sw-chip" style="background:#edc624"></span>
-      <span class="sw-meta"><b>Base</b><code>#edc624</code></span>
-    </button><button class="sw" data-copy="#ffec9c" title="Clic para copiar #ffec9c">
-      <span class="sw-chip" style="background:#ffec9c"></span>
-      <span class="sw-meta"><b>Medio</b><code>#ffec9c</code></span>
-    </button><button class="sw" data-copy="#fffae3" title="Clic para copiar #fffae3">
-      <span class="sw-chip" style="background:#fffae3"></span>
-      <span class="sw-meta"><b>Claro</b><code>#fffae3</code></span>
-    </button></div>
-  </div><div class="sem">
-    <div class="sem-head"><b>Error</b><span>Errores · Bloqueos · Campos inválidos · Alertas críticas</span></div>
-    <div class="sem-row"><button class="sw" data-copy="#ef446f" title="Clic para copiar #ef446f">
-      <span class="sw-chip" style="background:#ef446f"></span>
-      <span class="sw-meta"><b>Base</b><code>#ef446f</code></span>
-    </button><button class="sw" data-copy="#ff80a4" title="Clic para copiar #ff80a4">
-      <span class="sw-chip" style="background:#ff80a4"></span>
-      <span class="sw-meta"><b>Medio</b><code>#ff80a4</code></span>
-    </button><button class="sw" data-copy="#ffe1eb" title="Clic para copiar #ffe1eb">
-      <span class="sw-chip" style="background:#ffe1eb"></span>
-      <span class="sw-meta"><b>Claro</b><code>#ffe1eb</code></span>
-    </button></div>
-  </div><div class="sem">
-    <div class="sem-head"><b>Acento</b><span>Énfasis visual · Elementos destacados · Recursos expresivos · Llamadas de atención</span></div>
-    <div class="sem-row"><button class="sw" data-copy="#7b61ff" title="Clic para copiar #7b61ff">
-      <span class="sw-chip" style="background:#7b61ff"></span>
-      <span class="sw-meta"><b>Base</b><code>#7b61ff</code></span>
-    </button><button class="sw" data-copy="#a399ff" title="Clic para copiar #a399ff">
-      <span class="sw-chip" style="background:#a399ff"></span>
-      <span class="sw-meta"><b>Medio</b><code>#a399ff</code></span>
-    </button><button class="sw" data-copy="#e9e9ff" title="Clic para copiar #e9e9ff">
-      <span class="sw-chip" style="background:#e9e9ff"></span>
-      <span class="sw-meta"><b>Claro</b><code>#e9e9ff</code></span>
-    </button></div>
-  </div>
+      <p style="max-width:78ch">Los colores semánticos amplían la <strong>expresividad del
+      sistema visual</strong> de Maggiore. Cada tono cumple una función específica dentro de la
+      marca: sirven para categorizar, jerarquizar y acentuar información.</p>
+      <div class="cols"><div class="colcol"><div class="colname">Informativo</div><button class="blq" data-copy="#00aab0" style="background:#00aab0;height:110px" title="Clic para copiar #00aab0"></button><div class="vals3"><div><i>HEX</i><code>#00aab0</code></div></div><button class="blq claro" data-copy="#2cced6" style="background:#2cced6;height:30px" title="Clic para copiar #2cced6"><span>#2cced6</span></button><button class="blq claro" data-copy="#e6fcfd" style="background:#e6fcfd;height:30px" title="Clic para copiar #e6fcfd"><span>#e6fcfd</span></button><ul class="colusos"><li>Información general</li><li>Links secundarios</li><li>Estados informativos</li><li>Indicadores neutrales</li></ul></div><div class="colcol"><div class="colname">Éxito</div><button class="blq" data-copy="#00d97f" style="background:#00d97f;height:110px" title="Clic para copiar #00d97f"></button><div class="vals3"><div><i>HEX</i><code>#00d97f</code></div></div><button class="blq claro" data-copy="#00ff99" style="background:#00ff99;height:30px" title="Clic para copiar #00ff99"><span>#00ff99</span></button><button class="blq claro" data-copy="#e1fff1" style="background:#e1fff1;height:30px" title="Clic para copiar #e1fff1"><span>#e1fff1</span></button><ul class="colusos"><li>Acciones completadas</li><li>Validaciones correctas</li><li>Resultados positivos</li><li>Crecimiento</li></ul></div><div class="colcol"><div class="colname">Advertencia</div><button class="blq claro" data-copy="#edc624" style="background:#edc624;height:110px" title="Clic para copiar #edc624"></button><div class="vals3"><div><i>HEX</i><code>#edc624</code></div></div><button class="blq claro" data-copy="#ffec9c" style="background:#ffec9c;height:30px" title="Clic para copiar #ffec9c"><span>#ffec9c</span></button><button class="blq claro" data-copy="#fffae3" style="background:#fffae3;height:30px" title="Clic para copiar #fffae3"><span>#fffae3</span></button><ul class="colusos"><li>Alertas preventivas</li><li>Atención</li><li>Revisión pendiente</li><li>Estados intermedios</li></ul></div><div class="colcol"><div class="colname">Error</div><button class="blq" data-copy="#ef446f" style="background:#ef446f;height:110px" title="Clic para copiar #ef446f"></button><div class="vals3"><div><i>HEX</i><code>#ef446f</code></div></div><button class="blq claro" data-copy="#ff80a4" style="background:#ff80a4;height:30px" title="Clic para copiar #ff80a4"><span>#ff80a4</span></button><button class="blq claro" data-copy="#ffe1eb" style="background:#ffe1eb;height:30px" title="Clic para copiar #ffe1eb"><span>#ffe1eb</span></button><ul class="colusos"><li>Errores</li><li>Bloqueos</li><li>Campos inválidos</li><li>Alertas críticas</li></ul></div><div class="colcol"><div class="colname">Acento</div><button class="blq" data-copy="#7b61ff" style="background:#7b61ff;height:110px" title="Clic para copiar #7b61ff"></button><div class="vals3"><div><i>HEX</i><code>#7b61ff</code></div></div><button class="blq claro" data-copy="#a399ff" style="background:#a399ff;height:30px" title="Clic para copiar #a399ff"><span>#a399ff</span></button><button class="blq claro" data-copy="#e9e9ff" style="background:#e9e9ff;height:30px" title="Clic para copiar #e9e9ff"><span>#e9e9ff</span></button><ul class="colusos"><li>Énfasis visual</li><li>Elementos destacados</li><li>Recursos expresivos</li><li>Llamadas de atención</li></ul></div></div>
+
       <h3>Escala de grises</h3>
-      <div class="sw-grid"><button class="sw" data-copy="#111118" title="Clic para copiar #111118">
-      <span class="sw-chip" style="background:#111118"></span>
-      <span class="sw-meta"><b>Fondo / texto oscuro</b><code>#111118</code></span>
-    </button><button class="sw" data-copy="#2a2a2a" title="Clic para copiar #2a2a2a">
-      <span class="sw-chip" style="background:#2a2a2a"></span>
-      <span class="sw-meta"><b>Fondo tarjetas</b><code>#2a2a2a</code></span>
-    </button><button class="sw" data-copy="#535353" title="Clic para copiar #535353">
-      <span class="sw-chip" style="background:#535353"></span>
-      <span class="sw-meta"><b>Bordes</b><code>#535353</code></span>
-    </button><button class="sw" data-copy="#b2b2b2" title="Clic para copiar #b2b2b2">
-      <span class="sw-chip" style="background:#b2b2b2"></span>
-      <span class="sw-meta"><b>Texto muted</b><code>#b2b2b2</code></span>
-    </button><button class="sw" data-copy="#e5e5e5" title="Clic para copiar #e5e5e5">
-      <span class="sw-chip" style="background:#e5e5e5"></span>
-      <span class="sw-meta"><b>Bordes claro</b><code>#e5e5e5</code></span>
-    </button><button class="sw" data-copy="#f8f8f8" title="Clic para copiar #f8f8f8">
-      <span class="sw-chip" style="background:#f8f8f8"></span>
-      <span class="sw-meta"><b>Texto / fondo claro</b><code>#f8f8f8</code></span>
-    </button><button class="sw" data-copy="#fcfcfc" title="Clic para copiar #fcfcfc">
-      <span class="sw-chip" style="background:#fcfcfc"></span>
-      <span class="sw-meta"><b>Tarjetas claras</b><code>#fcfcfc</code></span>
-    </button><button class="sw" data-copy="#ffffff" title="Clic para copiar #ffffff">
-      <span class="sw-chip" style="background:#ffffff"></span>
-      <span class="sw-meta"><b>Blanco</b><code>#ffffff</code></span>
-    </button></div>
+      <p style="max-width:78ch">La escala de grises de Maggiore cumple una <strong>función
+      estructural</strong> dentro del sistema visual. Estos tonos permiten construir fondos,
+      bordes, superficies y niveles de texto con claridad, equilibrio y consistencia en todas
+      las aplicaciones.</p>
+      <div class="cols-mini"><div class="colcol mini"><div class="colname">Fondo / texto oscuro</div><button class="blq" data-copy="#111118" style="background:#111118;height:84px" title="Clic para copiar #111118"><span>#111118</span></button></div><div class="colcol mini"><div class="colname">Fondo tarjetas</div><button class="blq" data-copy="#2a2a2a" style="background:#2a2a2a;height:84px" title="Clic para copiar #2a2a2a"><span>#2a2a2a</span></button></div><div class="colcol mini"><div class="colname">Bordes</div><button class="blq" data-copy="#535353" style="background:#535353;height:84px" title="Clic para copiar #535353"><span>#535353</span></button></div><div class="colcol mini"><div class="colname">Texto muted</div><button class="blq claro" data-copy="#b2b2b2" style="background:#b2b2b2;height:84px" title="Clic para copiar #b2b2b2"><span>#b2b2b2</span></button></div><div class="colcol mini"><div class="colname">Bordes claro</div><button class="blq claro" data-copy="#e5e5e5" style="background:#e5e5e5;height:84px" title="Clic para copiar #e5e5e5"><span>#e5e5e5</span></button></div><div class="colcol mini"><div class="colname">Texto / fondo claro</div><button class="blq claro" data-copy="#f8f8f8" style="background:#f8f8f8;height:84px" title="Clic para copiar #f8f8f8"><span>#f8f8f8</span></button></div><div class="colcol mini"><div class="colname">Tarjetas claras</div><button class="blq claro" data-copy="#fcfcfc" style="background:#fcfcfc;height:84px" title="Clic para copiar #fcfcfc"><span>#fcfcfc</span></button></div><div class="colcol mini"><div class="colname">Blanco</div><button class="blq claro" data-copy="#ffffff" style="background:#ffffff;height:84px" title="Clic para copiar #ffffff"><span>#ffffff</span></button></div></div>
     </div></section>
 
     <section id="iconografia"><div class="pad">
@@ -8835,25 +8764,7 @@ footer { color: var(--dim); font-size: 12px; line-height: 16px;
         </div>
         <div>
           <h3 style="margin-top:0">Colores de interfaz</h3>
-          <div class="sw-grid"><button class="sw" data-copy="#181818" title="Clic para copiar #181818">
-      <span class="sw-chip" style="background:#181818"></span>
-      <span class="sw-meta"><b>Primario</b><code>#181818</code></span>
-    </button><button class="sw" data-copy="#00a7b5" title="Clic para copiar #00a7b5">
-      <span class="sw-chip" style="background:#00a7b5"></span>
-      <span class="sw-meta"><b>Secundario</b><code>#00a7b5</code></span>
-    </button><button class="sw" data-copy="#22e3b5" title="Clic para copiar #22e3b5">
-      <span class="sw-chip" style="background:#22e3b5"></span>
-      <span class="sw-meta"><b>Acento</b><code>#22e3b5</code></span>
-    </button><button class="sw" data-copy="#2d7cff" title="Clic para copiar #2d7cff">
-      <span class="sw-chip" style="background:#2d7cff"></span>
-      <span class="sw-meta"><b>Enlace</b><code>#2d7cff</code></span>
-    </button><button class="sw" data-copy="#181818" title="Clic para copiar #181818">
-      <span class="sw-chip" style="background:#181818"></span>
-      <span class="sw-meta"><b>Texto principal</b><code>#181818</code></span>
-    </button><button class="sw" data-copy="#6b7280" title="Clic para copiar #6b7280">
-      <span class="sw-chip" style="background:#6b7280"></span>
-      <span class="sw-meta"><b>Texto secundario</b><code>#6b7280</code></span>
-    </button></div>
+          <div class="cols-mini"><div class="colcol mini"><div class="colname">Primario</div><button class="blq" data-copy="#181818" style="background:#181818;height:84px" title="Clic para copiar #181818"><span>#181818</span></button></div><div class="colcol mini"><div class="colname">Secundario</div><button class="blq" data-copy="#00a7b5" style="background:#00a7b5;height:84px" title="Clic para copiar #00a7b5"><span>#00a7b5</span></button></div><div class="colcol mini"><div class="colname">Acento</div><button class="blq claro" data-copy="#22e3b5" style="background:#22e3b5;height:84px" title="Clic para copiar #22e3b5"><span>#22e3b5</span></button></div><div class="colcol mini"><div class="colname">Enlace</div><button class="blq" data-copy="#2d7cff" style="background:#2d7cff;height:84px" title="Clic para copiar #2d7cff"><span>#2d7cff</span></button></div><div class="colcol mini"><div class="colname">Texto principal</div><button class="blq" data-copy="#181818" style="background:#181818;height:84px" title="Clic para copiar #181818"><span>#181818</span></button></div><div class="colcol mini"><div class="colname">Texto secundario</div><button class="blq" data-copy="#6b7280" style="background:#6b7280;height:84px" title="Clic para copiar #6b7280"><span>#6b7280</span></button></div></div>
         </div>
       </div>
       <div class="note"><b>Pendiente de definición.</b> El manual no incluye una paleta
@@ -8879,7 +8790,7 @@ cuando exista autenticación real.</div>
 </div>
 
 <script>
-document.querySelectorAll('.sw').forEach(function (b) {
+document.querySelectorAll('.blq').forEach(function (b) {
   b.addEventListener('click', function () {
     var v = b.getAttribute('data-copy');
     var done = function () { b.classList.add('ok'); setTimeout(function () { b.classList.remove('ok'); }, 850); };
