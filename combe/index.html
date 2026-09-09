@@ -1545,8 +1545,10 @@ function v2RenderGrid(){
   }).join("");
 }
 
+function v2Slug(e){return "iep-"+e.brand.toLowerCase().replace(/\s+/g,"-")+"-"+e.experiment_id.toLowerCase();}
 function v2Open(i){
   var e=IEPV2_DATA[i], c=IEPV2_BRAND_COLORS[e.brand]||"#42b8b4";
+  try{history.replaceState(null,"","#"+v2Slug(e));}catch(_){}
   document.getElementById("iepV2Home").style.display="none";
   var d=document.getElementById("iepV2Detail");
   d.classList.add("open");
@@ -1581,7 +1583,7 @@ function v2Open(i){
   if(e.gallery&&e.gallery.length){ v2LbBuild(e);
     h+='<div class="v2-chart-title" style="margin-top:26px">Banners in field &middot; '+e.gallery.length+' claims &times; 3 formats</div><div class="v2-gal">'+e.gallery.map(function(g){
       return '<div class="v2-galcard"><div class="v2-galhead"><span class="v2-galnum">'+g.n+'</span><span class="v2-galrole">'+g.role+'</span></div><div class="v2-galclaim">'+g.claim+'</div><div class="v2-galimgs">'+["H","V","F"].map(function(f){
-        return '<a href="javascript:void(0)" onclick="v2LbOpen(\''+g.n+'\',\''+f+'\');return false;"><img loading="lazy" src="assets/iep-e03/thumb/'+g.n+'_'+f+'.jpg" alt="Banner '+g.n+' '+f+'"></a>';
+        return '<a href="javascript:void(0)" onclick="v2LbOpen(\''+g.n+'\',\''+f+'\');return false;"><img loading="lazy" src="/combe/assets/iep-e03/thumb/'+g.n+'_'+f+'.jpg" alt="Banner '+g.n+' '+f+'"></a>';
       }).join("")+'</div></div>';
     }).join("")+'</div>';
   }
@@ -1653,7 +1655,7 @@ function v2LbOpen(n,f){
 }
 function v2LbRender(){
   var it=V2LB_ITEMS[V2LB_I];
-  document.getElementById("v2lbImg").src="assets/iep-e03/full/"+it.n+"_"+it.f+".jpg";
+  document.getElementById("v2lbImg").src="/combe/assets/iep-e03/full/"+it.n+"_"+it.f+".jpg";
   document.getElementById("v2lbCap").innerHTML='<span class="v2lb-num">'+it.n+' / 24</span> &middot; '+V2LB_FMT[it.f]+' &middot; <span class="v2lb-role">'+it.role+'</span><div class="v2lb-claim">'+it.claim+'</div>';
 }
 function v2LbBgNav(ev){
@@ -1667,6 +1669,7 @@ function v2LbClose(){
   document.body.style.overflow="";
 }
 function v2Close(){
+  try{history.replaceState(null,"","#iep-v2");}catch(_){}
   document.getElementById("iepV2Detail").classList.remove("open");
   document.getElementById("iepV2Home").style.display="block";
   var _ex=document.getElementById("iep-v2-explorer"); if(_ex){window.scrollTo({top:_ex.getBoundingClientRect().top+window.scrollY-80,behavior:"smooth"});}
@@ -2565,5 +2568,28 @@ function navActive(){
 }
 </script>
 
-</body>
+<script>
+(function(){
+  function v2DeepLink(){
+    var m = location.hash.match(/^#iep-(.+)-(e\d+)$/i);
+    if(!m || typeof IEPV2_DATA === "undefined") return;
+    var slug = m[1].toLowerCase(), eid = m[2].toUpperCase();
+    var i = IEPV2_DATA.findIndex(function(d){
+      return d.brand.toLowerCase().replace(/\s+/g,"-") === slug && d.experiment_id.toUpperCase() === eid;
+    });
+    if(i < 0) return;
+    var nav = document.querySelector('a[href="#iep-v2"]');
+    if(nav) nav.click();
+    setTimeout(function(){
+      v2Open(i);
+      setTimeout(function(){
+        var d = document.getElementById("iepV2Detail");
+        if(d) d.scrollIntoView({block:"start"});
+      }, 200);
+    }, 300);
+  }
+  window.addEventListener("load", function(){ setTimeout(v2DeepLink, 350); });
+  window.addEventListener("hashchange", v2DeepLink);
+})();
+</script></body>
 </html>
