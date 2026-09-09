@@ -1405,6 +1405,32 @@ section[id], div[id="iep-v2-explorer"] { scroll-margin-top: 84px; }
 #v2lb .v2lb-x{position:absolute;z-index:2;top:22px;right:28px;background:none;border:none;color:#fcfcfc;font-size:34px;cursor:pointer;line-height:1}
 #v2lb .v2lb-x:hover{color:#2cced6}
 @media(max-width:700px){#v2lb .v2lb-nav{position:fixed;bottom:18px;top:auto}#v2lb .v2lb-prev{left:18px}#v2lb .v2lb-next{right:18px}}
+.fb-widget{margin-top:12px;padding-top:12px;border-top:1px dashed var(--border)}
+.fb-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.fb-chip{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);border:1px solid var(--border);border-radius:20px;padding:4px 10px;margin-right:auto}
+.fb-chip.ok{color:#0e1214;background:#2cced6;border-color:#2cced6}
+.fb-chip.chg{color:#0e1214;background:#f5c04a;border-color:#f5c04a}
+.fb-btn{background:none;border:1px solid var(--border);color:var(--text-secondary);font-size:11px;font-weight:500;padding:6px 12px;border-radius:5px;cursor:pointer;font-family:inherit}
+.fb-btn:hover{border-color:#2cced6;color:#2cced6}
+.fb-btn.fb-ok:hover{background:#2cced6;color:#0e1214}
+.fb-form{display:none;margin-top:10px}
+.fb-form.open{display:flex;gap:8px;align-items:flex-start}
+.fb-form textarea{flex:1;background:var(--bg-main);border:1px solid var(--border);border-radius:5px;color:var(--text-primary);font-family:inherit;font-size:12px;font-weight:300;padding:8px 10px;resize:vertical}
+.fb-form textarea.fb-need{border-color:#f5c04a}
+.fb-log{margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.fb-note{font-size:12px;color:var(--text-secondary);background:var(--bg-main);border:1px solid var(--border);border-radius:5px;padding:8px 10px}
+.fb-note b{font-weight:600;color:var(--text-primary);font-size:11px}
+.fb-note p{margin:4px 0 0;line-height:1.45}
+.fb-tagchg{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#f5c04a;margin-left:6px}
+.fb-allbar{margin:26px 0 0;padding:20px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-card)}
+.fb-allhead{font-size:16px;font-weight:600;color:var(--text-primary)}
+.fb-allsub{font-size:12px;font-weight:300;color:var(--text-muted);margin:4px 0 4px}
+.fb-all .fb-btn.fb-ok{background:#2cced6;color:#0e1214;border-color:#2cced6;font-size:13px;font-weight:600;padding:10px 22px}
+.fb-all .fb-btn.fb-ok:hover{background:#00aab0;border-color:#00aab0}
+.fb-idbar{display:flex;align-items:center;gap:10px;margin:14px 0 0;font-size:12px;color:var(--text-muted)}
+.fb-idbar input{background:var(--bg-main);border:1px solid var(--border);border-radius:5px;color:var(--text-primary);font-family:inherit;font-size:13px;padding:8px 12px;width:220px}
+.fb-idbar input.fb-need{border-color:#f5c04a}
+.fb-idnote{font-size:11px}
 .v2-gal{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:16px 0 8px}
 @media(max-width:900px){.v2-gal{grid-template-columns:1fr}}
 .v2-galcard{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 16px 14px}
@@ -1545,6 +1571,74 @@ function v2RenderGrid(){
   }).join("");
 }
 
+
+/* ── IEP review & approvals (Supabase iep_feedback) ─────────────────── */
+var FB_URL="https://mqaglifoavkknsdwtpwk.supabase.co/rest/v1/iep_feedback";
+var FB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1xYWdsaWZvYXZra25zZHd0cHdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2NzU0MDgsImV4cCI6MjA5NzI1MTQwOH0.yfafUVsBgA2aG9UugB5z9icwUqaecWDIQ9uXjFTK7lo";
+var FB_EXP="", FB_STATE={};
+function fbHeaders(){return {"apikey":FB_KEY,"Authorization":"Bearer "+FB_KEY,"Content-Type":"application/json"};}
+function fbInit(e){
+  FB_EXP=e.brand+"-"+e.experiment_id;
+  var author=localStorage.getItem("iepReviewer")||"";
+  var inp=document.getElementById("fbAuthor");
+  if(inp){inp.value=author; inp.addEventListener("change",function(){localStorage.setItem("iepReviewer",inp.value.trim());});}
+  document.querySelectorAll(".fb-widget").forEach(function(w){
+    var item=w.dataset.item;
+    w.innerHTML='<div class="fb-row"><span class="fb-chip" id="fbchip-'+item+'"></span>'+
+      '<button class="fb-btn fb-ok" onclick="fbSend(\''+item+'\',\'approved\')">Approve</button>'+
+      '<button class="fb-btn fb-chg" onclick="fbToggle(\''+item+'\')">Request changes</button></div>'+
+      '<div class="fb-form" id="fbform-'+item+'"><textarea id="fbtxt-'+item+'" rows="2" placeholder="What should change? Leave your comments here."></textarea>'+
+      '<button class="fb-btn fb-send" onclick="fbSend(\''+item+'\',\'changes\')">Send</button></div>'+
+      '<div class="fb-log" id="fblog-'+item+'"></div>';
+  });
+  fbRefresh();
+}
+function fbToggle(item){
+  var f=document.getElementById("fbform-"+item);
+  if(f){f.classList.toggle("open"); var t=document.getElementById("fbtxt-"+item); if(f.classList.contains("open")&&t) t.focus();}
+}
+function fbAuthor(){
+  var inp=document.getElementById("fbAuthor");
+  var v=inp?inp.value.trim():"";
+  if(!v&&inp){inp.classList.add("fb-need"); inp.focus(); inp.scrollIntoView({block:"center"});}
+  return v;
+}
+function fbSend(item,status){
+  var author=fbAuthor(); if(!author) return;
+  var t=document.getElementById("fbtxt-"+item);
+  var comment=t?t.value.trim():"";
+  if(status==="changes"&&!comment){if(t){t.classList.add("fb-need");t.focus();} return;}
+  fetch(FB_URL,{method:"POST",headers:fbHeaders(),body:JSON.stringify({experiment:FB_EXP,item:item,status:status,comment:comment||null,author:author})})
+    .then(function(r){if(!r.ok)throw 0; if(t){t.value="";} var f=document.getElementById("fbform-"+item); if(f)f.classList.remove("open"); fbRefresh();})
+    .catch(function(){alert("Could not save your review. Please try again.");});
+}
+function fbRefresh(){
+  fetch(FB_URL+"?experiment=eq."+encodeURIComponent(FB_EXP)+"&select=*&order=created_at.desc&limit=400",{headers:fbHeaders()})
+    .then(function(r){return r.json();})
+    .then(function(rows){
+      FB_STATE={};
+      rows.forEach(function(x){
+        var s=FB_STATE[x.item]||(FB_STATE[x.item]={status:null,comments:[]});
+        if(x.status&&!s.status) s.status={v:x.status,by:x.author,at:x.created_at};
+        if(x.comment) s.comments.push(x);
+      });
+      var allOk=FB_STATE["all"]&&FB_STATE["all"].status&&FB_STATE["all"].status.v==="approved";
+      document.querySelectorAll(".fb-widget").forEach(function(w){
+        var item=w.dataset.item, s=FB_STATE[item], chip=document.getElementById("fbchip-"+item);
+        if(!chip) return;
+        var st=s&&s.status?s.status:(allOk&&item.indexOf("banner-")===0?{v:"approved",by:FB_STATE["all"].status.by,all:true}:null);
+        if(st&&st.v==="approved"){chip.className="fb-chip ok";chip.textContent="Approved"+(st.all?" (all)":"")+(st.by?" · "+st.by:"");}
+        else if(st&&st.v==="changes"){chip.className="fb-chip chg";chip.textContent="Changes requested"+(st.by?" · "+st.by:"");}
+        else {chip.className="fb-chip";chip.textContent="Pending review";}
+        var log=document.getElementById("fblog-"+item);
+        if(log&&s&&s.comments.length){
+          log.innerHTML=s.comments.slice(0,3).map(function(c){
+            return '<div class="fb-note"><b>'+(c.author||"Anonymous")+'</b>'+(c.status==="changes"?' <span class="fb-tagchg">changes</span>':'')+'<p>'+String(c.comment).replace(/</g,"&lt;")+'</p></div>';
+          }).join("");
+        } else if(log){log.innerHTML="";}
+      });
+    }).catch(function(){});
+}
 function v2Slug(e){return "iep-"+e.brand.toLowerCase().replace(/\s+/g,"-")+"-"+e.experiment_id.toLowerCase();}
 function v2Open(i){
   var e=IEPV2_DATA[i], c=IEPV2_BRAND_COLORS[e.brand]||"#42b8b4";
@@ -1578,14 +1672,17 @@ function v2Open(i){
     h+='<div class="v2-chart-title" style="margin-top:20px">Audiences &middot; Meta</div><div class="v2-aud">'+e.audiences.map(function(a){
       return '<div class="v2-aud-box"><h6>'+a.name+'</h6>'+(a.size_mm?'<div class="v2-aud-size">'+a.size_mm+' MM estimated</div>':'')+(a.details?'<p>'+a.details+'</p>':'')+'</div>';
     }).join("")+'</div>';
+    if(e.gallery&&e.gallery.length) h+='<div class="fb-widget" data-item="audiences" data-label="Audiences"></div>';
   }
 
   if(e.gallery&&e.gallery.length){ v2LbBuild(e);
     h+='<div class="v2-chart-title" style="margin-top:26px">Banners in field &middot; '+e.gallery.length+' claims &times; 3 formats</div><div class="v2-gal">'+e.gallery.map(function(g){
       return '<div class="v2-galcard"><div class="v2-galhead"><span class="v2-galnum">'+g.n+'</span><span class="v2-galrole">'+g.role+'</span></div><div class="v2-galclaim">'+g.claim+'</div><div class="v2-galimgs">'+["H","V","F"].map(function(f){
         return '<a href="javascript:void(0)" onclick="v2LbOpen(\''+g.n+'\',\''+f+'\');return false;"><img loading="lazy" src="/combe/assets/iep-e03/thumb/'+g.n+'_'+f+'.jpg" alt="Banner '+g.n+' '+f+'"></a>';
-      }).join("")+'</div></div>';
+      }).join("")+'</div><div class="fb-widget fb-compact" data-item="banner-'+g.n+'" data-label="Banner '+g.n+'"></div></div>';
     }).join("")+'</div>';
+    h+='<div class="fb-allbar"><div class="fb-allhead">Done reviewing?</div><div class="fb-allsub">If everything looks good, approve the full banner set in one click. Individual approvals above are kept.</div><div class="fb-widget fb-all" data-item="all" data-label="All banners"></div></div>';
+    h+='<div class="fb-idbar"><label for="fbAuthor">Reviewing as</label><input id="fbAuthor" type="text" placeholder="Your name" maxlength="60"><span class="fb-idnote">Your name is saved with every approval or comment.</span></div>';
   }
 
   h+=e.rounds.map(function(r,ri){return v2Round(e,r,ri);}).join("");
@@ -1607,6 +1704,7 @@ function v2Open(i){
   }
 
   d.innerHTML=h;
+  if(e.gallery&&e.gallery.length) fbInit(e);
   e.rounds.forEach(function(r,ri){
     (r.charts||[]).forEach(function(ch,ci){
       var rows=(ch.rows||[]).filter(function(x){return x.value!=null;});
