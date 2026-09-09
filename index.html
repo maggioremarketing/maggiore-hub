@@ -544,7 +544,11 @@ async function handleSubmit(e) {
 }
 
 // ── Sign in ───────────────────────────────────────────────────────────────────
-async function doSignIn(email, password) {
+function getReturnTo() {
+      const p = new URLSearchParams(window.location.search).get('returnTo');
+      return (p && p.startsWith('/') && !p.startsWith('//')) ? p : null;
+    }
+    async function doSignIn(email, password) {
   const { data, error } = await sb.auth.signInWithPassword({ email, password });
 
   if (error) {
@@ -563,7 +567,7 @@ async function doSignIn(email, password) {
   }
 
   const access = getAccess(data.user.email);
-  window.location.href = HUB_REDIRECT[access];
+  window.location.href = (getAccess(email) === 'combe' || getAccess(email) === 'maggiore') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access];
 }
 
 // ── Register ──────────────────────────────────────────────────────────────────
@@ -631,7 +635,7 @@ async function handleAuthCallback() {
   const { data: { session } } = await sb.auth.getSession();
   if (session) {
     const access = getAccess(session.user.email);
-    window.location.replace(HUB_REDIRECT[access]);
+    window.location.replace((access === 'combe' || access === 'maggiore') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access]);
   }
 }
 
@@ -640,7 +644,7 @@ async function checkExistingSession() {
   const { data: { session } } = await sb.auth.getSession();
   if (session) {
     const access = getAccess(session.user.email);
-    window.location.replace(HUB_REDIRECT[access]);
+    window.location.replace((access === 'combe' || access === 'maggiore') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access]);
   }
 }
 

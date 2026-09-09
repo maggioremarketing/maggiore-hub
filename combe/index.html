@@ -4,6 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Combe Consumer Insights Hub</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  document.documentElement.style.visibility = "hidden";
+  function reveal(){ document.documentElement.style.visibility = ""; }
+  if (location.hostname === "localhost" || location.hostname === "127.0.0.1") { reveal(); return; }
+  if (!window.supabase) { reveal(); return; }
+  var sb = window.supabase.createClient("https://mqaglifoavkknsdwtpwk.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1xYWdsaWZvYXZra25zZHd0cHdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2NzU0MDgsImV4cCI6MjA5NzI1MTQwOH0.yfafUVsBgA2aG9UugB5z9icwUqaecWDIQ9uXjFTK7lo");
+  window.__hubSb = sb;
+  sb.auth.getSession().then(function(res){
+    var s = res && res.data ? res.data.session : null;
+    var email = s && s.user ? (s.user.email || "") : "";
+    var ok = /@combe\.com$/i.test(email) || /@maggiore\.cl$/i.test(email);
+    if (ok) { window.__hubUserEmail = email; reveal(); }
+    else if (email) { window.location.replace("/"); }
+    else { window.location.replace("/?returnTo=" + encodeURIComponent(location.pathname + location.search + location.hash)); }
+  }).catch(reveal);
+})();
+</script>
 <style>
 
 @font-face{font-family:"Switzer";font-weight:100 900;font-style:normal;font-display:swap;src:url("/combe/fonts/Switzer-100.ttf") format("truetype")}
@@ -1579,7 +1598,7 @@ var FB_EXP="", FB_STATE={};
 function fbHeaders(){return {"apikey":FB_KEY,"Authorization":"Bearer "+FB_KEY,"Content-Type":"application/json"};}
 function fbInit(e){
   FB_EXP=e.brand+"-"+e.experiment_id;
-  var author=localStorage.getItem("iepReviewer")||"";
+  var author=localStorage.getItem("iepReviewer")||window.__hubUserEmail||"";
   var inp=document.getElementById("fbAuthor");
   if(inp){inp.value=author; inp.addEventListener("change",function(){localStorage.setItem("iepReviewer",inp.value.trim());});}
   document.querySelectorAll(".fb-widget").forEach(function(w){
