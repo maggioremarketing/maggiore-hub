@@ -1585,7 +1585,7 @@ function fbInit(e){
   document.querySelectorAll(".fb-widget").forEach(function(w){
     var item=w.dataset.item;
     w.innerHTML='<div class="fb-row"><span class="fb-chip" id="fbchip-'+item+'"></span>'+
-      '<button class="fb-btn fb-ok" onclick="fbSend(\''+item+'\',\'approved\')">Approve</button>'+
+      '<button class="fb-btn fb-ok" onclick="fbSend(\''+item+'\',\'approved\')">'+(item==="all"?"Approve All Banners":"Approve")+'</button>'+
       '<button class="fb-btn fb-chg" onclick="fbToggle(\''+item+'\')">Request changes</button></div>'+
       '<div class="fb-form" id="fbform-'+item+'"><textarea id="fbtxt-'+item+'" rows="2" placeholder="What should change? Leave your comments here."></textarea>'+
       '<button class="fb-btn fb-send" onclick="fbSend(\''+item+'\',\'changes\')">Send</button></div>'+
