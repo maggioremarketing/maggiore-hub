@@ -567,7 +567,7 @@ function getReturnTo() {
   }
 
   const access = getAccess(data.user.email);
-  window.location.href = (getAccess(email) === 'combe' || getAccess(email) === 'maggiore') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access];
+  window.location.href = (getAccess(email) === 'combe' || getAccess(email) === 'both') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access];
 }
 
 // ── Register ──────────────────────────────────────────────────────────────────
@@ -635,7 +635,7 @@ async function handleAuthCallback() {
   const { data: { session } } = await sb.auth.getSession();
   if (session) {
     const access = getAccess(session.user.email);
-    window.location.replace((access === 'combe' || access === 'maggiore') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access]);
+    window.location.replace((access === 'combe' || access === 'both') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access]);
   }
 }
 
@@ -644,7 +644,7 @@ async function checkExistingSession() {
   const { data: { session } } = await sb.auth.getSession();
   if (session) {
     const access = getAccess(session.user.email);
-    window.location.replace((access === 'combe' || access === 'maggiore') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access]);
+    window.location.replace((access === 'combe' || access === 'both') && getReturnTo() ? getReturnTo() : HUB_REDIRECT[access]);
   }
 }
 
