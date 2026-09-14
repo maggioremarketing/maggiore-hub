@@ -1502,6 +1502,10 @@ section[id], div[id="iep-v2-explorer"] { scroll-margin-top: 84px; }
 .v2-aud-size{font-size:11px;font-weight:700;color:#2cced6;margin-bottom:6px}
 .v2-aud-box p{font-size:11.5px;color:var(--text-muted);line-height:1.5}
 .v2-round{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;margin:18px 0;box-shadow:var(--shadow)}
+.fb-chip.done{background:rgba(0,217,127,.14);color:#00d97f;border-color:rgba(0,217,127,.35)}
+.fb-tagdone{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#00d97f;background:rgba(0,217,127,.13);border-radius:4px;padding:1px 6px;margin-left:6px}
+.fb-note.done{border-left-color:#00d97f}
+.fb-when{font-size:10.5px;color:var(--text-muted);margin-left:6px}
 .v2-tip-claim{display:block;margin:5px 0 3px;font-style:italic;opacity:.85;max-width:260px;line-height:1.35}
 .v2-tabs{display:flex;gap:4px;margin:26px 0 22px;border-bottom:1px solid var(--ink-line);flex-wrap:wrap}
 .v2-tab-btn{appearance:none;background:none;border:0;border-bottom:2px solid transparent;color:var(--fg-muted);font-family:inherit;font-size:13px;font-weight:600;letter-spacing:.02em;padding:10px 16px;cursor:pointer;transition:color .15s,border-color .15s;white-space:nowrap}
@@ -1623,6 +1627,10 @@ function fbInit(e){
   });
   fbRefresh();
 }
+function fbDate(iso){
+  try{ return new Date(iso).toLocaleDateString("en-US",{month:"short",day:"numeric"}); }
+  catch(e){ return ""; }
+}
 function fbToggle(item){
   var f=document.getElementById("fbform-"+item);
   if(f){f.classList.toggle("open"); var t=document.getElementById("fbtxt-"+item); if(f.classList.contains("open")&&t) t.focus();}
@@ -1650,20 +1658,40 @@ function fbRefresh(){
       rows.forEach(function(x){
         var s=FB_STATE[x.item]||(FB_STATE[x.item]={status:null,comments:[]});
         if(x.status&&!s.status) s.status={v:x.status,by:x.author,at:x.created_at};
-        if(x.comment) s.comments.push(x);
+        if(x.comment) s.comments.unshift(x);
+      });
+      // La tabla solo admite 'approved'/'changes' por un CHECK, asi que una
+      // resolucion se representa como un 'approved' escrito por alguien de
+      // Maggiore sobre un item que el cliente habia marcado 'changes'. Eso la
+      // distingue de una aprobacion del propio cliente sin tocar el esquema.
+      Object.keys(FB_STATE).forEach(function(k){
+        var st=FB_STATE[k];
+        var pidio=st.comments.some(function(c){return c.status==="changes";});
+        if(pidio&&st.status&&st.status.v==="approved"&&/@maggiore\.cl$/i.test(st.status.by||"")) st.resolved=true;
       });
       var allOk=FB_STATE["all"]&&FB_STATE["all"].status&&FB_STATE["all"].status.v==="approved";
       document.querySelectorAll(".fb-widget").forEach(function(w){
         var item=w.dataset.item, s=FB_STATE[item], chip=document.getElementById("fbchip-"+item);
         if(!chip) return;
         var st=s&&s.status?s.status:(allOk&&item.indexOf("banner-")===0?{v:"approved",by:FB_STATE["all"].status.by,all:true}:null);
-        if(st&&st.v==="approved"){chip.className="fb-chip ok";chip.textContent="Approved"+(st.all?" (all)":"")+(st.by?" · "+st.by:"");}
-        else if(st&&st.v==="changes"){chip.className="fb-chip chg";chip.textContent="Changes requested"+(st.by?" · "+st.by:"");}
+        if(s&&s.resolved&&st){
+          chip.className="fb-chip done";
+          // sin fecha en el chip: marcaria cuando se registro la respuesta, y el cambio
+          // pudo aplicarse antes. La fecha exacta va en el comentario.
+          chip.textContent="Updated";
+        }
+        else if(st&&st.v==="approved"){chip.className="fb-chip ok";chip.textContent="Approved"+(st.all?" (all)":"")+(st.by?" \u00b7 "+st.by:"");}
+        else if(st&&st.v==="changes"){chip.className="fb-chip chg";chip.textContent="Changes requested"+(st.by?" \u00b7 "+st.by:"");}
         else {chip.className="fb-chip";chip.textContent="Pending review";}
         var log=document.getElementById("fblog-"+item);
         if(log&&s&&s.comments.length){
-          log.innerHTML=s.comments.slice(0,3).map(function(c){
-            return '<div class="fb-note"><b>'+(c.author||"Anonymous")+'</b>'+(c.status==="changes"?' <span class="fb-tagchg">changes</span>':'')+'<p>'+String(c.comment).replace(/</g,"&lt;")+'</p></div>';
+          log.innerHTML=s.comments.slice(0,4).map(function(c){
+            var done=c.status==="approved"&&/@maggiore\.cl$/i.test(c.author||"");
+            return '<div class="fb-note'+(done?' done':'')+'"><b>'+(c.author||"Anonymous")+'</b>'+
+              (c.status==="changes"?' <span class="fb-tagchg">changes</span>':'')+
+              (done?' <span class="fb-tagdone">updated</span>':'')+
+              (c.created_at?' <span class="fb-when">'+fbDate(c.created_at)+'</span>':'')+
+              '<p>'+String(c.comment).replace(/</g,"&lt;")+'</p></div>';
           }).join("");
         } else if(log){log.innerHTML="";}
       });
