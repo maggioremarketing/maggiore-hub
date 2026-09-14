@@ -775,5 +775,682 @@
   ],
   "learnings": [],
   "recommendations": []
+ },
+ {
+  "brand": "Vagisil",
+  "experiment_id": "E03",
+  "name": "Anti-Itch Claims Testing",
+  "category": "Feminine Care",
+  "status": "in_progress",
+  "headline": "Vagisil Max Strength Anti-Itch Creme — Project Compass E03R01",
+  "subtitle": "Project Compass E03R01 · 2026.09.09 — approved by Combe; Phase 1 launching. Results will stream here as the campaign runs.",
+  "background": "Vagisil's <b>Maximum Strength Anti-Itch Creme</b> (20% benzocaine, 3% resorcinol) is the <b>#1 anti-itch cream</b> on the market and the cornerstone of the brand.<br><br>Over the last two years the anti-itch business shows a steady decline (<b>L52W: -6.5% dollars, -5.5% units</b>), driven by compressed shelf space (category TDPs down ~700 pts), competition from niche and value brands, and consumers shifting from problem-solution toward prevention.<br><br>The company's position is clear: <b>the medicated positioning is not negotiable</b>. The goal is to return this $20-30M business to growth.",
+  "objective": "Determine <b>which claims have the most Stopping Power</b> for the hero product across <b>nine claim territories</b>: medicated efficacy, speed, duration, root-cause control, microbiome/pH, skin barrier, sensory, free-from and trust.<br><br>The test follows a <b>control design</b>: the base claim (<b>“Strongest medicine for intense itch”</b>) runs alone as the control, four alternative anchors run alone, and every other banner adds <b>a single attribute</b> on top of the base claim, so any change in Stopping Power is attributable to that attribute.<br><br>Top performers advance to <b>Phase 2</b>: six claims, full journey, Stopping &amp; Closing Power.",
+  "hypothesis": "Key strategic questions:<br>&middot; Does the current product <b>deliver on consumer expectations</b>?<br>&middot; Should the brand keep leaning into <b>problem-solution</b> messaging, or can <b>prevention claims</b> (pH, microbiome, skin barrier) add attention on top of the medicated message?<br>&middot; What are the largest <b>barriers to purchase</b>?<br><br><b>Stretch claims</b> not supportable by the current formula (pH balanced, restores the microbiome) are tested intentionally as input for future formula work, and three <b>ingredient claims</b> (ceramides, hyaluronic acid, gooseberry) run as innovation input.",
+  "success_criteria": "Stopping Power (Phase 1) · Stopping & Closing Power (Phase 2)",
+  "methodology": {
+   "platform": "Meta (Facebook / Instagram)",
+   "format": "24 static banners in 3 formats (16:9, 9:16 and 3:4, Meta-safe zones respected): 1 control claim, 4 alternative anchors tested alone, and 19 base-plus-single-attribute variants. All five free-from claims included, woven into base-plus-attribute banners.",
+   "field": "Phase 1 traffic campaign — September 2026 (E03R01, compass dated 2026.09.09). Results expected within ~3 weeks of launch.",
+   "kpi": "Stopping Power (unique link clicks / reach); Phase 2 adds Closing Power (add to cart / landing page visits)",
+   "benchmarks": [
+    {
+     "metric": "stopping",
+     "lo": 1.19,
+     "hi": 2.47
+    }
+   ]
+  },
+  "audiences": [
+   {
+    "name": "Female 18-44",
+    "size_mm": "TBD",
+    "details": "Female, age 18-44. Location: US. Excluding offices of: Prestige Consumer Healthcare, Church & Dwight, Bayer Consumer Health, The Honey Pot Company, Bonafide Health, FemiClear, Laclede Inc., Lupin Pharmaceuticals, Reckitt."
+   },
+   {
+    "name": "Female 45+",
+    "size_mm": "TBD",
+    "details": "Female, age 45+. Location: US. Excluding offices of: Prestige Consumer Healthcare, Church & Dwight, Bayer Consumer Health, The Honey Pot Company, Bonafide Health, FemiClear, Laclede Inc., Lupin Pharmaceuticals, Reckitt."
+   }
+  ],
+  "rounds": [
+   {
+    "round": 1,
+    "dates": "Phase 1 · in field since September 13, 2026 · updated Sep 14, 2026",
+    "charts": [
+     {
+      "title": "LIVE · Stopping Power by claim — both audiences (updated Sep 14, 2026)",
+      "metric": "stopping",
+      "audience": "US women 18-44 and 45+ · pooled · unique link clicks / reach (Meta)",
+      "benchmark": {
+       "lo": 1.19,
+       "hi": 2.47
+      },
+      "rows": [
+       {
+        "label": "Causes",
+        "ref": "04",
+        "group": null,
+        "value": 1.71,
+        "extra": "Reach 11,259 · Unique link clicks 193",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Fragrance & Hormone Free",
+        "ref": "19",
+        "group": null,
+        "value": 1.55,
+        "extra": "Reach 4,393 · Unique link clicks 68",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Ceramides",
+        "ref": "11",
+        "group": null,
+        "value": 1.21,
+        "extra": "Reach 1,236 · Unique link clicks 15",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Skin Barrier",
+        "ref": "05",
+        "group": null,
+        "value": 1.06,
+        "extra": "Reach 4,357 · Unique link clicks 46",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gyno Tested",
+        "ref": "21",
+        "group": null,
+        "value": 0.92,
+        "extra": "Reach 1,744 · Unique link clicks 16",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Soothing",
+        "ref": "02",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 2 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Long Lasting",
+        "ref": "03",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 2 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Fast Acting",
+        "ref": "06",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 695 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "8 Hrs",
+        "ref": "07",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 71 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Microbiome",
+        "ref": "09",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 823 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Restore Barrier",
+        "ref": "10",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 329 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Hyaluronic",
+        "ref": "12",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 829 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Non Greasy",
+        "ref": "13",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 113 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Residue",
+        "ref": "14",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 3 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Non Burning",
+        "ref": "15",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 63 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Aloe & Vitamin E",
+        "ref": "16",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 1 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gooseberry",
+        "ref": "17",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 574 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clinically Tested",
+        "ref": "22",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 174 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Most Trusted",
+        "ref": "23",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 33 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Botanicals",
+        "ref": "24",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 1 · still gathering data",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": "Campaign in field. Causes leads Stopping Power at 1.71%, across 26,702 people reached so far. No claim has yet cleared the 2.47% benchmark ceiling; delivery is still early. 15 claims are still gathering reach and are shown at zero until their rate is reliable — Meta front-loads delivery to early winners, and an automated rule retires each ad at 10,000 reach so the budget rotates to the rest. Figures come from Meta's unique link clicks over reach, per ad."
+     },
+     {
+      "title": "LIVE · Stopping Power by claim — Female 18-44",
+      "metric": "stopping",
+      "audience": "Female 18-44",
+      "benchmark": {
+       "lo": 1.19,
+       "hi": 2.47
+      },
+      "rows": [
+       {
+        "label": "Causes",
+        "ref": "04",
+        "group": null,
+        "value": 1.6,
+        "extra": "Reach 6,435 · Unique link clicks 103",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Skin Barrier",
+        "ref": "05",
+        "group": null,
+        "value": 1.04,
+        "extra": "Reach 4,312 · Unique link clicks 45",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gyno Tested",
+        "ref": "21",
+        "group": null,
+        "value": 0.92,
+        "extra": "Reach 1,744 · Unique link clicks 16",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Fast Acting",
+        "ref": "06",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 581 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Microbiome",
+        "ref": "09",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 454 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Restore Barrier",
+        "ref": "10",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 31 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Ceramides",
+        "ref": "11",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 855 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Non Greasy",
+        "ref": "13",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 101 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Non Burning",
+        "ref": "15",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 1 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gooseberry",
+        "ref": "17",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 6 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clinically Tested",
+        "ref": "22",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 169 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Most Trusted",
+        "ref": "23",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 6 · still gathering data",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": null
+     },
+     {
+      "title": "LIVE · Stopping Power by claim — Female 45+",
+      "metric": "stopping",
+      "audience": "Female 45+",
+      "benchmark": {
+       "lo": 1.19,
+       "hi": 2.47
+      },
+      "rows": [
+       {
+        "label": "Causes",
+        "ref": "04",
+        "group": null,
+        "value": 1.87,
+        "extra": "Reach 4,824 · Unique link clicks 90",
+        "better_than": null,
+        "winner": true
+       },
+       {
+        "label": "Fragrance & Hormone Free",
+        "ref": "19",
+        "group": null,
+        "value": 1.55,
+        "extra": "Reach 4,393 · Unique link clicks 68",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Soothing",
+        "ref": "02",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 2 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Long Lasting",
+        "ref": "03",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 2 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Skin Barrier",
+        "ref": "05",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 45 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Fast Acting",
+        "ref": "06",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 114 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "8 Hrs",
+        "ref": "07",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 71 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Microbiome",
+        "ref": "09",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 369 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Restore Barrier",
+        "ref": "10",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 298 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Ceramides",
+        "ref": "11",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 381 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Hyaluronic",
+        "ref": "12",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 829 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Non Greasy",
+        "ref": "13",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 12 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Residue",
+        "ref": "14",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 3 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Non Burning",
+        "ref": "15",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 62 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Aloe & Vitamin E",
+        "ref": "16",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 1 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gooseberry",
+        "ref": "17",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 568 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clinically Tested",
+        "ref": "22",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 5 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Most Trusted",
+        "ref": "23",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 27 · still gathering data",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Botanicals",
+        "ref": "24",
+        "group": null,
+        "value": 0,
+        "extra": "Reach 1 · still gathering data",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": null
+     },
+     {
+      "title": "Closing Power — phase 2, not started",
+      "metric": "closing",
+      "audience": "US women 18-44 and 45+",
+      "benchmark": null,
+      "rows": [],
+      "insight": "Phase 1 measures attention only. Closing Power is measured in phase 2, when the winning claims drive to a product page and add-to-cart."
+     }
+    ],
+    "narrative": null,
+    "outcome": null
+   }
+  ],
+  "learnings": [],
+  "recommendations": [],
+  "claims_count": 24,
+  "card_winner": null,
+  "gallery": [
+   {
+    "n": "01",
+    "claim": "<b>Strongest medicine for intense itch</b>",
+    "role": "Control"
+   },
+   {
+    "n": "02",
+    "claim": "<b>Instant soothing comfort on contact</b>",
+    "role": "Anchor"
+   },
+   {
+    "n": "03",
+    "claim": "<b>Long lasting relief from painful itching, burning &amp; irritation</b>",
+    "role": "Anchor"
+   },
+   {
+    "n": "04",
+    "claim": "<b>Targets common causes of vulvar discomfort</b>",
+    "role": "Anchor"
+   },
+   {
+    "n": "05",
+    "claim": "<b>Relieves itch and restores the skin's barrier</b>",
+    "role": "Anchor"
+   },
+   {
+    "n": "06",
+    "claim": "Strongest medicine for intense itch. <b>Fast acting, works on contact.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "07",
+    "claim": "Strongest medicine for intense itch. <b>Up to 8 hrs. of continuous relief.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "08",
+    "claim": "Strongest medicine for intense itch. <b>pH balanced.</b>",
+    "role": "Base + attribute, stretch"
+   },
+   {
+    "n": "09",
+    "claim": "Strongest medicine for intense itch. <b>Won't disrupt the intimate microbiome.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "10",
+    "claim": "Strongest medicine for intense itch. <b>Helps restore the skin's barrier.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "11",
+    "claim": "Strongest medicine for intense itch. <b>With ceramides for a healthy skin barrier.</b>",
+    "role": "Base + attribute, innovation"
+   },
+   {
+    "n": "12",
+    "claim": "Strongest medicine for intense itch. <b>With moisturizing hyaluronic acid.</b>",
+    "role": "Base + attribute, innovation"
+   },
+   {
+    "n": "13",
+    "claim": "Strongest medicine for intense itch. <b>Non-greasy, fast drying.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "14",
+    "claim": "Strongest medicine for intense itch. <b>No residue, no mess.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "15",
+    "claim": "Strongest medicine for intense itch. <b>Non-burning, non-stinging formula.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "16",
+    "claim": "Strongest medicine for intense itch. <b>With soothing aloe and vitamin E.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "17",
+    "claim": "Strongest medicine for intense itch. <b>With gooseberry extract for gentle cooling.</b>",
+    "role": "Base + attribute, innovation"
+   },
+   {
+    "n": "18",
+    "claim": "Strongest medicine for intense itch. <b>Paraben &amp; dye free.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "19",
+    "claim": "Strongest medicine for intense itch. <b>Fragrance &amp; hormone free.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "20",
+    "claim": "Strongest medicine for intense itch. <b>Vegan, phthalate free.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "21",
+    "claim": "Strongest medicine for intense itch. <b>Gynecologist tested.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "22",
+    "claim": "Strongest medicine for intense itch. <b>Clinically tested.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "23",
+    "claim": "Strongest medicine for intense itch. <b>#1 most trusted brand for feminine itch.</b>",
+    "role": "Base + attribute"
+   },
+   {
+    "n": "24",
+    "claim": "Strongest medicine for intense itch. <b>With soothing botanicals and antioxidants.</b>",
+    "role": "Base + attribute"
+   }
+  ]
  }
 ]
