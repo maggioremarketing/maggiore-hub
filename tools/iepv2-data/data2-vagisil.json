@@ -811,6 +811,11 @@
     "name": "Female 45+",
     "size_mm": "TBD",
     "details": "Female, age 45+. Location: US. Excluding offices of: Prestige Consumer Healthcare, Church & Dwight, Bayer Consumer Health, The Honey Pot Company, Bonafide Health, FemiClear, Laclede Inc., Lupin Pharmaceuticals, Reckitt."
+   },
+   {
+    "name": "Lapsed buyers · Circana list",
+    "size_mm": "0.21 – 0.25",
+    "details": "Verified past buyers of Vagisil Maximum Strength Anti-Itch Creme who have stopped purchasing, sourced from Circana. US women, 18-65+. Added to the experiment on September 15, once the campaign was already in field, so its figures cover a shorter period than the other two audiences. Excluding offices of: Prestige Consumer Healthcare, Church & Dwight, Bayer Consumer Health, The Honey Pot Company, Bonafide Health, FemiClear, Laclede Inc., Lupin Pharmaceuticals, Reckitt."
    }
   ],
   "rounds": [
@@ -819,9 +824,9 @@
     "dates": "Phase 1 · in field since September 13, 2026 · updated Sep 16, 2026",
     "charts": [
      {
-      "title": "LIVE · Stopping Power by claim — both audiences (updated Sep 16, 2026)",
+      "title": "LIVE · Stopping Power by claim — all audiences (updated Sep 16, 2026)",
       "metric": "stopping",
-      "audience": "US women 18-44 and 45+ · pooled · unique link clicks / reach (Meta)",
+      "audience": "3 audiences pooled · unique link clicks / reach (Meta)",
       "benchmark": {
        "lo": 1.19,
        "hi": 2.47
@@ -1640,6 +1645,282 @@
         "pending": true,
         "extra": "Reach 547 · still gathering data",
         "claim": "Strongest medicine for intense itch. #1 most trusted brand for feminine itch.",
+        "better_than": null,
+        "winner": false
+       }
+      ],
+      "insight": null
+     },
+     {
+      "title": "LIVE · Stopping Power by claim — Lapsed buyers · Circana list",
+      "metric": "stopping",
+      "audience": "Lapsed buyers · Circana list",
+      "benchmark": {
+       "lo": 1.19,
+       "hi": 2.47
+      },
+      "rows": [
+       {
+        "label": "Causes",
+        "ref": "04",
+        "group": null,
+        "value": 1.39,
+        "pending": false,
+        "extra": "Reach 1,079 · Unique link clicks 15",
+        "claim": "Targets common causes of vulvar discomfort",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Paraben & Dye Free",
+        "ref": "18",
+        "group": null,
+        "value": 1.14,
+        "pending": false,
+        "extra": "Reach 1,491 · Unique link clicks 17",
+        "claim": "Strongest medicine for intense itch. Paraben & dye free.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gyno Tested",
+        "ref": "21",
+        "group": null,
+        "value": 1.07,
+        "pending": false,
+        "extra": "Reach 1,216 · Unique link clicks 13",
+        "claim": "Strongest medicine for intense itch. Gynecologist tested.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Microbiome",
+        "ref": "09",
+        "group": null,
+        "value": 0.99,
+        "pending": false,
+        "extra": "Reach 1,218 · Unique link clicks 12",
+        "claim": "Strongest medicine for intense itch. Won't disrupt the intimate microbiome.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Non Burning",
+        "ref": "15",
+        "group": null,
+        "value": 0.83,
+        "pending": false,
+        "extra": "Reach 1,322 · Unique link clicks 11",
+        "claim": "Strongest medicine for intense itch. Non-burning, non-stinging formula.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Control",
+        "ref": "01",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 77 · still gathering data",
+        "claim": "Strongest medicine for intense itch",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Soothing",
+        "ref": "02",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 192 · still gathering data",
+        "claim": "Instant soothing comfort on contact",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Long Lasting",
+        "ref": "03",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 106 · still gathering data",
+        "claim": "Long lasting relief from painful itching, burning & irritation",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Skin Barrier",
+        "ref": "05",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 207 · still gathering data",
+        "claim": "Relieves itch and restores the skin's barrier",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Fast Acting",
+        "ref": "06",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 36 · still gathering data",
+        "claim": "Strongest medicine for intense itch. Fast acting, works on contact.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "8 Hrs",
+        "ref": "07",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 449 · still gathering data",
+        "claim": "Strongest medicine for intense itch. Up to 8 hrs. of continuous relief.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "pH Balanced",
+        "ref": "08",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 138 · still gathering data",
+        "claim": "Strongest medicine for intense itch. pH balanced.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Restore Barrier",
+        "ref": "10",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 178 · still gathering data",
+        "claim": "Strongest medicine for intense itch. Helps restore the skin's barrier.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Ceramides",
+        "ref": "11",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 142 · still gathering data",
+        "claim": "Strongest medicine for intense itch. With ceramides for a healthy skin barrier.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Hyaluronic",
+        "ref": "12",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 90 · still gathering data",
+        "claim": "Strongest medicine for intense itch. With moisturizing hyaluronic acid.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Non Greasy",
+        "ref": "13",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 225 · still gathering data",
+        "claim": "Strongest medicine for intense itch. Non-greasy, fast drying.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "No Residue",
+        "ref": "14",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 398 · still gathering data",
+        "claim": "Strongest medicine for intense itch. No residue, no mess.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Aloe & Vitamin E",
+        "ref": "16",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 52 · still gathering data",
+        "claim": "Strongest medicine for intense itch. With soothing aloe and vitamin E.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Gooseberry",
+        "ref": "17",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 174 · still gathering data",
+        "claim": "Strongest medicine for intense itch. With gooseberry extract for gentle cooling.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Fragrance & Hormone Free",
+        "ref": "19",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 132 · still gathering data",
+        "claim": "Strongest medicine for intense itch. Fragrance & hormone free.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Vegan",
+        "ref": "20",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 29 · still gathering data",
+        "claim": "Strongest medicine for intense itch. Vegan, phthalate free.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Clinically Tested",
+        "ref": "22",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 165 · still gathering data",
+        "claim": "Strongest medicine for intense itch. Clinically tested.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Most Trusted",
+        "ref": "23",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 395 · still gathering data",
+        "claim": "Strongest medicine for intense itch. #1 most trusted brand for feminine itch.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Botanicals",
+        "ref": "24",
+        "group": null,
+        "value": null,
+        "pending": true,
+        "extra": "Reach 676 · still gathering data",
+        "claim": "Strongest medicine for intense itch. With soothing botanicals and antioxidants.",
         "better_than": null,
         "winner": false
        }
