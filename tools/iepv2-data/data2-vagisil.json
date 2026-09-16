@@ -836,7 +836,7 @@
         "extra": "Reach 1,531 · Unique link clicks 26",
         "claim": "Strongest medicine for intense itch. #1 most trusted brand for feminine itch.",
         "better_than": null,
-        "winner": true
+        "winner": false
        },
        {
         "label": "Microbiome",
@@ -1092,7 +1092,7 @@
         "winner": false
        }
       ],
-      "insight": "Campaign in field. Most Trusted leads Stopping Power at 1.70%, across 255,698 people reached so far. No claim has yet cleared the 2.47% benchmark ceiling; delivery is still early. Figures come from Meta's unique link clicks over reach, per ad."
+      "insight": "Campaign in field, 255,698 people reached so far. Most Trusted shows the highest Stopping Power at 1.70%, but the gap to the next claims is still within what sampling alone can explain, so we are not calling a winner yet. No claim has yet cleared the 2.47% benchmark ceiling; delivery is still early. Figures come from Meta's unique link clicks over reach, per ad."
      },
      {
       "title": "LIVE · Stopping Power by claim — Female 18-44",
@@ -1112,7 +1112,7 @@
         "extra": "Reach 3,021 · Unique link clicks 52",
         "claim": "Strongest medicine for intense itch. Won't disrupt the intimate microbiome.",
         "better_than": null,
-        "winner": true
+        "winner": false
        },
        {
         "label": "Causes",
@@ -1388,7 +1388,7 @@
         "extra": "Reach 1,760 · Unique link clicks 34",
         "claim": "Strongest medicine for intense itch. Won't disrupt the intimate microbiome.",
         "better_than": null,
-        "winner": true
+        "winner": false
        },
        {
         "label": "No Residue",
