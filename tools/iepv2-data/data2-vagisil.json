@@ -824,33 +824,33 @@
     "dates": "Phase 1 · in field since September 13, 2026 · updated Sep 16, 2026",
     "charts": [
      {
-      "title": "LIVE · Stopping Power by claim — all audiences (updated Sep 16, 2026)",
+      "title": "LIVE · Stopping Power by claim — Female 18-44 and Female 45+ (updated Sep 16, 2026)",
       "metric": "stopping",
-      "audience": "3 audiences pooled · unique link clicks / reach (Meta)",
+      "audience": "Female 18-44 + Female 45+ pooled · unique link clicks / reach (Meta)",
       "benchmark": {
        "lo": 1.19,
        "hi": 2.47
       },
       "rows": [
        {
-        "label": "Most Trusted",
-        "ref": "23",
+        "label": "Microbiome",
+        "ref": "09",
         "group": null,
-        "value": 1.7,
+        "value": 1.8,
         "pending": false,
-        "extra": "Reach 1,531 · Unique link clicks 26",
-        "claim": "Strongest medicine for intense itch. #1 most trusted brand for feminine itch.",
+        "extra": "Reach 4,781 · Unique link clicks 86",
+        "claim": "Strongest medicine for intense itch. Won't disrupt the intimate microbiome.",
         "better_than": null,
         "winner": false
        },
        {
-        "label": "Microbiome",
-        "ref": "09",
+        "label": "No Residue",
+        "ref": "14",
         "group": null,
-        "value": 1.63,
+        "value": 1.54,
         "pending": false,
-        "extra": "Reach 5,999 · Unique link clicks 98",
-        "claim": "Strongest medicine for intense itch. Won't disrupt the intimate microbiome.",
+        "extra": "Reach 2,537 · Unique link clicks 39",
+        "claim": "Strongest medicine for intense itch. No residue, no mess.",
         "better_than": null,
         "winner": false
        },
@@ -860,30 +860,8 @@
         "group": null,
         "value": 1.53,
         "pending": false,
-        "extra": "Reach 21,818 · Unique link clicks 333",
+        "extra": "Reach 20,739 · Unique link clicks 318",
         "claim": "Targets common causes of vulvar discomfort",
-        "better_than": null,
-        "winner": false
-       },
-       {
-        "label": "No Residue",
-        "ref": "14",
-        "group": null,
-        "value": 1.53,
-        "pending": false,
-        "extra": "Reach 2,935 · Unique link clicks 45",
-        "claim": "Strongest medicine for intense itch. No residue, no mess.",
-        "better_than": null,
-        "winner": false
-       },
-       {
-        "label": "8 Hrs",
-        "ref": "07",
-        "group": null,
-        "value": 1.49,
-        "pending": false,
-        "extra": "Reach 1,813 · Unique link clicks 27",
-        "claim": "Strongest medicine for intense itch. Up to 8 hrs. of continuous relief.",
         "better_than": null,
         "winner": false
        },
@@ -893,8 +871,30 @@
         "group": null,
         "value": 1.48,
         "pending": false,
-        "extra": "Reach 11,250 · Unique link clicks 166",
+        "extra": "Reach 11,118 · Unique link clicks 165",
         "claim": "Strongest medicine for intense itch. Fragrance & hormone free.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "8 Hrs",
+        "ref": "07",
+        "group": null,
+        "value": 1.39,
+        "pending": false,
+        "extra": "Reach 1,364 · Unique link clicks 19",
+        "claim": "Strongest medicine for intense itch. Up to 8 hrs. of continuous relief.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Most Trusted",
+        "ref": "23",
+        "group": null,
+        "value": 1.23,
+        "pending": false,
+        "extra": "Reach 1,136 · Unique link clicks 14",
+        "claim": "Strongest medicine for intense itch. #1 most trusted brand for feminine itch.",
         "better_than": null,
         "winner": false
        },
@@ -902,9 +902,9 @@
         "label": "Fast Acting",
         "ref": "06",
         "group": null,
-        "value": 1.11,
+        "value": 1.12,
         "pending": false,
-        "extra": "Reach 2,170 · Unique link clicks 24",
+        "extra": "Reach 2,134 · Unique link clicks 24",
         "claim": "Strongest medicine for intense itch. Fast acting, works on contact.",
         "better_than": null,
         "winner": false
@@ -913,9 +913,9 @@
         "label": "Long Lasting",
         "ref": "03",
         "group": null,
-        "value": 1.04,
+        "value": 1.02,
         "pending": false,
-        "extra": "Reach 4,727 · Unique link clicks 49",
+        "extra": "Reach 4,621 · Unique link clicks 47",
         "claim": "Long lasting relief from painful itching, burning & irritation",
         "better_than": null,
         "winner": false
@@ -924,9 +924,9 @@
         "label": "Non Greasy",
         "ref": "13",
         "group": null,
-        "value": 0.94,
+        "value": 1.02,
         "pending": false,
-        "extra": "Reach 1,601 · Unique link clicks 15",
+        "extra": "Reach 1,376 · Unique link clicks 14",
         "claim": "Strongest medicine for intense itch. Non-greasy, fast drying.",
         "better_than": null,
         "winner": false
@@ -935,21 +935,10 @@
         "label": "Botanicals",
         "ref": "24",
         "group": null,
-        "value": 0.9,
+        "value": 0.87,
         "pending": false,
-        "extra": "Reach 9,022 · Unique link clicks 81",
+        "extra": "Reach 8,346 · Unique link clicks 73",
         "claim": "Strongest medicine for intense itch. With soothing botanicals and antioxidants.",
-        "better_than": null,
-        "winner": false
-       },
-       {
-        "label": "Gyno Tested",
-        "ref": "21",
-        "group": null,
-        "value": 0.82,
-        "pending": false,
-        "extra": "Reach 22,533 · Unique link clicks 185",
-        "claim": "Strongest medicine for intense itch. Gynecologist tested.",
         "better_than": null,
         "winner": false
        },
@@ -957,21 +946,21 @@
         "label": "Skin Barrier",
         "ref": "05",
         "group": null,
-        "value": 0.8,
+        "value": 0.81,
         "pending": false,
-        "extra": "Reach 20,405 · Unique link clicks 164",
+        "extra": "Reach 20,198 · Unique link clicks 163",
         "claim": "Relieves itch and restores the skin's barrier",
         "better_than": null,
         "winner": false
        },
        {
-        "label": "Non Burning",
-        "ref": "15",
+        "label": "Gyno Tested",
+        "ref": "21",
         "group": null,
-        "value": 0.69,
+        "value": 0.81,
         "pending": false,
-        "extra": "Reach 9,459 · Unique link clicks 65",
-        "claim": "Strongest medicine for intense itch. Non-burning, non-stinging formula.",
+        "extra": "Reach 21,317 · Unique link clicks 172",
+        "claim": "Strongest medicine for intense itch. Gynecologist tested.",
         "better_than": null,
         "winner": false
        },
@@ -979,21 +968,21 @@
         "label": "Clinically Tested",
         "ref": "22",
         "group": null,
-        "value": 0.69,
+        "value": 0.7,
         "pending": false,
-        "extra": "Reach 1,874 · Unique link clicks 13",
+        "extra": "Reach 1,709 · Unique link clicks 12",
         "claim": "Strongest medicine for intense itch. Clinically tested.",
         "better_than": null,
         "winner": false
        },
        {
-        "label": "Soothing",
-        "ref": "02",
+        "label": "Non Burning",
+        "ref": "15",
         "group": null,
-        "value": 0.63,
+        "value": 0.66,
         "pending": false,
-        "extra": "Reach 14,018 · Unique link clicks 88",
-        "claim": "Instant soothing comfort on contact",
+        "extra": "Reach 8,137 · Unique link clicks 54",
+        "claim": "Strongest medicine for intense itch. Non-burning, non-stinging formula.",
         "better_than": null,
         "winner": false
        },
@@ -1003,8 +992,19 @@
         "group": null,
         "value": 0.63,
         "pending": false,
-        "extra": "Reach 6,809 · Unique link clicks 43",
+        "extra": "Reach 6,671 · Unique link clicks 42",
         "claim": "Strongest medicine for intense itch. pH balanced.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Soothing",
+        "ref": "02",
+        "group": null,
+        "value": 0.61,
+        "pending": false,
+        "extra": "Reach 13,826 · Unique link clicks 85",
+        "claim": "Instant soothing comfort on contact",
         "better_than": null,
         "winner": false
        },
@@ -1014,7 +1014,7 @@
         "group": null,
         "value": 0.5,
         "pending": false,
-        "extra": "Reach 15,497 · Unique link clicks 77",
+        "extra": "Reach 15,420 · Unique link clicks 77",
         "claim": "Strongest medicine for intense itch",
         "better_than": null,
         "winner": false
@@ -1025,7 +1025,7 @@
         "group": null,
         "value": 0.49,
         "pending": false,
-        "extra": "Reach 12,747 · Unique link clicks 63",
+        "extra": "Reach 12,573 · Unique link clicks 62",
         "claim": "Strongest medicine for intense itch. With gooseberry extract for gentle cooling.",
         "better_than": null,
         "winner": false
@@ -1034,21 +1034,10 @@
         "label": "Paraben & Dye Free",
         "ref": "18",
         "group": null,
-        "value": 0.48,
+        "value": 0.44,
         "pending": false,
-        "extra": "Reach 21,457 · Unique link clicks 104",
+        "extra": "Reach 19,966 · Unique link clicks 87",
         "claim": "Strongest medicine for intense itch. Paraben & dye free.",
-        "better_than": null,
-        "winner": false
-       },
-       {
-        "label": "Hyaluronic",
-        "ref": "12",
-        "group": null,
-        "value": 0.41,
-        "pending": false,
-        "extra": "Reach 9,510 · Unique link clicks 39",
-        "claim": "Strongest medicine for intense itch. With moisturizing hyaluronic acid.",
         "better_than": null,
         "winner": false
        },
@@ -1056,21 +1045,21 @@
         "label": "Ceramides",
         "ref": "11",
         "group": null,
-        "value": 0.4,
+        "value": 0.38,
         "pending": false,
-        "extra": "Reach 16,088 · Unique link clicks 65",
+        "extra": "Reach 15,946 · Unique link clicks 61",
         "claim": "Strongest medicine for intense itch. With ceramides for a healthy skin barrier.",
         "better_than": null,
         "winner": false
        },
        {
-        "label": "Restore Barrier",
-        "ref": "10",
+        "label": "Hyaluronic",
+        "ref": "12",
         "group": null,
         "value": 0.38,
         "pending": false,
-        "extra": "Reach 8,096 · Unique link clicks 31",
-        "claim": "Strongest medicine for intense itch. Helps restore the skin's barrier.",
+        "extra": "Reach 9,420 · Unique link clicks 36",
+        "claim": "Strongest medicine for intense itch. With moisturizing hyaluronic acid.",
         "better_than": null,
         "winner": false
        },
@@ -1080,7 +1069,7 @@
         "group": null,
         "value": 0.38,
         "pending": false,
-        "extra": "Reach 20,523 · Unique link clicks 79",
+        "extra": "Reach 20,471 · Unique link clicks 78",
         "claim": "Strongest medicine for intense itch. With soothing aloe and vitamin E.",
         "better_than": null,
         "winner": false
@@ -1091,13 +1080,24 @@
         "group": null,
         "value": 0.38,
         "pending": false,
-        "extra": "Reach 13,816 · Unique link clicks 53",
+        "extra": "Reach 13,787 · Unique link clicks 53",
         "claim": "Strongest medicine for intense itch. Vegan, phthalate free.",
+        "better_than": null,
+        "winner": false
+       },
+       {
+        "label": "Restore Barrier",
+        "ref": "10",
+        "group": null,
+        "value": 0.37,
+        "pending": false,
+        "extra": "Reach 7,918 · Unique link clicks 29",
+        "claim": "Strongest medicine for intense itch. Helps restore the skin's barrier.",
         "better_than": null,
         "winner": false
        }
       ],
-      "insight": "Campaign in field, 255,698 people reached so far. Most Trusted shows the highest Stopping Power at 1.70%, but the gap to the next claims is still within what sampling alone can explain, so we are not calling a winner yet. No claim has yet cleared the 2.47% benchmark ceiling; delivery is still early. Figures come from Meta's unique link clicks over reach, per ad."
+      "insight": "Campaign in field, 245,511 people reached so far. Microbiome shows the highest Stopping Power at 1.80%, but the gap to the next claims is still within what sampling alone can explain, so we are not calling a winner yet. No claim has yet cleared the 2.47% benchmark ceiling; delivery is still early. Figures come from Meta's unique link clicks over reach, per ad."
      },
      {
       "title": "LIVE · Stopping Power by claim — Female 18-44",
@@ -1925,7 +1925,7 @@
         "winner": false
        }
       ],
-      "insight": null
+      "insight": "This audience is a verified buyer list, not a demographic audience, so it is reported on its own and is not part of the pooled chart above. It also entered the experiment later, with fewer days in field. Read it as its own test: which claim brings lapsed buyers back."
      },
      {
       "title": "Closing Power — phase 2, not started",
