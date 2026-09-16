@@ -2197,5 +2197,240 @@
    "Round out with ease of application: “Up to 3 uses: Reusable for Future Use” (1.82%) and “Easy Brush-In Application” (1.73%) complete a six-claim set that fills front and back of the box without repeating a message.",
    "If more moisture claims are needed, “Infused with Aloe &amp; Coconut Oil for Softer Feeling Hair” (1.70%) and “Aloe &amp; Coconut Oil to Help Hydrate as it Colors” (1.55%) are validated alternates from the same family."
   ]
+ },
+ {
+  "brand": "Just For Men",
+  "experiment_id": "E06",
+  "name": "1-Day Hair Color",
+  "category": "Hair Care",
+  "status": "in_progress",
+  "headline": "Just For Men 1-Day Hair Color — Project Compass E06R01",
+  "subtitle": "Iterative Experiment Platform · 2026.09.16",
+  "assets_dir": "iep-jfm-e06",
+  "background": "Just For Men is preparing the launch of 1-Day Hair Color, a temporary brush-in / wash-out colour for head hair aimed at men who want grey coverage without the commitment of permanent dye. The product needs no mixing, is dispensed straight from the tube into an included applicator brush, lasts the day and rinses out with the next shampoo. Because the proposition is new to the category, the launch messaging has not yet been settled.",
+  "objective": "Establish which claim captures the most attention, and which of the six territories the messaging should lean on for launch.",
+  "hypothesis": "Two questions sit behind the test. Does the promise of instant grey coverage still lead, as it has across previous Just For Men experiments? Or does the temporary, no-commitment nature of this format — the one thing genuinely new about the product — earn its own place in the launch message?",
+  "success_criteria": "Stopping Power",
+  "methodology": {
+   "platform": "Meta (Facebook / Instagram)",
+   "format": "40 static banners in 3 formats (16:9, 4:5 and 9:16, each matching Meta's delivery ratios exactly). Typography is held constant across the whole set so that the claim is the only variable under test.",
+   "field": "Phase 1 traffic campaign — pending launch",
+   "kpi": "Stopping Power (unique link clicks / reach)",
+   "benchmarks": [
+    {
+     "metric": "stopping",
+     "lo": 1.18,
+     "hi": 2.48
+    }
+   ]
+  },
+  "audiences": [],
+  "rounds": [],
+  "learnings": [],
+  "recommendations": [],
+  "claims_count": 40,
+  "card_winner": null,
+  "gallery": [
+   {
+    "n": "01",
+    "claim": "<b>Not ready for permanent color start here</b>",
+    "role": "Temporary Nature of Product"
+   },
+   {
+    "n": "02",
+    "claim": "<b>Risk free wash out color</b>",
+    "role": "Temporary Nature of Product"
+   },
+   {
+    "n": "03",
+    "claim": "<b>No commitment color</b>",
+    "role": "Temporary Nature of Product"
+   },
+   {
+    "n": "04",
+    "claim": "<b>Brush in and wash out color</b>",
+    "role": "Temporary Nature of Product"
+   },
+   {
+    "n": "05",
+    "claim": "<b>Creates fuller, thicker-looking hair instantly</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "06",
+    "claim": "<b>Easily &amp; instantly covers grays</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "07",
+    "claim": "<b>Buildable 1-day coverage</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "08",
+    "claim": "<b>Instant, undetectable, &amp; discreet coverage</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "09",
+    "claim": "<b>1-day color that blends naturally with your hair</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "10",
+    "claim": "<b>Fast, natural-looking 1-day gray coverage</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "11",
+    "claim": "<b>Instantly covers grays, roots, and thinning hairlines</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "12",
+    "claim": "<b>Color &amp; style in 1-step</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "13",
+    "claim": "<b>Instantly cover early grays</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "14",
+    "claim": "<b>All over or targeted gray coverage</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "15",
+    "claim": "<b>Undetectable 1-day coverage</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "16",
+    "claim": "<b>Instant &amp; controlled gray coverage</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "17",
+    "claim": "<b>Instantly touch up temples, roots, or all over</b>",
+    "role": "Final Look from Product"
+   },
+   {
+    "n": "18",
+    "claim": "<b>Look instantly younger</b>",
+    "role": "Emotional Outcome"
+   },
+   {
+    "n": "19",
+    "claim": "<b>Control the gray you show</b>",
+    "role": "Emotional Outcome"
+   },
+   {
+    "n": "20",
+    "claim": "<b>Control your grays</b>",
+    "role": "Emotional Outcome"
+   },
+   {
+    "n": "21",
+    "claim": "<b>Look like yourself only better</b>",
+    "role": "Emotional Outcome"
+   },
+   {
+    "n": "22",
+    "claim": "<b>Provides all day confidence</b>",
+    "role": "Emotional Outcome"
+   },
+   {
+    "n": "23",
+    "claim": "<b>1-day nourishing cream color</b>",
+    "role": "Hair Health"
+   },
+   {
+    "n": "24",
+    "claim": "<b>Instantly healthier looking hair</b>",
+    "role": "Hair Health"
+   },
+   {
+    "n": "25",
+    "claim": "<b>Dye-free &amp; skin-friendly 1-day color</b>",
+    "role": "Hair Health"
+   },
+   {
+    "n": "26",
+    "claim": "<b>Hypoallergenic &amp; gentle 1-day color</b>",
+    "role": "Hair Health"
+   },
+   {
+    "n": "27",
+    "claim": "<b>Sweat &amp; water resistant 1-day color</b>",
+    "role": "Reassurance of Wear"
+   },
+   {
+    "n": "28",
+    "claim": "<b>1-day color that won't rub off</b>",
+    "role": "Reassurance of Wear"
+   },
+   {
+    "n": "29",
+    "claim": "<b>Stain free temporary color</b>",
+    "role": "Reassurance of Wear"
+   },
+   {
+    "n": "30",
+    "claim": "<b>1-day color that works across all hair types &amp; textures</b>",
+    "role": "Reassurance of Wear"
+   },
+   {
+    "n": "31",
+    "claim": "<b>Even, streak-free 1-day color</b>",
+    "role": "Reassurance of Wear"
+   },
+   {
+    "n": "32",
+    "claim": "<b>Lightweight, non-sticky 1-day color</b>",
+    "role": "Reassurance of Wear"
+   },
+   {
+    "n": "33",
+    "claim": "<b>No stiffness or crunchy feel 1-day color</b>",
+    "role": "Reassurance of Wear"
+   },
+   {
+    "n": "34",
+    "claim": "<b>24hr color</b>",
+    "role": "Reassurance of Wear"
+   },
+   {
+    "n": "35",
+    "claim": "<b>Great value with up to 30 uses</b>",
+    "role": "Application"
+   },
+   {
+    "n": "36",
+    "claim": "<b>No mix, no gloves, no mess</b>",
+    "role": "Application"
+   },
+   {
+    "n": "37",
+    "claim": "<b>Precise application at roots &amp; part</b>",
+    "role": "Application"
+   },
+   {
+    "n": "38",
+    "claim": "<b>Custom precision applicator</b>",
+    "role": "Application"
+   },
+   {
+    "n": "39",
+    "claim": "<b>Quick &amp; Easy color application</b>",
+    "role": "Application"
+   },
+   {
+    "n": "40",
+    "claim": "<b>Easiest 1-day color</b>",
+    "role": "Application"
+   }
+  ]
  }
 ]
