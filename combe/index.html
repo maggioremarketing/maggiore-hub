@@ -2757,6 +2757,16 @@ function sectionsFor(tab){
   if (tab === 'iep-v2'){ var ex = document.getElementById('iep-v2-explorer'); if (ex) els.push(ex); }
   return els;
 }
+// Un hash tipo #iep-vagisil-e03 no es una pestana: es el deep link a la ficha de un
+// experimento, y lo resuelve v2DeepLink al final del archivo. Hay que reconocerlo para
+// no mandarlo al hub ni, peor, sobrescribirlo antes de que alcance a leerse.
+function esFichaExperimento(h){ return /^#?iep-[a-z0-9-]+-e\d+$/i.test(h || ""); }
+
+// Solo hay que proteger el hash durante el arranque, hasta que v2DeepLink alcance a
+// leerlo. Despues la navegacion normal vuelve a mandar sobre la URL: si no, el usuario
+// entra a la ficha, se va al Hub, recarga y aterriza otra vez en la ficha.
+window.__abriendoDeepLink = esFichaExperimento(location.hash);
+
 function showTab(tab){
   if (!TABS[tab]) tab = 'hub';
   allTabSections().forEach(function(sn){ sn.style.display = 'none'; });
@@ -2767,14 +2777,17 @@ function showTab(tab){
     a.style.borderBottom = on ? '1px solid var(--primary)' : '0';
   });
   window.scrollTo(0, 0);
-  try{ history.replaceState(null, '', '#' + tab); }catch(e){}
+  try{
+    if (!window.__abriendoDeepLink) history.replaceState(null, '', '#' + tab);
+  }catch(e){}
 }
 function navActive(){
   Array.prototype.forEach.call(document.querySelectorAll('[data-screen-label="Nav"] a[href^="#"]'), function(a){
     if (a.getAttribute('href') === '#iep' && a.textContent.trim() === 'IEP'){ a.style.display = 'none'; return; }
     a.addEventListener('click', function(ev){ ev.preventDefault(); var t = a.getAttribute('href').slice(1); showTab(t === 'iep' ? 'iep-v2' : t); });
   });
-  var initial = (location.hash || '#hub').slice(1);
+  var h = location.hash || '#hub';
+  var initial = esFichaExperimento(h) ? 'iep-v2' : h.slice(1);
   showTab(initial);
 }
 </script>
@@ -2789,10 +2802,10 @@ function navActive(){
       return d.brand.toLowerCase().replace(/\s+/g,"-") === slug && d.experiment_id.toUpperCase() === eid;
     });
     if(i < 0) return;
-    var nav = document.querySelector('a[href="#iep-v2"]');
-    if(nav) nav.click();
+    if (typeof showTab === "function") showTab("iep-v2");
     setTimeout(function(){
       v2Open(i);
+      window.__abriendoDeepLink = false;
       setTimeout(function(){
         var d = document.getElementById("iepV2Detail");
         if(d) d.scrollIntoView({block:"start"});
