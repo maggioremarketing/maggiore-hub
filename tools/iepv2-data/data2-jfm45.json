@@ -2239,12 +2239,12 @@
   "gallery": [
    {
     "n": "01",
-    "claim": "<b>Not ready for permanent color start here</b>",
+    "claim": "<b>Not ready for permanent color, start here</b>",
     "role": "Temporary Nature of Product"
    },
    {
     "n": "02",
-    "claim": "<b>Risk free wash out color</b>",
+    "claim": "<b>Risk free, wash out color</b>",
     "role": "Temporary Nature of Product"
    },
    {
@@ -2309,7 +2309,7 @@
    },
    {
     "n": "15",
-    "claim": "<b>Undetectable 1-day coverage</b>",
+    "claim": "<b>Undetectable, 1-day coverage</b>",
     "role": "Final Look from Product"
    },
    {
@@ -2404,7 +2404,7 @@
    },
    {
     "n": "34",
-    "claim": "<b>24hr color</b>",
+    "claim": "<b>New 24-Hour Color</b>",
     "role": "Reassurance of Wear"
    },
    {
