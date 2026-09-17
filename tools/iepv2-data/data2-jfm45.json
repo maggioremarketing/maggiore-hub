@@ -2224,7 +2224,13 @@
     }
    ]
   },
-  "audiences": [],
+  "audiences": [
+   {
+    "name": "Men 30-55 · US",
+    "size_mm": "13.2 – 15.5",
+    "details": "Male, age 30-55. Location: United States. Interests: hair coloring, hair products, Just For Men or men's grooming products. Must also match behaviour: Engaged Shoppers. Advantage+ audience is switched off, so delivery stays inside the defined audience and the claim remains the only variable under test."
+   }
+  ],
   "rounds": [],
   "learnings": [],
   "recommendations": [],
